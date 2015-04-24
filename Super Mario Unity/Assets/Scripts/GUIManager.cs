@@ -16,22 +16,22 @@ public class GUIManager : MonoBehaviour
 		instance = this;
 	}
 
-	public int ChangeScoreText(int score)
+	public void ChangeScoreText(int score)
 	{
 		textScore.text = string.Format ("{0}", score);
 	}
 
-	public int ChangeCoinText(int coins)
+	public void ChangeCoinText(int coins)
 	{
 		textCoin.text = string.Format ("{0}", coins);
 	}
 
-	public int ChangeTimeText(int time)
+	public void ChangeTimeText(int time)
 	{
 		textTime.text = string.Format ("{0}", time);
 	}
 
-	public int ChangeLevelText(string level)
+	public void ChangeLevelText(string level)
 	{
 		textLevel.text = string.Format ("{0}", level);
 	}
