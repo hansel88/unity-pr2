@@ -1,15 +1,21 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Entity : MonoBehaviour {
+public class Entity : MonoBehaviour
+{
+	public float movementSpeed = 10f;
+	public int direction = 1;
 
-	// Use this for initialization
-	void Start () {
-	
+	public void Movement()
+	{
+		transform.Translate ((transform.right * movementSpeed * Time.deltaTime) * direction);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (!other.CompareTag ("Ground"))
+		{
+			direction *= -1;
+		}
 	}
 }
