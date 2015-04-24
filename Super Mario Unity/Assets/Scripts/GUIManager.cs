@@ -9,3 +9,4 @@ public class GUIManager : MonoBehaviour
 	{
 		instance = this;
 	}
+}
