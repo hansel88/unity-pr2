@@ -11,6 +11,7 @@ public class EnemyShell : Enemy
 		direction = 0;
 	}
 
+	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
 		// Check if shell is moving

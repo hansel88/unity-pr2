@@ -10,7 +10,11 @@ public class GM : MonoBehaviour
     public int Score
     {
         get { return this.score; }
-        set { this.score = value; }
+        set 
+		{ 
+			this.score = value; 
+			GUIManager.instance.ChangeScoreText (value);
+		}
     }
 
     private int lives = 0;
@@ -24,14 +28,22 @@ public class GM : MonoBehaviour
     public int Coins
     {
         get { return this.coins; }
-        set { this.coins = value; }
+        set 
+		{
+			this.coins = value; 
+			GUIManager.instance.ChangeCoinText (value);
+		}
     }
 
 	private int timer = 0;
 	public int Timer
 	{
 		get { return this.timer; }
-		set { this.timer = value; GUIManager.instance.ChangeTimeText (value);}
+		set 
+		{ 
+			this.timer = value; 
+			GUIManager.instance.ChangeTimeText (value);
+		}
 	}
     #endregion
 

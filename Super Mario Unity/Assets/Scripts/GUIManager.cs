@@ -24,7 +24,7 @@ public class GUIManager : MonoBehaviour
 			return;
 		}
 
-		textScore.text = string.Format ("MARIO\n{0}", score);
+		textScore.text = string.Format ("MARIO\n{0:0000000}", score);
 	}
 
 	public void ChangeCoinText(int coins)
