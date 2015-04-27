@@ -269,7 +269,7 @@ GameObject:
   - 222: {fileID: 1429717093}
   - 114: {fileID: 1429717092}
   m_Layer: 5
-  m_Name: TimeUpText
+  m_Name: TimeUpORGameOverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
