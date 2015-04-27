@@ -96,12 +96,15 @@ public class GM : MonoBehaviour
 	void DoCountdown()
 	{
 		currentCountdownTime += Time.deltaTime;
-		if (currentCountdownTime >= secondRatio)
-		{
-			Timer -= 1;
-			currentCountdownTime = 0f;
-			CheckTimer ();
-		}
+        if (Application.loadedLevel == 0)
+        {
+            if (currentCountdownTime >= secondRatio)
+            {
+                Timer -= 1;
+                currentCountdownTime = 0f;
+                CheckTimer();
+            }
+        }
 	}
 
 	void CheckTimer()
