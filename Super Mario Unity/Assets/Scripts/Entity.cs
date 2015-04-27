@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Entity : MonoBehaviour
 {
+	public int scoreReward = 100;
 	public float movementSpeed = 3f;
-	public int direction = 1;
+	public int direction = 1; // 1 = right, -1 = left, 0 = no movement
 	public Transform spriteTransform; // The sprite to rotate when turning
 
 	private bool isChangingDirection = false;
@@ -46,9 +49,24 @@ public class Entity : MonoBehaviour
 	IEnumerator ChangeDirection()
 	{
 		isChangingDirection = true;
+
+		// Wait for end of frame to continue som we don't turn around while still colliding
 		yield return new WaitForEndOfFrame();
+
+		// Change direction
 		direction *= -1;
-		spriteTransform.localScale = new Vector3(direction, 1f);
+
+		// Rotate spritetransform
+		Vector3 scale = spriteTransform.localScale;
+		scale.x *= -1;
+		spriteTransform.localScale = scale;
+
 		isChangingDirection = false;
+	}
+
+	public void RewardScore()
+	{
+		// Give the player scoreReward points
+		GM.instance.Score += scoreReward;
 	}
 }

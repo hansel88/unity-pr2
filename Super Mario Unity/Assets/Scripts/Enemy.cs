@@ -8,13 +8,9 @@ public class Enemy : Entity
 		HorizontalMovement ();
 	}
 
-	public void OnPlayerHit()
+	public void Die()
 	{
-
-	}
-
-	public void OnDeath()
-	{
-
+		gameObject.SetActive (false); // TODO animate death and remove this
+		GM.instance.Score += scoreReward;
 	}
 }
