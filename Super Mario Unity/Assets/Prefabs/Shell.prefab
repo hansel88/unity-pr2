@@ -98,10 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43e7b59bc0ce47faaae37132572b347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreReward: 100
+  scoreReward: 500
   movementSpeed: 3
   direction: 1
   spriteTransform: {fileID: 477840}
+  scoreMovingReward: 100
 --- !u!212 &21269854
 SpriteRenderer:
   m_ObjectHideFlags: 1

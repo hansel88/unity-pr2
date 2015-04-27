@@ -18,21 +18,45 @@ public class GUIManager : MonoBehaviour
 
 	public void ChangeScoreText(int score)
 	{
-		textScore.text = string.Format ("{0}", score);
+		if (!textScore) 
+		{
+			Debug.LogError ("No textScore assigned!", this);
+			return;
+		}
+
+		textScore.text = string.Format ("MARIO\n{0}", score);
 	}
 
 	public void ChangeCoinText(int coins)
 	{
-		textCoin.text = string.Format ("{0}", coins);
+		if (!textCoin) 
+		{
+			Debug.LogError ("No textCoin assigned!", this);
+			return;
+		}
+
+		textCoin.text = string.Format ("x{0}", coins);
 	}
 
 	public void ChangeTimeText(int time)
 	{
-		textTime.text = string.Format ("{0}", time);
+		if (!textTime) 
+		{
+			Debug.LogError ("No textTime assigned!", this);
+			return;
+		}
+
+		textTime.text = string.Format ("TIME\n{0}", time);
 	}
 
 	public void ChangeLevelText(string level)
 	{
-		textLevel.text = string.Format ("{0}", level);
+		if (!textLevel) 
+		{
+			Debug.LogError ("No textLevel assigned!", this);
+			return;
+		}
+
+		textLevel.text = string.Format ("WORLD\n{0}", level);
 	}
 }
