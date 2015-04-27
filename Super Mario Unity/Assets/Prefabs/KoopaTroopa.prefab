@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd5600151c7f44ba945f8fecf47b1ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreReward: 200
+  scoreReward: 100
   movementSpeed: 1
   direction: -1
   spriteTransform: {fileID: 421596}
