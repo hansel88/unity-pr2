@@ -26,6 +26,13 @@ public class GM : MonoBehaviour
         get { return this.coins; }
         set { this.coins = value; }
     }
+
+	private int timer = 0;
+	public int Timer
+	{
+		get { return this.timer; }
+		set { this.timer = value; GUIManager.instance.ChangeTimeText (value);}
+	}
     #endregion
 
     #region status and powerup properties
@@ -61,6 +68,10 @@ public class GM : MonoBehaviour
     }
 #endregion
 
+	private float currentCountdownTime = 0;
+	private const float secondRatio = 0.4f; // Seconds per in-game seconds
+	private const int totalTime = 400; // Total time for a level
+
     void Awake()
     {
         if (instance == null)
@@ -68,13 +79,43 @@ public class GM : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
+		ResetCountdown ();
     }
+
+	void Update()
+	{
+		DoCountdown ();
+	}
 
     #region methods
     private void checkGameOver()
     {
         //TODO
     }
+
+	void DoCountdown()
+	{
+		currentCountdownTime += Time.deltaTime;
+		if (currentCountdownTime >= secondRatio)
+		{
+			Timer -= 1;
+			currentCountdownTime = 0f;
+			CheckTimer ();
+		}
+	}
+
+	void CheckTimer()
+	{
+		if (Timer <= 0)
+		{
+			// TODO Gameover
+		}
+	}
+
+	void ResetCountdown()
+	{
+		Timer = totalTime;
+	}
     #endregion
 
 }
