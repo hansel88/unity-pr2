@@ -5,7 +5,7 @@ public class Entity : MonoBehaviour
 {
 	public float movementSpeed = 3f;
 	public int direction = 1;
-	public Transform spriteTransform; // The transform to rotate when turning
+	public Transform spriteTransform; // The sprite to rotate when turning
 
 	private bool isChangingDirection = false;
 

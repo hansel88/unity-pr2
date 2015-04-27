@@ -7,4 +7,14 @@ public class Enemy : Entity
 	{
 		HorizontalMovement ();
 	}
+
+	public void OnPlayerHit()
+	{
+
+	}
+
+	public void OnDeath()
+	{
+
+	}
 }
