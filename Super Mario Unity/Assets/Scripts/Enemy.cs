@@ -3,8 +3,9 @@ using System.Collections;
 
 public class Enemy : Entity
 {
-	void Update()
+	public override void Update()
 	{
+		base.Update ();
 		HorizontalMovement ();
 	}
 

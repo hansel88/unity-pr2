@@ -12,4 +12,9 @@ public class EnemyKoopaTroopa : Enemy
 
 		Die ();
 	}
+
+	public void OnCollide()
+	{
+		print ("Collided");
+	}
 }

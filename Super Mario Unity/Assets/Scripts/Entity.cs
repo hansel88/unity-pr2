@@ -3,7 +3,7 @@ using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Entity : MonoBehaviour
+public class Entity : CollisionEntity
 {
 	public int scoreReward = 100;
 	public float movementSpeed = 3f;
