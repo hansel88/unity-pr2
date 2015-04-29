@@ -38,13 +38,30 @@ public class Entity : CollisionEntity
 			if ((otherPos.x > pos.x && direction == 1) || (otherPos.x < pos.x && direction == -1))
 			{
 				// Check if we are already changing direction before turning
-				if (!isChangingDirection)
+				if (!isChangingDirection && gameObject.activeInHierarchy)
 				{
 					StartCoroutine (ChangeDirection ());
 				}
 			}
 		}
 	}
+
+	/*public virtual void OnCollide(Transform other)
+	{
+		print ("On entity collide");
+		// Check if the collided object is on the correct side
+		Vector3 otherPos = other.position;
+		Vector3 pos = transform.position;
+		if ((otherPos.x > pos.x && direction == 1) || (otherPos.x < pos.x && direction == -1))
+		{
+			print ("Change dir");
+			// Check if we are already changing direction before turning
+			if (!isChangingDirection && gameObject.activeInHierarchy)
+			{
+				StartCoroutine (ChangeDirection ());
+			}
+		}
+	}*/
 	
 	IEnumerator ChangeDirection()
 	{
@@ -64,9 +81,15 @@ public class Entity : CollisionEntity
 		isChangingDirection = false;
 	}
 
+	public void RewardScore(int score)
+	{
+		// Give the player score points
+		GM.instance.Score += score;
+		GUIManager.instance.PopRewardText (transform.position, "+" + score);
+	}
+
 	public void RewardScore()
 	{
-		// Give the player scoreReward points
-		GM.instance.Score += scoreReward;
+		RewardScore (scoreReward);
 	}
 }

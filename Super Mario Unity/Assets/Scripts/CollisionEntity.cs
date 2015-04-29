@@ -3,40 +3,34 @@ using System.Collections;
 
 public class CollisionEntity : MonoBehaviour
 {
-	public BoxCollider2D boxCollider;
+	private BoxCollider2D boxCollider;
+	private Rect jumpRect;
+	private float jumpRectHeight = 0.05f;
+	private CharacterMovement chrMove;
 
 	void Awake()
 	{
 		boxCollider = GetComponent<BoxCollider2D>();
+		chrMove = GetComponent<CharacterMovement>();
 	}
-	public Rect topRect;
-	public float size = 0.1f;
+
 	public virtual void Update()
 	{
-		// old rect
-		/*Bounds b = boxCollider.bounds;
-		topRect = new Rect(b.center.x - b.extents.x, b.center.x + b.extents.x, 
-		                   b.center.y - b.extents.y - size, b.center.y + b.extents.y + size);
-		topRect.xMin = topRect.x;
-		topRect.xMax = topRect.y;
-		topRect.yMin = -topRect.x;
-		topRect.yMax = -topRect.y;*/
-
-
-		// rect 
-		Vector2 scale = boxCollider.size;
-		scale.y = size;
+		// Jump rect 
+		/*Vector2 scale = boxCollider.size;
+		scale.y = jumpRectHeight;
 		Vector3 centerPoint = new Vector3( boxCollider.offset.x, boxCollider.offset.y, 0f);
 		
 		Vector3 worldPos = transform.TransformPoint (boxCollider.offset);
 		
-		topRect = new Rect(0f, 0f, scale.x, scale.y);
-		topRect.center = new Vector2(worldPos.x, worldPos.y + boxCollider.bounds.extents.y);
+		jumpRect = new Rect(0f, 0f, scale.x, scale.y);
+		jumpRect.center = new Vector2(worldPos.x, worldPos.y + boxCollider.bounds.extents.y);*/
 		
-		topLeft = new Vector3( topRect.xMin, topRect.yMax, worldPos.z);
-		topRight = new Vector3( topRect.xMax, topRect.yMax, worldPos.z);
-		btmLeft = new Vector3( topRect.xMin, topRect.yMin, worldPos.z);
-		btmRight = new Vector3( topRect.xMax, topRect.yMin, worldPos.z); 
+		/*topLeft = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		topRight = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		btmLeft = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		btmRight = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
+		//SetJumpRect ();
 	}
 	Vector3 topLeft;
 	Vector3 topRight;
@@ -46,7 +40,7 @@ public class CollisionEntity : MonoBehaviour
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
-		//Gizmos.DrawCube (topRect.center, topRect.size);
+		//Gizmos.DrawCube (jumpRect.center, jumpRect.size);
 		Gizmos.DrawLine (topLeft, topRight);
 		Gizmos.DrawLine (topRight, btmRight);
 		Gizmos.DrawLine (btmRight, btmLeft);
@@ -57,40 +51,29 @@ public class CollisionEntity : MonoBehaviour
 	{
 		if (!other.collider.CompareTag (Tags.ground))
 		{
-
-
-			//Rect topRect = new Rect(b.center - b.extents.x, b.center + b.extents.x, 
-			//                       b.center - b.extents.y - size, b.center + b.extents.y + size);
-
+			print ("hey");
 			if (other.collider.CompareTag (Tags.player))
 			{
 				// TODO Send hitmsg to player
-				print ("Hit player");
+				print ("Mama mia!");
 			}
 			else if (other.collider.CompareTag (Tags.enemy))
 			{
-				// OR compare to the entitys colliders (store reference on them)
-				/*print (other.collider);
-				return;
-				if (other.collider.GetType () == typeof(EdgeCollider2D) && gameObject.CompareTag (Tags.player))
-				{
-					print ("Hit " + other.gameObject.name + " edgecollider");
-				}
-				else if (other.collider.GetType () == typeof(BoxCollider2D))
-				{
-					print ("Hit " + other.gameObject.name + " boxcollider");
-				}*/
-				if (other.collider.GetComponent<CollisionEntity>().topRect.Contains (other.contacts[0].point)
+				if (other.collider.GetComponent<CollisionEntity>().JumpRectContains (other.contacts[0].point)
 				    && gameObject.CompareTag (Tags.player))
 				{
-					print ("Hit " + other.gameObject.name + " toprect");
-					// TODO Jump player
+					//print ("Hit " + other.gameObject.name + " toprect");
+					if (chrMove)
+					{
+						chrMove.Jump ();
+					}
+					
 					other.gameObject.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
 				}
 				else
 				{
-					print ("Hit " + other.gameObject.name + " collider");
-					other.gameObject.SendMessage ("OnCollide", SendMessageOptions.DontRequireReceiver);
+					//print ("Hit " + other.gameObject.name + " collider");
+					other.gameObject.SendMessage ("OnCollide", transform, SendMessageOptions.DontRequireReceiver);
 				}
 			}
 			else if (other.collider.CompareTag (Tags.powerup))
@@ -99,5 +82,28 @@ public class CollisionEntity : MonoBehaviour
 				print ("Hit powerup");
 			}
 		}
+	}
+
+	void SetJumpRect()
+	{
+		// Jump rect 
+		Vector2 colliderSize = new Vector3 (boxCollider.size.x, jumpRectHeight);
+		Vector3 colliderCenter = new Vector3(boxCollider.offset.x, boxCollider.offset.y); // TODO Remove
+		Vector3 worldPos = transform.TransformPoint (boxCollider.offset);
+		jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
+		jumpRect.center = new Vector2(worldPos.x, worldPos.y + boxCollider.bounds.extents.y);
+
+		// TODO Remove
+		topLeft = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		topRight = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		btmLeft = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		btmRight = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
+	}
+
+	// Checks if the jumprect contains the point
+	public bool JumpRectContains(Vector2 point)
+	{
+		SetJumpRect ();
+		return jumpRect.Contains (point);
 	}
 }

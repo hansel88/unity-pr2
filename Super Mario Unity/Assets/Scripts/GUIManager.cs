@@ -4,10 +4,12 @@ using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
+	public Transform rewardCanvas;
 	public Text textScore;
 	public Text textCoin;
 	public Text textTime;
 	public Text textLevel;
+	public GameObject rewardPrefab;
 
 	public static GUIManager instance;
 
@@ -58,5 +60,15 @@ public class GUIManager : MonoBehaviour
 		}
 
 		textLevel.text = string.Format ("WORLD\n{0}", level);
+	}
+
+	public void PopRewardText(Vector3 pos, string rewardText)
+	{
+		//GameObject textObj = new GameObject("RewardText", typeof(RewardText));
+		//Text text = textObj.GetComponent<Text>(); // TODO Get from poolmanager
+		//text.transform.position = pos;
+		//text.text = rewardText;
+		GameObject textObj = Instantiate (rewardPrefab) as GameObject;
+		textObj.GetComponent<RewardText>().Initialize (rewardText, pos, rewardCanvas);
 	}
 }

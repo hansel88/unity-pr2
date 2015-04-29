@@ -11,7 +11,7 @@ public class Enemy : Entity
 
 	public void Die()
 	{
-		GM.instance.Score += scoreReward;
+		RewardScore ();
 		gameObject.SetActive (false); // TODO animate death and remove this
 	}
 }

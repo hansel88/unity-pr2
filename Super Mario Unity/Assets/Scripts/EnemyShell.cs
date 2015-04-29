@@ -25,7 +25,7 @@ public class EnemyShell : Enemy
 		else // Is moving
 		{
 			// Reward player with score
-			GM.instance.Score += scoreMovingReward;
+			RewardScore (scoreMovingReward);
 			// Stop shell
 			direction = 0;
 		}

@@ -13,8 +13,8 @@ public class EnemyKoopaTroopa : Enemy
 		Die ();
 	}
 
-	public void OnCollide()
+	public void OnCollide(Transform other)
 	{
-		print ("Collided");
+		//base.OnCollide (other);
 	}
 }
