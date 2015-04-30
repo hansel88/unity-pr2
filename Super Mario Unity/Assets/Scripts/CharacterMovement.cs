@@ -3,45 +3,67 @@ using System.Collections;
 
 public class CharacterMovement : MonoBehaviour {
 
+	public float downForce = 10f;
+    public float speed = 1.0f;
+    public float jumpForce = 200.0f;
+	public LayerMask groundedLayers;
+	public Transform groundedPosition;
+    public bool grounded = true;
+	private Animator anim;
+	private Rigidbody2D rBody;
+	public Transform[] groundedChecks;
 
-    float speed = 1.0f;
-    float jumpForce = 200.0f;
-    private bool grounded = true;
-
-	// Use this for initialization
-	void Start () {
-	    
+	void Awake()
+	{
+		anim = GetComponent<Animator>();
+		rBody = GetComponent<Rigidbody2D>();
 	}
+	float horizontalInput = 0f;
+	void Update () 
+	{
+		// Grounded check
+		Vector2 bl = groundedPosition.position - new Vector3(0.007f, 0.02f);
+		Vector2 tr = groundedPosition.position + new Vector3(0.007f, 0.02f);
+		grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
 
-
-	
-	// Update is called once per frame
-	void Update () {
-        var move = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
-        if ((Input.GetKeyDown("space") || Input.GetKeyDown("up")) && grounded == true)
+        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+		horizontalInput = Input.GetAxisRaw ("Horizontal");
+        if (Input.GetButtonDown("Jump") && grounded == true)
         {
-            GetComponent<Animator>().SetTrigger("JumpTrigger");
-            grounded = false;
-            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+			Jump ();
         }
-        else
+        /*else
         {
             //GetComponent<Animator>().SetBool("WalkingRight", true); 
-            transform.position += move * speed * Time.deltaTime;
-        }
-        if (move.x < 0)
-            GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
-        else if(move.x > 0)
-            GetComponent<Transform>().localScale = new Vector3(1, 1, 1);
-        GetComponent<Animator>().SetFloat("movementSpeed", move.x);
+            //transform.position += move * speed * Time.deltaTime;
+			//rBody.AddForce (move * speed * Time.deltaTime);
+
+        }*/
+
+        if (horizontalInput < 0)
+            transform.localScale = new Vector3(-1, 1, 1);
+		else if(horizontalInput > 0)
+            transform.localScale = new Vector3(1, 1, 1);
+
+		anim.SetFloat("movementSpeed", horizontalInput);
+		anim.SetBool("Grounded", grounded);
 	}
 
-    void OnCollisionEnter2D(Collision2D colObj)
-    {
-        if (colObj.gameObject.tag == "Ground")
-        {
-            grounded = true;
-        }
-    }
+	void FixedUpdate()
+	{
+		float vel = rBody.velocity.y;
+		if (!grounded)
+		{
+			vel -= downForce;
+		}
+		rBody.velocity = new Vector2(horizontalInput * speed, vel);
+	}
 
+	public void Jump()
+	{
+		if (!grounded) return;
+
+        anim.SetTrigger("JumpTrigger");
+		rBody.AddForce(new Vector2(0, jumpForce));
+	}
 }
