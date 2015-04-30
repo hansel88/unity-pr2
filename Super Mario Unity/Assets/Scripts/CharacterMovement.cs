@@ -27,7 +27,7 @@ public class CharacterMovement : MonoBehaviour {
         else
         {
             //GetComponent<Animator>().SetBool("WalkingRight", true); 
-            if( !(move.x < 0 && transform.position.x <= GM.instance.camWorldBottomLeft.x))
+            if( !(move.x < 0 && transform.position.x <= GM.instance.camWorldBottomLeft.x)) //Prevent Mario from walking out of the left side of the screen
                 transform.position += move * speed * Time.deltaTime;
         }
         if (move.x < 0)
