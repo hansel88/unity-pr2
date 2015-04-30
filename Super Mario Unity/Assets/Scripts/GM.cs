@@ -138,7 +138,7 @@ public class GM : MonoBehaviour
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates
 	[HideInInspector]public Vector3 camWorldBottomLeft; // Bottom left of screen in world coordinates
-	[HideInInspector]public Vector3 camWorldCenter;
+	[HideInInspector]public Vector3 camWorldCenter; // Center of screen in world coordinates
 
 	/// <summary>
 	/// Updates the screen bounds.

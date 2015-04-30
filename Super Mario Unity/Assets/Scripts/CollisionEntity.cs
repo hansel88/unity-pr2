@@ -32,6 +32,8 @@ public class CollisionEntity : MonoBehaviour
 		btmRight = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
 		//SetJumpRect ();
 	}
+
+	// DEBUG
 	Vector3 topLeft;
 	Vector3 topRight;
 	Vector3 btmLeft;
@@ -39,6 +41,7 @@ public class CollisionEntity : MonoBehaviour
 
 	void OnDrawGizmos()
 	{
+		// DEBUG
 		Gizmos.color = Color.red;
 		//Gizmos.DrawCube (jumpRect.center, jumpRect.size);
 		Gizmos.DrawLine (topLeft, topRight);
@@ -93,11 +96,11 @@ public class CollisionEntity : MonoBehaviour
 	{
 		// Jump rect 
 		Vector2 colliderSize = new Vector3 (boxCollider.size.x, jumpRectHeight);
-		Vector3 colliderCenter = new Vector3(boxCollider.offset.x, boxCollider.offset.y); // TODO Remove
 		Vector3 worldPos = transform.TransformPoint (boxCollider.offset);
 		jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + boxCollider.bounds.extents.y);
 
+		// DEBUG
 		// TODO Remove
 		topLeft = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
 		topRight = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
