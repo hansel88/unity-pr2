@@ -9,4 +9,5 @@ public class Tags
 	public static string player = "Player";
 	public static string enemy = "Enemy";
 	public static string powerup = "Powerup";
+	public static string block = "Block";
 }
