@@ -92,6 +92,8 @@ public class GM : MonoBehaviour
             Destroy(gameObject);
 
 		ResetCountdown ();
+
+		UpdateScreenBounds ();
     }
 
 	void Update()
@@ -133,4 +135,19 @@ public class GM : MonoBehaviour
 	}
     #endregion
 
+
+	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates
+	[HideInInspector]public Vector3 camWorldBottomLeft; // Bottom left of screen in world coordinates
+	[HideInInspector]public Vector3 camWorldCenter;
+
+	/// <summary>
+	/// Updates the screen bounds.
+	/// </summary>
+	public void UpdateScreenBounds()
+	{
+		Camera cam = Camera.main;
+		camWorldBottomLeft = cam.ScreenToWorldPoint (new Vector3 (0f, 0f));
+		camWorldTopRight = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth, cam.pixelHeight));
+		camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
+	}
 }
