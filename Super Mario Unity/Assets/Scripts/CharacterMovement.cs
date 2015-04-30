@@ -27,7 +27,8 @@ public class CharacterMovement : MonoBehaviour {
         else
         {
             //GetComponent<Animator>().SetBool("WalkingRight", true); 
-            transform.position += move * speed * Time.deltaTime;
+            if( !(move.x < 0 && transform.position.x <= GM.instance.camWorldBottomLeft.x))
+                transform.position += move * speed * Time.deltaTime;
         }
         if (move.x < 0)
             GetComponent<Transform>().localScale = new Vector3(-1, 1, 1);
