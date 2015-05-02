@@ -10,6 +10,6 @@ public class Powerup : Entity
 
 	public virtual void OnPickup()
 	{
-		Destroy (gameObject);
+		gameObject.SetActive (false);
 	}
 }

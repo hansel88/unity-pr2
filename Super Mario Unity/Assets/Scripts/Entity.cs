@@ -92,4 +92,16 @@ public class Entity : CollisionEntity
 	{
 		RewardScore (scoreReward);
 	}
+
+	public void JumpedOn()
+	{
+		hasBeenJumped = true;
+		StartCoroutine (ResetJump ());
+	}
+	public bool hasBeenJumped = false;
+	IEnumerator ResetJump()
+	{
+		yield return new WaitForSeconds(1f);
+		hasBeenJumped = false;
+	}
 }

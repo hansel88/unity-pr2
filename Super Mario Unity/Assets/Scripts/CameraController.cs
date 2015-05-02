@@ -4,6 +4,7 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
     public Transform Player;        // Reference to the player's transform.
+	public Transform leftCollider;
 
     void Awake()
     {
@@ -11,6 +12,15 @@ public class CameraController : MonoBehaviour {
         //Player = GameObject.FindGameObjectWithTag("Player").transform; 
         Player = GameObject.FindWithTag("Player").transform;
     }
+
+	void Start()
+	{
+		leftCollider.SetParent (null);
+		leftCollider.position = new Vector3(GM.instance.camWorldBottomLeft.x - 0.5f, GM.instance.camWorldCenter.y, 0f);
+		leftCollider.GetComponent<BoxCollider2D>().size = new Vector2(1f, Vector2.Distance (new Vector2(0f, GM.instance.camWorldBottomLeft.y), 
+		                                                                                    new Vector2(0f, GM.instance.camWorldTopRight.y)));
+		leftCollider.SetParent (transform);
+	}
 
     void FixedUpdate()
     {

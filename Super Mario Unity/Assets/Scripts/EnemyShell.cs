@@ -14,6 +14,7 @@ public class EnemyShell : Enemy
 	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
+		JumpedOn ();
 		// Check if shell is moving
 		if (direction == 0) // Is not moving
 		{

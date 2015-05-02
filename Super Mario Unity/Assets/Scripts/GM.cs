@@ -80,6 +80,12 @@ public class GM : MonoBehaviour
     }
 #endregion
 
+	// TODO Remove
+	public enum PowerupItem{Mushroom, Fireflower, Star};
+	public enum MarioPowerupStatus{Small, Big, Fireflower, Star};
+	public MarioPowerupStatus marioPowerupStatus;
+
+	public bool playerIsAlive = true;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
 	private const int totalTime = 400; // Total time for a level
@@ -107,6 +113,35 @@ public class GM : MonoBehaviour
         //TODO
     }
 
+	public void PowerPlayerUp(PowerupItem powerup)
+	{
+		// TODO Improve
+		if (marioPowerupStatus == MarioPowerupStatus.Small && powerup == PowerupItem.Mushroom)
+		{
+			marioPowerupStatus = MarioPowerupStatus.Big;
+			// TODO Animate getting mushroom
+		}
+		if (marioPowerupStatus == MarioPowerupStatus.Small && powerup == PowerupItem.Fireflower)
+		{
+			marioPowerupStatus = MarioPowerupStatus.Fireflower;
+			// TODO Animate from small to fireflower
+		}
+		if (marioPowerupStatus == MarioPowerupStatus.Big && powerup == PowerupItem.Fireflower)
+		{
+			marioPowerupStatus = MarioPowerupStatus.Fireflower;
+			// TODO Animate from big to firelfower
+		}
+		if (marioPowerupStatus == MarioPowerupStatus.Fireflower && (powerup == PowerupItem.Mushroom || powerup == PowerupItem.Fireflower))
+		{
+			// TODO Reward player with points
+		}
+	}
+
+	public void PowerPlayerDown()
+	{
+
+	}
+
 	void DoCountdown()
 	{
 		currentCountdownTime += Time.deltaTime;
@@ -133,7 +168,6 @@ public class GM : MonoBehaviour
 	{
 		Timer = totalTime;
 	}
-    #endregion
 
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates
@@ -150,4 +184,5 @@ public class GM : MonoBehaviour
 		camWorldTopRight = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth, cam.pixelHeight));
 		camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
 	}
+	#endregion
 }

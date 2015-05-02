@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 955a80e89f23640f39c3c0fff60aa465
-timeCreated: 1430137716
+timeCreated: 1430575420
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -68,50 +68,50 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 33
+        x: 30
         y: 0
-        width: 11
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_3
       rect:
         serializedVersion: 2
         x: 46
         y: 0
-        width: 15
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 62
         y: 0
-        width: 13
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_5
       rect:
@@ -121,77 +121,77 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 95
-        y: 2
-        width: 14
-        height: 14
+        x: 94
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 110
         y: 0
-        width: 13
+        width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 128
+        x: 126
         y: 0
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 143
+        x: 142
         y: 0
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 159
+        x: 158
         y: 0
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 175
+        x: 174
         y: 0
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 191
+        x: 190
         y: 0
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: MarioSSpriteSheet_13
       rect:
@@ -199,9 +199,9 @@ TextureImporter:
         x: 206
         y: 0
         width: 14
-        height: 15
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

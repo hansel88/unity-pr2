@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Awake()
 	{
-		anim = GetComponent<Animator>();
+		anim = GetComponent<CharacterManager>().anim;
 		rBody = GetComponent<Rigidbody2D>();
 	}
 	float horizontalInput = 0f;
@@ -26,26 +26,34 @@ public class CharacterMovement : MonoBehaviour {
 		Vector2 tr = groundedPosition.position + new Vector3(0.007f, 0.02f);
 		grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
 
-        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-		horizontalInput = Input.GetAxisRaw ("Horizontal");
-        if (Input.GetButtonDown("Jump") && grounded == true)
-        {
-			Jump ();
-        }
-        /*else
-        {
-            //GetComponent<Animator>().SetBool("WalkingRight", true); 
-            //transform.position += move * speed * Time.deltaTime;
-			//rBody.AddForce (move * speed * Time.deltaTime);
+		if (GM.instance.playerIsAlive)
+		{
+	        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+			horizontalInput = Input.GetAxisRaw ("Horizontal");
+	        if (Input.GetButtonDown("Jump") && grounded == true)
+	        {
+				Jump ();
+	        }
+	        /*else
+	        {
+	            //GetComponent<Animator>().SetBool("WalkingRight", true); 
+	            //transform.position += move * speed * Time.deltaTime;
+				//rBody.AddForce (move * speed * Time.deltaTime);
 
-        }*/
+	        }*/
 
-        if (horizontalInput < 0)
-            transform.localScale = new Vector3(-1, 1, 1);
-		else if(horizontalInput > 0)
-            transform.localScale = new Vector3(1, 1, 1);
+	        if (horizontalInput < 0)
+	            transform.localScale = new Vector3(-1, 1, 1);
+			else if(horizontalInput > 0)
+	            transform.localScale = new Vector3(1, 1, 1);
+		}
+		else 
+		{
+			horizontalInput = 0f;
+		}
 
-		anim.SetFloat("movementSpeed", horizontalInput);
+		anim.SetBool ("Walking", horizontalInput < 0f || horizontalInput > 0f);
+		//anim.SetFloat("movementSpeed", h);
 		anim.SetBool("Grounded", grounded);
 	}
 
@@ -62,7 +70,6 @@ public class CharacterMovement : MonoBehaviour {
 	public void Jump()
 	{
 		if (!grounded) return;
-
         anim.SetTrigger("JumpTrigger");
 		rBody.AddForce(new Vector2(0, jumpForce));
 	}

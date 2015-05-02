@@ -8,6 +8,8 @@ public class EnemyKoopaTroopa : Enemy
 	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
+		JumpedOn ();
+
 		Instantiate (shellPrefab, transform.position, Quaternion.identity);
 
 		Die ();
@@ -15,6 +17,7 @@ public class EnemyKoopaTroopa : Enemy
 
 	public void OnCollide(Transform other)
 	{
+		other.SendMessage ("OnDeath", SendMessageOptions.DontRequireReceiver);
 		//base.OnCollide (other);
 	}
 }
