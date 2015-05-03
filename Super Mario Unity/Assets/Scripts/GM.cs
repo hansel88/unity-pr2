@@ -172,7 +172,7 @@ public class GM : MonoBehaviour
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates
 	[HideInInspector]public Vector3 camWorldBottomLeft; // Bottom left of screen in world coordinates
-	[HideInInspector]public Vector3 camWorldCenter; // Center of screen in world coordinates
+	//[HideInInspector]public Vector3 camWorldCenter; // Center of screen in world coordinates
 
 	/// <summary>
 	/// Updates the screen bounds.
@@ -182,7 +182,7 @@ public class GM : MonoBehaviour
 		Camera cam = Camera.main;
 		camWorldBottomLeft = cam.ScreenToWorldPoint (new Vector3 (0f, 0f));
 		camWorldTopRight = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth, cam.pixelHeight));
-		camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
+		//camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
 	}
 	#endregion
 }

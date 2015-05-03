@@ -55,16 +55,18 @@ public class CharacterMovement : MonoBehaviour {
 		anim.SetBool ("Walking", horizontalInput < 0f || horizontalInput > 0f);
 		//anim.SetFloat("movementSpeed", h);
 		anim.SetBool("Grounded", grounded);
-	}
 
-	void FixedUpdate()
-	{
 		float vel = rBody.velocity.y;
 		if (!grounded)
 		{
 			vel -= downForce;
 		}
 		rBody.velocity = new Vector2(horizontalInput * speed, vel);
+	}
+
+	void FixedUpdate()
+	{
+
 	}
 
 	public void Jump()

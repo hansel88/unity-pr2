@@ -8,7 +8,7 @@ public class CollisionEntity : MonoBehaviour
 	private float jumpRectHeight = 0.05f;
 	private CharacterMovement chrMove;
 
-	void Awake()
+	public virtual void Awake()
 	{
 		boxCollider = GetComponent<BoxCollider2D>();
 		chrMove = GetComponent<CharacterMovement>();
@@ -34,7 +34,7 @@ public class CollisionEntity : MonoBehaviour
 	}
 
 	// DEBUG
-	Vector3 topLeft;
+	/*Vector3 topLeft;
 	Vector3 topRight;
 	Vector3 btmLeft;
 	Vector3 btmRight;
@@ -48,7 +48,7 @@ public class CollisionEntity : MonoBehaviour
 		Gizmos.DrawLine (topRight, btmRight);
 		Gizmos.DrawLine (btmRight, btmLeft);
 		Gizmos.DrawLine (btmLeft, topLeft);
-	}
+	}*/
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
@@ -103,10 +103,10 @@ public class CollisionEntity : MonoBehaviour
 
 		// DEBUG
 		// TODO Remove
-		topLeft = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		/*topLeft = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
 		topRight = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
 		btmLeft = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
-		btmRight = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
+		btmRight = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
 	}
 
 	// Checks if the jumprect contains the point

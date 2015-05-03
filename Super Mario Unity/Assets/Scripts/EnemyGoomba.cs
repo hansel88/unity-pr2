@@ -7,4 +7,10 @@ public class EnemyGoomba : Enemy
 	{
 		Die ();
 	}
+
+	public void OnCollide(Transform other)
+	{
+		other.SendMessage ("OnDeath", SendMessageOptions.DontRequireReceiver);
+		//base.OnCollide (other);
+	}
 }

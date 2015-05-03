@@ -9,8 +9,15 @@ public class Entity : CollisionEntity
 	public float movementSpeed = 3f;
 	public int direction = 1; // 1 = right, -1 = left, 0 = no movement
 	public Transform spriteTransform; // The sprite to rotate when turning
-
+	public bool canMove = true;
 	private bool isChangingDirection = false;
+	[HideInInspector]public Animator anim;
+
+	public override void Awake()
+	{
+		base.Awake ();
+		anim = GetComponent<Animator>();
+	}
 
 	void Start()
 	{
@@ -24,6 +31,8 @@ public class Entity : CollisionEntity
 
 	public void HorizontalMovement()
 	{
+		if (!canMove) return;
+
 		// Moves the object in a horizontal direction
 		transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
 	}
@@ -40,6 +49,8 @@ public class Entity : CollisionEntity
 				// Check if we are already changing direction before turning
 				if (!isChangingDirection && gameObject.activeInHierarchy)
 				{
+					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
+					// that way it probably wont get stuck....
 					StartCoroutine (ChangeDirection ());
 				}
 			}

@@ -5,6 +5,7 @@ public class CameraController : MonoBehaviour {
 
     public Transform Player;        // Reference to the player's transform.
 	public Transform leftCollider;
+	public Transform centerTransform;
 
     void Awake()
     {
@@ -16,7 +17,7 @@ public class CameraController : MonoBehaviour {
 	void Start()
 	{
 		leftCollider.SetParent (null);
-		leftCollider.position = new Vector3(GM.instance.camWorldBottomLeft.x - 0.5f, GM.instance.camWorldCenter.y, 0f);
+		leftCollider.position = new Vector3(GM.instance.camWorldBottomLeft.x - 0.5f, centerTransform.position.y, 0f);
 		leftCollider.GetComponent<BoxCollider2D>().size = new Vector2(1f, Vector2.Distance (new Vector2(0f, GM.instance.camWorldBottomLeft.y), 
 		                                                                                    new Vector2(0f, GM.instance.camWorldTopRight.y)));
 		leftCollider.SetParent (transform);
@@ -31,11 +32,10 @@ public class CameraController : MonoBehaviour {
     {
         // By default the target x and y coordinates of the camera are it's current x and y coordinates.
 
-        
-        float targetX = Player.position.x;
+        //GM.instance.UpdateScreenBounds();
+		float targetX = Player.position.x;
 
-        GM.instance.UpdateScreenBounds();
-        if(targetX > GM.instance.camWorldCenter.x)
+		if(Player.position.x > centerTransform.position.x)
         {
             this.transform.position = new Vector3(targetX, this.transform.position.y, transform.position.z);
         }
