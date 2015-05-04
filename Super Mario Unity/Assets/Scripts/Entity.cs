@@ -34,15 +34,18 @@ public class Entity : CollisionEntity
 
 	public void HorizontalMovement()
 	{
-		if (!canMove) return;
-		if (GM.instance.freezeEntites)
+		if (!GM.instance.freezeEntites && canMove)
 		{
-			rbody.velocity = Vector2.zero;
-		}
-		else
-		{
+			if (rbody.isKinematic)
+			{
+				rbody.isKinematic = false;
+			}
 			// Moves the object in a horizontal direction
 			transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
+		}
+		else if (!rbody.isKinematic)
+		{
+			rbody.isKinematic = true;
 		}
 	}
 

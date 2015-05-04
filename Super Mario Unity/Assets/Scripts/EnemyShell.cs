@@ -31,4 +31,9 @@ public class EnemyShell : Enemy
 			direction = 0;
 		}
 	}
+
+	public void OnCollide(Transform other)
+	{
+		other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
+	}
 }

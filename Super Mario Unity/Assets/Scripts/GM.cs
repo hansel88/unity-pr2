@@ -185,6 +185,15 @@ public class GM : MonoBehaviour
 		Timer = totalTime;
 	}
 
+	public void FreezeEntities()
+	{
+		freezeEntites = true;
+	}
+
+	public void UnFreezeEntities()
+	{
+		freezeEntites = false;
+	}
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates
 	[HideInInspector]public Vector3 camWorldBottomLeft; // Bottom left of screen in world coordinates

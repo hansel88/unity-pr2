@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Enemy : Entity
 {
+	public bool hasDeathAnimation = true;
+
 	public override void Update()
 	{
 		base.Update ();
@@ -14,9 +16,17 @@ public class Enemy : Entity
 		canMove = false;
 		RewardScore ();
 		//gameObject.SetActive (false); // TODO animate death and remove this
-		if (anim)
+
+		if (hasDeathAnimation)
 		{
-			anim.SetTrigger ("DeathTrigger");
+			if (anim)
+			{
+				anim.SetTrigger ("DeathTrigger");
+			}
+		}
+		else
+		{
+			DestroyEntity ();
 		}
 	}
 

@@ -22,10 +22,11 @@ public class CharacterManager : MonoBehaviour
 
 	public void OnEnemyHit()
 	{
-		if (GM.instance.HasMushroom)
+		if (GM.instance.CharacterStatus == GM.MarioStatus.Small)
 		{
-
+			Die ();
 		}
+		PowerDowngrade ();
 	}
 
 	void Die()
@@ -38,7 +39,7 @@ public class CharacterManager : MonoBehaviour
 
 	public void PowerUpgrade()
 	{
-		charMove.canMove = false;
+		GM.instance.FreezeEntities ();
 		if (GM.instance.CharacterStatus == GM.MarioStatus.Small && GM.instance.HasMushroom)
 		{
 			GM.instance.CharacterStatus = GM.MarioStatus.Big;
@@ -52,8 +53,11 @@ public class CharacterManager : MonoBehaviour
 
 	public void PowerDowngrade()
 	{
-		if (GM.instance.CharacterStatus == GM.MarioStatus.Small && GM.instance.HasMushroom)
+		// TODO Make player invincible???
+
+		if (GM.instance.CharacterStatus == GM.MarioStatus.Big && GM.instance.HasMushroom)
 		{
+			GM.instance.CharacterStatus = GM.MarioStatus.Small;
 			anim.SetBool ("Mushroom", false);
 			anim.SetBool ("IsSmall", false);
 			anim.SetTrigger ("PowerupTrigger");

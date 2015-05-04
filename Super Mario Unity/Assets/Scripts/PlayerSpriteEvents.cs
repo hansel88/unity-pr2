@@ -12,7 +12,7 @@ public class PlayerSpriteEvents : MonoBehaviour
 
 	public void PowerupDone()
 	{
-		charMove.canMove = true;
+		GM.instance.UnFreezeEntities ();
 		// TODO Resume game
 	}
 }

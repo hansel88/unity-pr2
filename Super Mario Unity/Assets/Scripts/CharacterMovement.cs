@@ -62,13 +62,17 @@ public class CharacterMovement : MonoBehaviour {
 		{
 			vel -= downForce;
 		}
-		if (GM.instance.freezeEntites)
+		if (!GM.instance.freezeEntites)
 		{
-			rBody.velocity = Vector2.zero;
-		}
-		else
-		{
+			if (rBody.isKinematic)
+			{
+				rBody.isKinematic = false;
+			}
 			rBody.velocity = new Vector2(horizontalInput * speed * Time.deltaTime, vel);
+		}
+		else if (!rBody.isKinematic)
+		{
+			rBody.isKinematic = true;
 		}
 	}
 
