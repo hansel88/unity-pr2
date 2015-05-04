@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 3df70161684fd4bf0a470916d80889a8
-timeCreated: 1430575595
+timeCreated: 1430755322
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -833,7 +833,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_1
@@ -843,7 +843,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_2
@@ -853,77 +853,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_3
-      rect:
-        serializedVersion: 2
-        x: 80
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_6
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_7
-      rect:
-        serializedVersion: 2
-        x: 144
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_8
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_9
-      rect:
-        serializedVersion: 2
-        x: 176
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_10
@@ -933,7 +863,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_11
@@ -943,7 +873,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_12
@@ -953,7 +883,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_13
@@ -963,7 +893,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_14
@@ -973,7 +903,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_15
@@ -983,7 +913,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_16
@@ -993,7 +923,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_17
@@ -1003,17 +933,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: CharacterSpriteSheet_18
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 512
-        width: 16
-        height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_19
@@ -1023,7 +943,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_20
@@ -1033,7 +953,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_21
@@ -1043,7 +963,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_22
@@ -1053,7 +973,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_23
@@ -1063,7 +983,7 @@ TextureImporter:
         y: 512
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_24
@@ -1073,7 +993,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_25
@@ -1083,7 +1003,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_26
@@ -1093,7 +1013,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_27
@@ -1103,7 +1023,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_28
@@ -1112,9 +1032,9 @@ TextureImporter:
         x: 80
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_29
       rect:
@@ -1122,9 +1042,9 @@ TextureImporter:
         x: 96
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_30
       rect:
@@ -1132,9 +1052,9 @@ TextureImporter:
         x: 112
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_31
       rect:
@@ -1142,9 +1062,9 @@ TextureImporter:
         x: 128
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_32
       rect:
@@ -1152,9 +1072,9 @@ TextureImporter:
         x: 144
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_33
       rect:
@@ -1162,9 +1082,9 @@ TextureImporter:
         x: 160
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_34
       rect:
@@ -1172,9 +1092,9 @@ TextureImporter:
         x: 176
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_35
       rect:
@@ -1183,7 +1103,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_36
@@ -1193,7 +1113,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_37
@@ -1203,7 +1123,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_38
@@ -1213,7 +1133,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_39
@@ -1223,7 +1143,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_40
@@ -1233,7 +1153,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_41
@@ -1243,7 +1163,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_42
@@ -1253,7 +1173,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_43
@@ -1262,9 +1182,9 @@ TextureImporter:
         x: 320
         y: 496
         width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_44
       rect:
@@ -1273,7 +1193,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_45
@@ -1283,7 +1203,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_46
@@ -1293,7 +1213,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_47
@@ -1303,7 +1223,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_48
@@ -1313,7 +1233,7 @@ TextureImporter:
         y: 496
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_49
@@ -1323,7 +1243,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_50
@@ -1333,7 +1253,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_51
@@ -1343,7 +1263,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_52
@@ -1353,7 +1273,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_53
@@ -1363,7 +1283,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_54
@@ -1373,7 +1293,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_55
@@ -1383,7 +1303,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_56
@@ -1393,7 +1313,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_57
@@ -1403,7 +1323,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_58
@@ -1413,7 +1333,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_59
@@ -1423,7 +1343,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_60
@@ -1433,7 +1353,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_61
@@ -1443,7 +1363,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_62
@@ -1453,7 +1373,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_63
@@ -1463,7 +1383,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_64
@@ -1473,7 +1393,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_65
@@ -1483,7 +1403,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_66
@@ -1493,7 +1413,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_67
@@ -1503,7 +1423,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_68
@@ -1513,7 +1433,7 @@ TextureImporter:
         y: 480
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_69
@@ -1523,7 +1443,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_70
@@ -1533,7 +1453,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_71
@@ -1543,7 +1463,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_72
@@ -1553,7 +1473,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_73
@@ -1563,7 +1483,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_74
@@ -1573,7 +1493,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_75
@@ -1583,7 +1503,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_76
@@ -1593,7 +1513,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_77
@@ -1603,7 +1523,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_78
@@ -1613,7 +1533,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_79
@@ -1623,7 +1543,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_80
@@ -1633,7 +1553,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_81
@@ -1643,7 +1563,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_82
@@ -1653,7 +1573,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_83
@@ -1663,7 +1583,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_84
@@ -1673,7 +1593,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_85
@@ -1683,7 +1603,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_86
@@ -1693,7 +1613,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_87
@@ -1703,7 +1623,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_88
@@ -1713,7 +1633,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_89
@@ -1723,7 +1643,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_90
@@ -1733,7 +1653,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_91
@@ -1743,7 +1663,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_92
@@ -1753,7 +1673,7 @@ TextureImporter:
         y: 464
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_93
@@ -1763,7 +1683,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_94
@@ -1773,7 +1693,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_95
@@ -1783,7 +1703,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_96
@@ -1793,7 +1713,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_97
@@ -1803,7 +1723,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_98
@@ -1813,7 +1733,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_99
@@ -1823,7 +1743,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_100
@@ -1833,7 +1753,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_101
@@ -1843,7 +1763,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_102
@@ -1853,7 +1773,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_103
@@ -1863,7 +1783,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_104
@@ -1873,7 +1793,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_105
@@ -1883,7 +1803,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_106
@@ -1893,7 +1813,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_107
@@ -1903,7 +1823,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_108
@@ -1913,7 +1833,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_109
@@ -1923,7 +1843,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_110
@@ -1933,7 +1853,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_111
@@ -1943,7 +1863,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_112
@@ -1953,7 +1873,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_113
@@ -1963,7 +1883,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_114
@@ -1973,7 +1893,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_115
@@ -1983,7 +1903,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_116
@@ -1993,7 +1913,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_117
@@ -2003,7 +1923,7 @@ TextureImporter:
         y: 448
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_118
@@ -2013,7 +1933,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_119
@@ -2023,7 +1943,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_120
@@ -2033,7 +1953,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_121
@@ -2043,7 +1963,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_122
@@ -2053,7 +1973,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_123
@@ -2063,7 +1983,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_124
@@ -2073,7 +1993,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_125
@@ -2083,7 +2003,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_126
@@ -2093,7 +2013,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_127
@@ -2103,7 +2023,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_128
@@ -2113,7 +2033,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_129
@@ -2123,7 +2043,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_130
@@ -2133,7 +2053,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_131
@@ -2143,7 +2063,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_132
@@ -2153,7 +2073,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_133
@@ -2163,7 +2083,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_134
@@ -2173,7 +2093,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_135
@@ -2183,7 +2103,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_136
@@ -2193,7 +2113,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_137
@@ -2203,7 +2123,7 @@ TextureImporter:
         y: 432
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_138
@@ -2213,7 +2133,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_139
@@ -2223,7 +2143,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_140
@@ -2233,7 +2153,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_141
@@ -2243,7 +2163,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_142
@@ -2253,7 +2173,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_143
@@ -2263,7 +2183,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_144
@@ -2273,7 +2193,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_145
@@ -2283,7 +2203,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_146
@@ -2293,7 +2213,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_147
@@ -2303,7 +2223,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_148
@@ -2313,7 +2233,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_149
@@ -2323,7 +2243,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_150
@@ -2333,7 +2253,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_151
@@ -2343,7 +2263,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_152
@@ -2353,7 +2273,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_153
@@ -2363,7 +2283,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_154
@@ -2373,7 +2293,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_155
@@ -2383,7 +2303,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_156
@@ -2393,7 +2313,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_157
@@ -2403,7 +2323,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_158
@@ -2413,7 +2333,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_159
@@ -2423,7 +2343,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_160
@@ -2433,7 +2353,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_161
@@ -2443,7 +2363,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_162
@@ -2453,7 +2373,7 @@ TextureImporter:
         y: 416
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_163
@@ -2463,7 +2383,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_164
@@ -2473,7 +2393,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_165
@@ -2483,7 +2403,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_166
@@ -2493,7 +2413,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_167
@@ -2503,7 +2423,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_168
@@ -2513,7 +2433,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_169
@@ -2523,7 +2443,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_170
@@ -2533,7 +2453,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_171
@@ -2543,7 +2463,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_172
@@ -2553,7 +2473,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_173
@@ -2563,7 +2483,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_174
@@ -2573,7 +2493,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_175
@@ -2583,7 +2503,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_176
@@ -2593,7 +2513,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_177
@@ -2603,7 +2523,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_178
@@ -2613,7 +2533,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_179
@@ -2623,7 +2543,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_180
@@ -2633,7 +2553,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_181
@@ -2643,7 +2563,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_182
@@ -2653,7 +2573,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_183
@@ -2663,7 +2583,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_184
@@ -2673,7 +2593,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_185
@@ -2683,7 +2603,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_186
@@ -2693,7 +2613,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_187
@@ -2703,7 +2623,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_188
@@ -2713,7 +2633,7 @@ TextureImporter:
         y: 400
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_189
@@ -2723,7 +2643,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_190
@@ -2733,7 +2653,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_191
@@ -2743,7 +2663,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_192
@@ -2753,7 +2673,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_193
@@ -2763,7 +2683,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_194
@@ -2773,7 +2693,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_195
@@ -2783,7 +2703,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_196
@@ -2793,7 +2713,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_197
@@ -2803,7 +2723,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_198
@@ -2813,7 +2733,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_199
@@ -2823,7 +2743,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_200
@@ -2833,7 +2753,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_201
@@ -2843,7 +2763,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_202
@@ -2853,7 +2773,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_203
@@ -2863,7 +2783,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_204
@@ -2873,7 +2793,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_205
@@ -2883,7 +2803,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_206
@@ -2893,7 +2813,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_207
@@ -2903,7 +2823,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_208
@@ -2913,7 +2833,7 @@ TextureImporter:
         y: 384
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_209
@@ -2923,7 +2843,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_210
@@ -2933,7 +2853,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_211
@@ -2943,7 +2863,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_212
@@ -2953,7 +2873,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_213
@@ -2963,7 +2883,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_214
@@ -2973,7 +2893,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_215
@@ -2983,7 +2903,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_216
@@ -2993,7 +2913,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_217
@@ -3003,7 +2923,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_218
@@ -3013,7 +2933,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_219
@@ -3023,7 +2943,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_220
@@ -3033,7 +2953,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_221
@@ -3043,7 +2963,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_222
@@ -3053,7 +2973,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_223
@@ -3063,7 +2983,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_224
@@ -3073,7 +2993,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_225
@@ -3083,7 +3003,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_226
@@ -3093,7 +3013,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_227
@@ -3103,7 +3023,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_228
@@ -3113,7 +3033,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_229
@@ -3123,7 +3043,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_230
@@ -3133,7 +3053,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_231
@@ -3143,7 +3063,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_232
@@ -3153,7 +3073,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_233
@@ -3163,7 +3083,7 @@ TextureImporter:
         y: 368
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_234
@@ -3173,7 +3093,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_235
@@ -3183,7 +3103,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_236
@@ -3193,7 +3113,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_237
@@ -3203,7 +3123,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_238
@@ -3213,7 +3133,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_239
@@ -3223,7 +3143,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_240
@@ -3233,7 +3153,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_241
@@ -3243,7 +3163,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_242
@@ -3253,7 +3173,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_243
@@ -3263,7 +3183,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_244
@@ -3273,7 +3193,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_245
@@ -3283,7 +3203,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_246
@@ -3293,7 +3213,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_247
@@ -3303,7 +3223,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_248
@@ -3313,7 +3233,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_249
@@ -3323,7 +3243,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_250
@@ -3333,7 +3253,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_251
@@ -3343,7 +3263,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_252
@@ -3353,7 +3273,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_253
@@ -3363,7 +3283,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_254
@@ -3373,7 +3293,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_255
@@ -3383,7 +3303,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_256
@@ -3393,7 +3313,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_257
@@ -3403,7 +3323,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_258
@@ -3413,7 +3333,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_259
@@ -3423,7 +3343,7 @@ TextureImporter:
         y: 352
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_260
@@ -3433,7 +3353,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_261
@@ -3443,7 +3363,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_262
@@ -3453,7 +3373,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_263
@@ -3463,7 +3383,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_264
@@ -3473,7 +3393,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_265
@@ -3483,7 +3403,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_266
@@ -3493,7 +3413,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_267
@@ -3503,7 +3423,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_268
@@ -3513,7 +3433,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_269
@@ -3523,7 +3443,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_270
@@ -3533,7 +3453,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_271
@@ -3543,7 +3463,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_272
@@ -3553,7 +3473,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_273
@@ -3563,7 +3483,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_274
@@ -3573,7 +3493,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_275
@@ -3583,7 +3503,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_276
@@ -3593,7 +3513,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_277
@@ -3603,7 +3523,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_278
@@ -3613,7 +3533,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_279
@@ -3623,7 +3543,7 @@ TextureImporter:
         y: 336
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_280
@@ -3633,7 +3553,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_281
@@ -3643,7 +3563,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_282
@@ -3653,7 +3573,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_283
@@ -3663,7 +3583,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_284
@@ -3673,7 +3593,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_285
@@ -3683,7 +3603,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_286
@@ -3693,7 +3613,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_287
@@ -3703,7 +3623,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_288
@@ -3713,7 +3633,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_289
@@ -3723,7 +3643,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_290
@@ -3733,7 +3653,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_291
@@ -3743,7 +3663,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_292
@@ -3753,7 +3673,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_293
@@ -3763,7 +3683,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_294
@@ -3773,7 +3693,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_295
@@ -3783,7 +3703,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_296
@@ -3793,7 +3713,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_297
@@ -3803,7 +3723,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_298
@@ -3813,7 +3733,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_299
@@ -3823,7 +3743,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_300
@@ -3833,7 +3753,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_301
@@ -3843,7 +3763,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_302
@@ -3853,7 +3773,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_303
@@ -3863,7 +3783,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_304
@@ -3873,7 +3793,7 @@ TextureImporter:
         y: 320
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_305
@@ -3883,7 +3803,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_306
@@ -3893,7 +3813,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_307
@@ -3903,7 +3823,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_308
@@ -3913,7 +3833,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_309
@@ -3923,7 +3843,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_310
@@ -3933,7 +3853,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_311
@@ -3943,7 +3863,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_312
@@ -3953,7 +3873,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_313
@@ -3963,7 +3883,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_314
@@ -3973,7 +3893,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_315
@@ -3983,7 +3903,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_316
@@ -3993,7 +3913,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_317
@@ -4003,7 +3923,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_318
@@ -4013,7 +3933,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_319
@@ -4023,7 +3943,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_320
@@ -4033,7 +3953,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_321
@@ -4043,7 +3963,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_322
@@ -4053,7 +3973,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_323
@@ -4063,7 +3983,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_324
@@ -4073,7 +3993,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_325
@@ -4083,7 +4003,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_326
@@ -4093,7 +4013,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_327
@@ -4103,7 +4023,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_328
@@ -4113,7 +4033,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_329
@@ -4123,7 +4043,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_330
@@ -4133,7 +4053,7 @@ TextureImporter:
         y: 304
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_331
@@ -4143,7 +4063,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_332
@@ -4153,7 +4073,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_333
@@ -4163,7 +4083,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_334
@@ -4173,7 +4093,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_335
@@ -4183,7 +4103,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_336
@@ -4193,7 +4113,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_337
@@ -4203,7 +4123,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_338
@@ -4213,7 +4133,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_339
@@ -4223,7 +4143,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_340
@@ -4233,7 +4153,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_341
@@ -4243,7 +4163,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_342
@@ -4253,7 +4173,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_343
@@ -4263,7 +4183,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_344
@@ -4273,7 +4193,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_345
@@ -4283,7 +4203,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_346
@@ -4293,7 +4213,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_347
@@ -4303,7 +4223,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_348
@@ -4313,7 +4233,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_349
@@ -4323,7 +4243,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_350
@@ -4333,7 +4253,7 @@ TextureImporter:
         y: 288
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_351
@@ -4343,7 +4263,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_352
@@ -4353,7 +4273,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_353
@@ -4363,7 +4283,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_354
@@ -4373,7 +4293,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_355
@@ -4383,7 +4303,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_356
@@ -4393,7 +4313,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_357
@@ -4403,7 +4323,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_358
@@ -4413,7 +4333,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_359
@@ -4423,7 +4343,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_360
@@ -4433,7 +4353,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_361
@@ -4443,7 +4363,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_362
@@ -4453,7 +4373,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_363
@@ -4463,7 +4383,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_364
@@ -4473,7 +4393,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_365
@@ -4483,7 +4403,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_366
@@ -4493,7 +4413,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_367
@@ -4503,7 +4423,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_368
@@ -4513,7 +4433,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_369
@@ -4523,7 +4443,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_370
@@ -4533,7 +4453,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_371
@@ -4543,7 +4463,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_372
@@ -4553,7 +4473,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_373
@@ -4563,7 +4483,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_374
@@ -4573,7 +4493,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_375
@@ -4583,7 +4503,7 @@ TextureImporter:
         y: 272
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_376
@@ -4593,7 +4513,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_377
@@ -4603,7 +4523,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_378
@@ -4613,7 +4533,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_379
@@ -4623,7 +4543,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_380
@@ -4633,7 +4553,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_381
@@ -4643,7 +4563,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_382
@@ -4653,7 +4573,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_383
@@ -4663,7 +4583,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_384
@@ -4673,7 +4593,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_385
@@ -4683,7 +4603,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_386
@@ -4693,7 +4613,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_387
@@ -4703,7 +4623,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_388
@@ -4713,7 +4633,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_389
@@ -4723,7 +4643,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_390
@@ -4733,7 +4653,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_391
@@ -4743,7 +4663,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_392
@@ -4753,7 +4673,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_393
@@ -4763,7 +4683,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_394
@@ -4773,7 +4693,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_395
@@ -4783,7 +4703,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_396
@@ -4793,7 +4713,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_397
@@ -4803,7 +4723,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_398
@@ -4813,7 +4733,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_399
@@ -4823,7 +4743,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_400
@@ -4833,7 +4753,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_401
@@ -4843,7 +4763,7 @@ TextureImporter:
         y: 256
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_402
@@ -4853,7 +4773,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_403
@@ -4863,7 +4783,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_404
@@ -4873,7 +4793,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_405
@@ -4883,7 +4803,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_406
@@ -4893,7 +4813,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_407
@@ -4903,7 +4823,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_408
@@ -4913,7 +4833,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_409
@@ -4923,7 +4843,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_410
@@ -4933,7 +4853,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_411
@@ -4943,7 +4863,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_412
@@ -4953,7 +4873,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_413
@@ -4963,7 +4883,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_414
@@ -4973,7 +4893,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_415
@@ -4983,7 +4903,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_416
@@ -4993,7 +4913,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_417
@@ -5003,7 +4923,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_418
@@ -5013,7 +4933,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_419
@@ -5023,7 +4943,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_420
@@ -5033,7 +4953,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_421
@@ -5043,7 +4963,7 @@ TextureImporter:
         y: 240
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_422
@@ -5053,7 +4973,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_423
@@ -5063,7 +4983,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_424
@@ -5073,7 +4993,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_425
@@ -5083,7 +5003,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_426
@@ -5093,7 +5013,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_427
@@ -5103,7 +5023,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_428
@@ -5113,7 +5033,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_429
@@ -5123,7 +5043,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_430
@@ -5133,7 +5053,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_431
@@ -5143,7 +5063,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_432
@@ -5153,7 +5073,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_433
@@ -5163,7 +5083,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_434
@@ -5173,7 +5093,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_435
@@ -5183,7 +5103,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_436
@@ -5193,7 +5113,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_437
@@ -5203,7 +5123,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_438
@@ -5213,7 +5133,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_439
@@ -5223,7 +5143,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_440
@@ -5233,7 +5153,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_441
@@ -5243,7 +5163,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_442
@@ -5253,7 +5173,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_443
@@ -5263,7 +5183,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_444
@@ -5273,7 +5193,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_445
@@ -5283,7 +5203,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_446
@@ -5293,7 +5213,7 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_447
@@ -5303,7 +5223,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_448
@@ -5313,7 +5233,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_449
@@ -5323,7 +5243,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_450
@@ -5333,7 +5253,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_451
@@ -5343,7 +5263,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_452
@@ -5353,7 +5273,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_453
@@ -5363,7 +5283,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_454
@@ -5373,7 +5293,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_455
@@ -5383,7 +5303,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_456
@@ -5393,7 +5313,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_457
@@ -5403,7 +5323,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_458
@@ -5413,7 +5333,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_459
@@ -5423,7 +5343,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_460
@@ -5433,7 +5353,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_461
@@ -5443,7 +5363,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_462
@@ -5453,7 +5373,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_463
@@ -5463,7 +5383,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_464
@@ -5473,7 +5393,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_465
@@ -5483,7 +5403,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_466
@@ -5493,7 +5413,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_467
@@ -5503,7 +5423,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_468
@@ -5513,7 +5433,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_469
@@ -5523,7 +5443,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_470
@@ -5533,7 +5453,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_471
@@ -5543,7 +5463,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_472
@@ -5553,7 +5473,7 @@ TextureImporter:
         y: 208
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_473
@@ -5563,7 +5483,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_474
@@ -5573,7 +5493,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_475
@@ -5583,7 +5503,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_476
@@ -5593,7 +5513,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_477
@@ -5603,7 +5523,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_478
@@ -5613,7 +5533,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_479
@@ -5623,7 +5543,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_480
@@ -5633,7 +5553,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_481
@@ -5643,7 +5563,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_482
@@ -5653,7 +5573,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_483
@@ -5663,7 +5583,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_484
@@ -5673,7 +5593,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_485
@@ -5683,7 +5603,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_486
@@ -5693,7 +5613,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_487
@@ -5703,7 +5623,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_488
@@ -5713,7 +5633,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_489
@@ -5723,7 +5643,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_490
@@ -5733,7 +5653,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_491
@@ -5743,7 +5663,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_492
@@ -5753,7 +5673,7 @@ TextureImporter:
         y: 192
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_493
@@ -5763,7 +5683,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_494
@@ -5773,7 +5693,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_495
@@ -5783,7 +5703,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_496
@@ -5793,7 +5713,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_497
@@ -5803,7 +5723,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_498
@@ -5813,7 +5733,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_499
@@ -5823,7 +5743,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_500
@@ -5833,7 +5753,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_501
@@ -5843,7 +5763,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_502
@@ -5853,7 +5773,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_503
@@ -5863,7 +5783,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_504
@@ -5873,7 +5793,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_505
@@ -5883,7 +5803,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_506
@@ -5893,7 +5813,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_507
@@ -5903,7 +5823,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_508
@@ -5913,7 +5833,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_509
@@ -5923,7 +5843,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_510
@@ -5933,7 +5853,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_511
@@ -5943,7 +5863,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_512
@@ -5953,7 +5873,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_513
@@ -5963,7 +5883,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_514
@@ -5973,7 +5893,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_515
@@ -5983,7 +5903,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_516
@@ -5993,7 +5913,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_517
@@ -6003,7 +5923,7 @@ TextureImporter:
         y: 176
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_518
@@ -6013,7 +5933,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_519
@@ -6023,7 +5943,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_520
@@ -6033,7 +5953,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_521
@@ -6043,7 +5963,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_522
@@ -6053,7 +5973,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_523
@@ -6063,7 +5983,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_524
@@ -6073,7 +5993,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_525
@@ -6083,7 +6003,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_526
@@ -6093,7 +6013,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_527
@@ -6103,7 +6023,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_528
@@ -6113,7 +6033,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_529
@@ -6123,7 +6043,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_530
@@ -6133,7 +6053,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_531
@@ -6143,7 +6063,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_532
@@ -6153,7 +6073,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_533
@@ -6163,7 +6083,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_534
@@ -6173,7 +6093,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_535
@@ -6183,7 +6103,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_536
@@ -6193,7 +6113,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_537
@@ -6203,7 +6123,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_538
@@ -6213,7 +6133,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_539
@@ -6223,7 +6143,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_540
@@ -6233,7 +6153,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_541
@@ -6243,7 +6163,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_542
@@ -6253,7 +6173,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_543
@@ -6263,7 +6183,7 @@ TextureImporter:
         y: 160
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_544
@@ -6273,7 +6193,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_545
@@ -6283,7 +6203,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_546
@@ -6293,7 +6213,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_547
@@ -6303,7 +6223,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_548
@@ -6313,7 +6233,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_549
@@ -6323,7 +6243,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_550
@@ -6333,7 +6253,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_551
@@ -6343,7 +6263,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_552
@@ -6353,7 +6273,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_553
@@ -6363,7 +6283,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_554
@@ -6373,7 +6293,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_555
@@ -6383,7 +6303,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_556
@@ -6393,7 +6313,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_557
@@ -6403,7 +6323,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_558
@@ -6413,7 +6333,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_559
@@ -6423,7 +6343,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_560
@@ -6433,7 +6353,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_561
@@ -6443,7 +6363,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_562
@@ -6453,7 +6373,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_563
@@ -6463,7 +6383,7 @@ TextureImporter:
         y: 144
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_564
@@ -6473,7 +6393,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_565
@@ -6483,7 +6403,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_566
@@ -6493,7 +6413,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_567
@@ -6503,7 +6423,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_568
@@ -6513,7 +6433,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_569
@@ -6523,7 +6443,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_570
@@ -6533,7 +6453,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_571
@@ -6543,7 +6463,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_572
@@ -6553,7 +6473,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_573
@@ -6563,7 +6483,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_574
@@ -6573,7 +6493,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_575
@@ -6583,7 +6503,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_576
@@ -6593,7 +6513,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_577
@@ -6603,7 +6523,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_578
@@ -6613,7 +6533,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_579
@@ -6623,7 +6543,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_580
@@ -6633,7 +6553,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_581
@@ -6643,7 +6563,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_582
@@ -6653,7 +6573,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_583
@@ -6663,7 +6583,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_584
@@ -6673,7 +6593,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_585
@@ -6683,7 +6603,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_586
@@ -6693,7 +6613,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_587
@@ -6703,7 +6623,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_588
@@ -6713,7 +6633,7 @@ TextureImporter:
         y: 128
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_589
@@ -6723,7 +6643,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_590
@@ -6733,7 +6653,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_591
@@ -6743,7 +6663,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_592
@@ -6753,7 +6673,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_593
@@ -6763,7 +6683,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_594
@@ -6773,7 +6693,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_595
@@ -6783,7 +6703,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_596
@@ -6793,7 +6713,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_597
@@ -6803,7 +6723,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_598
@@ -6813,7 +6733,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_599
@@ -6823,7 +6743,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_600
@@ -6833,7 +6753,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_601
@@ -6843,7 +6763,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_602
@@ -6853,7 +6773,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_603
@@ -6863,7 +6783,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_604
@@ -6873,7 +6793,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_605
@@ -6883,7 +6803,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_606
@@ -6893,7 +6813,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_607
@@ -6903,7 +6823,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_608
@@ -6913,7 +6833,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_609
@@ -6923,7 +6843,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_610
@@ -6933,7 +6853,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_611
@@ -6943,7 +6863,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_612
@@ -6953,7 +6873,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_613
@@ -6963,7 +6883,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_614
@@ -6973,7 +6893,7 @@ TextureImporter:
         y: 112
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_615
@@ -6983,7 +6903,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_616
@@ -6993,7 +6913,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_617
@@ -7003,7 +6923,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_618
@@ -7013,7 +6933,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_619
@@ -7023,7 +6943,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_620
@@ -7033,7 +6953,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_621
@@ -7043,7 +6963,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_622
@@ -7053,7 +6973,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_623
@@ -7063,7 +6983,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_624
@@ -7073,7 +6993,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_625
@@ -7083,7 +7003,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_626
@@ -7093,7 +7013,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_627
@@ -7103,7 +7023,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_628
@@ -7113,7 +7033,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_629
@@ -7123,7 +7043,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_630
@@ -7133,7 +7053,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_631
@@ -7143,7 +7063,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_632
@@ -7153,7 +7073,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_633
@@ -7163,7 +7083,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_634
@@ -7173,7 +7093,7 @@ TextureImporter:
         y: 96
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_635
@@ -7183,7 +7103,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_636
@@ -7193,7 +7113,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_637
@@ -7203,7 +7123,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_638
@@ -7213,7 +7133,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_639
@@ -7223,7 +7143,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_640
@@ -7233,7 +7153,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_641
@@ -7243,7 +7163,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_642
@@ -7253,7 +7173,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_643
@@ -7263,7 +7183,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_644
@@ -7273,7 +7193,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_645
@@ -7283,7 +7203,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_646
@@ -7293,7 +7213,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_647
@@ -7303,7 +7223,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_648
@@ -7313,7 +7233,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_649
@@ -7323,7 +7243,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_650
@@ -7333,7 +7253,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_651
@@ -7343,7 +7263,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_652
@@ -7353,7 +7273,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_653
@@ -7363,7 +7283,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_654
@@ -7373,7 +7293,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_655
@@ -7383,7 +7303,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_656
@@ -7393,7 +7313,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_657
@@ -7403,7 +7323,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_658
@@ -7413,7 +7333,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_659
@@ -7423,7 +7343,7 @@ TextureImporter:
         y: 80
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_660
@@ -7433,7 +7353,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_661
@@ -7443,7 +7363,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_662
@@ -7453,7 +7373,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_663
@@ -7463,7 +7383,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_664
@@ -7473,7 +7393,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_665
@@ -7483,7 +7403,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_666
@@ -7493,7 +7413,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_667
@@ -7503,7 +7423,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_668
@@ -7513,7 +7433,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_669
@@ -7523,7 +7443,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_670
@@ -7533,7 +7453,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_671
@@ -7543,7 +7463,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_672
@@ -7553,7 +7473,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_673
@@ -7563,7 +7483,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_674
@@ -7573,7 +7493,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_675
@@ -7583,7 +7503,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_676
@@ -7593,7 +7513,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_677
@@ -7603,7 +7523,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_678
@@ -7613,7 +7533,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_679
@@ -7623,7 +7543,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_680
@@ -7633,7 +7553,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_681
@@ -7643,7 +7563,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_682
@@ -7653,7 +7573,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_683
@@ -7663,7 +7583,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_684
@@ -7673,7 +7593,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_685
@@ -7683,7 +7603,7 @@ TextureImporter:
         y: 64
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_686
@@ -7693,7 +7613,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_687
@@ -7703,7 +7623,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_688
@@ -7713,7 +7633,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_689
@@ -7723,7 +7643,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_690
@@ -7733,7 +7653,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_691
@@ -7743,7 +7663,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_692
@@ -7753,7 +7673,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_693
@@ -7763,7 +7683,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_694
@@ -7773,7 +7693,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_695
@@ -7783,7 +7703,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_696
@@ -7793,7 +7713,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_697
@@ -7803,7 +7723,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_698
@@ -7813,7 +7733,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_699
@@ -7823,7 +7743,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_700
@@ -7833,7 +7753,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_701
@@ -7843,7 +7763,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_702
@@ -7853,7 +7773,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_703
@@ -7863,7 +7783,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_704
@@ -7873,7 +7793,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_705
@@ -7883,7 +7803,7 @@ TextureImporter:
         y: 48
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_706
@@ -7893,7 +7813,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_707
@@ -7903,7 +7823,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_708
@@ -7913,7 +7833,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_709
@@ -7923,7 +7843,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_710
@@ -7933,7 +7853,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_711
@@ -7943,7 +7863,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_712
@@ -7953,7 +7873,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_713
@@ -7963,7 +7883,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_714
@@ -7973,7 +7893,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_715
@@ -7983,7 +7903,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_716
@@ -7993,7 +7913,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_717
@@ -8003,7 +7923,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_718
@@ -8013,7 +7933,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_719
@@ -8023,7 +7943,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_720
@@ -8033,7 +7953,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_721
@@ -8043,7 +7963,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_722
@@ -8053,7 +7973,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_723
@@ -8063,7 +7983,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_724
@@ -8073,7 +7993,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_725
@@ -8083,7 +8003,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_726
@@ -8093,7 +8013,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_727
@@ -8103,7 +8023,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_728
@@ -8113,7 +8033,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_729
@@ -8123,7 +8043,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_730
@@ -8133,7 +8053,7 @@ TextureImporter:
         y: 32
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_731
@@ -8143,7 +8063,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_732
@@ -8153,7 +8073,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_733
@@ -8163,7 +8083,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_734
@@ -8173,7 +8093,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_735
@@ -8183,7 +8103,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_736
@@ -8193,7 +8113,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_737
@@ -8203,7 +8123,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_738
@@ -8213,7 +8133,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_739
@@ -8223,7 +8143,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_740
@@ -8233,7 +8153,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_741
@@ -8243,7 +8163,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_742
@@ -8253,7 +8173,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_743
@@ -8263,7 +8183,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_744
@@ -8273,7 +8193,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_745
@@ -8283,7 +8203,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_746
@@ -8293,7 +8213,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_747
@@ -8303,7 +8223,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_748
@@ -8313,7 +8233,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_749
@@ -8323,7 +8243,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_750
@@ -8333,7 +8253,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_751
@@ -8343,7 +8263,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_752
@@ -8353,7 +8273,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_753
@@ -8363,7 +8283,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_754
@@ -8373,7 +8293,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_755
@@ -8383,7 +8303,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_756
@@ -8393,7 +8313,7 @@ TextureImporter:
         y: 16
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_757
@@ -8403,7 +8323,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_758
@@ -8413,7 +8333,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_759
@@ -8423,7 +8343,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_760
@@ -8433,7 +8353,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_761
@@ -8443,7 +8363,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_762
@@ -8453,7 +8373,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_763
@@ -8463,7 +8383,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_764
@@ -8473,7 +8393,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_765
@@ -8483,7 +8403,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_766
@@ -8493,7 +8413,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_767
@@ -8503,7 +8423,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_768
@@ -8513,7 +8433,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_769
@@ -8523,7 +8443,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_770
@@ -8533,7 +8453,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_771
@@ -8543,7 +8463,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_772
@@ -8553,7 +8473,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_773
@@ -8563,7 +8483,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_774
@@ -8573,7 +8493,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_775
@@ -8583,7 +8503,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: CharacterSpriteSheet_776
@@ -8593,7 +8513,7 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
-      alignment: 0
+      alignment: 7
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 

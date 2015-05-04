@@ -51,7 +51,7 @@ public class GM : MonoBehaviour
 
     public enum MarioStatus { Big, Small };
 
-    private MarioStatus characterStatus;
+    private MarioStatus characterStatus = MarioStatus.Small;
     public MarioStatus CharacterStatus
     {
         get { return this.characterStatus; }
@@ -76,7 +76,7 @@ public class GM : MonoBehaviour
     public bool HasMushroom
     {
         get { return this.hasMushroom; }
-        set { this.hasMushroom = value; }
+		set { this.hasMushroom = value; charManager.PowerUpgrade (); print ("Has mushroom"); }
     }
 #endregion
 
@@ -85,10 +85,19 @@ public class GM : MonoBehaviour
 	public enum MarioPowerupStatus{Small, Big, Fireflower, Star};
 	public MarioPowerupStatus marioPowerupStatus;
 
-	public bool playerIsAlive = true;
+	public GameObject player;
+	private bool playerIsAlive = true;
+	public bool PlayerIsAlive 
+	{ 
+		get {return playerIsAlive;} 
+		set {playerIsAlive = value; charMove.canMove = value;}
+	}
+	public bool freezeEntites = false;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
 	private const int totalTime = 400; // Total time for a level
+	private CharacterMovement charMove;
+	private CharacterManager charManager;
 
     void Awake()
     {
@@ -96,6 +105,13 @@ public class GM : MonoBehaviour
             instance = this;
         else if (instance != this)
             Destroy(gameObject);
+
+		if (!player)
+		{
+			player = GameObject.FindGameObjectWithTag (Tags.player);
+		}
+		charManager = player.GetComponent<CharacterManager>();
+		charMove = player.GetComponent<CharacterMovement>();
 
 		ResetCountdown ();
 

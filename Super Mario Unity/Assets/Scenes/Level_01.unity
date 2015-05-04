@@ -130,22 +130,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 14
       objectReference: {fileID: 0}
-    - target: {fileID: 138016, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
-      propertyPath: m_TagString
-      value: Powerup
-      objectReference: {fileID: 0}
-    - target: {fileID: 11412580, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
-      propertyPath: spriteTransform
-      value: 
-      objectReference: {fileID: 2012566630}
-    - target: {fileID: 11412580, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
-      propertyPath: movementSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 138016, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
   m_IsPrefabParent: 0
@@ -614,7 +598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   marioPowerupStatus: 0
-  playerIsAlive: 1
+  player: {fileID: 0}
+  freezeEntites: 0
   camWorldTopRight: {x: 0, y: 0, z: 0}
   camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!4 &1397479442
@@ -779,7 +764,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: -.930000007}
   serializedVersion: 2
-  m_Size: {x: 34, y: .100000001}
+  m_Size: {x: 200, y: .100000001}
 --- !u!4 &1456264291
 Transform:
   m_ObjectHideFlags: 0
@@ -1051,6 +1036,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300068, guid: d906f3629db364a3dafe4ef7f1648a10,
         type: 3}
+    - target: {fileID: 189088, guid: ffdcd0f2d6463484590f0bbdcc351cde, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ffdcd0f2d6463484590f0bbdcc351cde, type: 2}
   m_IsPrefabParent: 0
@@ -1109,7 +1098,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: .419607878, g: .556862772, b: 1, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1392,7 +1381,3 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1994229965}
---- !u!4 &2012566630 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 442680, guid: d7e94575ce5d5447e89ca66638743833, type: 2}
-  m_PrefabInternal: {fileID: 181872481}

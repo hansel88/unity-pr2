@@ -9,6 +9,7 @@ public class CharacterMovement : MonoBehaviour {
 	public LayerMask groundedLayers;
 	public Transform groundedPosition;
     public bool grounded = true;
+	public bool canMove = true;
 	private Animator anim;
 	private Rigidbody2D rBody;
 	public Transform[] groundedChecks;
@@ -26,7 +27,7 @@ public class CharacterMovement : MonoBehaviour {
 		Vector2 tr = groundedPosition.position + new Vector3(0.007f, 0.02f);
 		grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
 
-		if (GM.instance.playerIsAlive)
+		if (canMove)
 		{
 	        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
 			horizontalInput = Input.GetAxisRaw ("Horizontal");
@@ -61,7 +62,14 @@ public class CharacterMovement : MonoBehaviour {
 		{
 			vel -= downForce;
 		}
-		rBody.velocity = new Vector2(horizontalInput * speed, vel);
+		if (GM.instance.freezeEntites)
+		{
+			rBody.velocity = Vector2.zero;
+		}
+		else
+		{
+			rBody.velocity = new Vector2(horizontalInput * speed * Time.deltaTime, vel);
+		}
 	}
 
 	void FixedUpdate()

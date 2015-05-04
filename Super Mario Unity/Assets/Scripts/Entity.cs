@@ -8,14 +8,17 @@ public class Entity : CollisionEntity
 	public int scoreReward = 100;
 	public float movementSpeed = 3f;
 	public int direction = 1; // 1 = right, -1 = left, 0 = no movement
+	public bool rotateWithDirection = true;
 	public Transform spriteTransform; // The sprite to rotate when turning
 	public bool canMove = true;
 	private bool isChangingDirection = false;
 	[HideInInspector]public Animator anim;
+	private Rigidbody2D rbody;
 
 	public override void Awake()
 	{
 		base.Awake ();
+		rbody = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 	}
 
@@ -32,9 +35,15 @@ public class Entity : CollisionEntity
 	public void HorizontalMovement()
 	{
 		if (!canMove) return;
-
-		// Moves the object in a horizontal direction
-		transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
+		if (GM.instance.freezeEntites)
+		{
+			rbody.velocity = Vector2.zero;
+		}
+		else
+		{
+			// Moves the object in a horizontal direction
+			transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -85,9 +94,12 @@ public class Entity : CollisionEntity
 		direction *= -1;
 
 		// Rotate spritetransform
-		Vector3 scale = spriteTransform.localScale;
-		scale.x *= -1;
-		spriteTransform.localScale = scale;
+		if (rotateWithDirection)
+		{
+			Vector3 scale = spriteTransform.localScale;
+			scale.x *= -1;
+			spriteTransform.localScale = scale;
+		}
 
 		isChangingDirection = false;
 	}

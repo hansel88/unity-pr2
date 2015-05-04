@@ -13,7 +13,7 @@ GameObject:
   - 114: {fileID: 11412580}
   m_Layer: 0
   m_Name: PowerupMushroom
-  m_TagString: Untagged
+  m_TagString: Powerup
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,9 +99,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 100
-  movementSpeed: 3
+  movementSpeed: 2
   direction: 1
-  spriteTransform: {fileID: 0}
+  rotateWithDirection: 0
+  spriteTransform: {fileID: 442680}
+  canMove: 1
+  anim: {fileID: 0}
   hasBeenJumped: 0
 --- !u!212 &21215624
 SpriteRenderer:
