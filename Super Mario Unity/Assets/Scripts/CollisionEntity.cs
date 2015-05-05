@@ -54,7 +54,6 @@ public class CollisionEntity : MonoBehaviour
 	{
 		if (!other.collider.CompareTag (Tags.ground))
 		{
-			print ("hey");
 			if (other.collider.CompareTag (Tags.player))
 			{
 				// TODO Send hitmsg to player
@@ -68,9 +67,9 @@ public class CollisionEntity : MonoBehaviour
 					//print ("Hit " + other.gameObject.name + " toprect");
 					if (chrMove && !other.collider.GetComponent<Entity>().hasBeenJumped)
 					{
-						chrMove.Jump ();
+						other.collider.GetComponent<Entity>().hasBeenJumped = true;
+						chrMove.Jump (true);
 					}
-					print ("jump hit");
 					other.gameObject.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
 				}
 				else
@@ -82,7 +81,6 @@ public class CollisionEntity : MonoBehaviour
 			else if (other.collider.CompareTag (Tags.powerup))
 			{
 				// TODO Send pickupmsg to powerup
-				print ("Hit powerup!");
 				other.gameObject.SendMessage ("OnPickup", SendMessageOptions.DontRequireReceiver);
 			}
 			else if (other.collider.CompareTag (Tags.block) && JumpRectContains (other.contacts[0].point))
@@ -95,6 +93,7 @@ public class CollisionEntity : MonoBehaviour
 
 	void SetJumpRect()
 	{
+		// TODO Replace with a collider
 		// Jump rect 
 		Vector2 colliderSize = new Vector3 (boxCollider.size.x, jumpRectHeight);
 		Vector3 worldPos = transform.TransformPoint (boxCollider.offset);

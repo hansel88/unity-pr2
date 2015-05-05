@@ -7,15 +7,6 @@ public class PowerupFireflower : Powerup
 	{
 		base.OnPickup ();
 
-		// Check if the player already has fireflower
-		if (GM.instance.HasFireFly)
-		{
-			// Give the player some points
-			RewardScore ();
-		}
-		else
-		{
-			GM.instance.HasFireFly = true;
-		}
+		GM.instance.charManager.PowerUpgrade (PlayerState.Fireflower);
 	}
 }

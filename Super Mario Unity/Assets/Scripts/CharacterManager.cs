@@ -3,10 +3,15 @@ using System.Collections;
 
 public class CharacterManager : MonoBehaviour
 {
+	public PlayerState curState;
+	public bool hasStar = false;
+	public bool isInvincible = false;
+
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
 	private BoxCollider2D charCollider;
 	private CharacterMovement charMove;
+	private SpriteRenderer spriteRenderer;
 
 	void Awake()
 	{
@@ -18,23 +23,62 @@ public class CharacterManager : MonoBehaviour
 		charCollider = GetComponent<BoxCollider2D>();
 		charMove = GetComponent<CharacterMovement>();
 		anim = spriteTranform.GetComponent<Animator>();
+		spriteRenderer = spriteTranform.GetComponent<SpriteRenderer>();
 	}
 
 	public void OnEnemyHit()
 	{
-		if (GM.instance.CharacterStatus == GM.MarioStatus.Small)
+		if (isInvincible)
 		{
-			Die ();
+			return;
 		}
-		PowerDowngrade ();
+
+		GM.instance.FreezeEntities ();
+
+		anim.SetBool ("PoweringUp", false);
+		anim.SetInteger ("PlayerState", (int)curState);
+		anim.SetTrigger ("PowerupTrigger");
+		isInvincible = true;
+		switch(curState)
+		{
+		case PlayerState.Small:
+			Die ();
+			break;
+		case PlayerState.Mushroom:
+			curState = PlayerState.Small;
+			// TODO To small
+			break;
+		case PlayerState.Fireflower:
+			curState = PlayerState.Mushroom;
+			// TODO To mushroom
+			break;
+		}
+		SetColliderSize ();
 	}
 
+	public void PowerUpgrade(PlayerState toState)
+	{
+		if ((int)curState >= (int)toState)
+		{
+			// TODO Reward player
+			GM.instance.Score += 1000;
+			GUIManager.instance.PopRewardText (transform.position, "+" + 1000);
+		}
+		else
+		{
+			GM.instance.FreezeEntities ();
+			curState = toState;
+			anim.SetBool ("PoweringUp", true);
+			anim.SetInteger ("PlayerState", (int)curState);
+			anim.SetTrigger ("PowerupTrigger");
+		}
+	}
+	
 	void Die()
 	{
 		charCollider.enabled = false;
 		GM.instance.PlayerIsAlive = false;
 		anim.SetTrigger ("DeathTrigger");
-
 	}
 
 	public void PowerUpgrade()
@@ -65,4 +109,25 @@ public class CharacterManager : MonoBehaviour
 			charCollider.offset = new Vector2(0f, 0.08f);
 		}
 	}
+
+	void SetColliderSize()
+	{
+		if (curState == PlayerState.Small)
+		{
+			charCollider.size = new Vector2(0.16f, 0.16f);
+			charCollider.offset = new Vector2(0f, 0.08f);
+		}
+		else
+		{
+			charCollider.size = new Vector2(0.16f, 0.32f);
+			charCollider.offset = new Vector2(0f, 0.16f);
+		}
+	}
+}
+
+public enum PlayerState
+{
+	Small,
+	Mushroom,
+	Fireflower
 }

@@ -7,15 +7,6 @@ public class PowerupMushroom : Powerup
 	{
 		base.OnPickup ();
 
-		// Check if the player already has mushroom
-		if (GM.instance.HasMushroom)
-		{
-			// Give the player some points
-			RewardScore ();
-		}
-		else
-		{
-			GM.instance.HasMushroom = true;
-		}
+		GM.instance.charManager.PowerUpgrade (PlayerState.Mushroom);
 	}
 }

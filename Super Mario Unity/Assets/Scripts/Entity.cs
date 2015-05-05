@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -14,6 +14,7 @@ public class Entity : CollisionEntity
 	private bool isChangingDirection = false;
 	[HideInInspector]public Animator anim;
 	private Rigidbody2D rbody;
+	public bool isVisibleInCamera = true;
 
 	public override void Awake()
 	{
@@ -34,7 +35,8 @@ public class Entity : CollisionEntity
 
 	public void HorizontalMovement()
 	{
-		if (!GM.instance.freezeEntites && canMove)
+		if (!isVisibleInCamera) return;
+		if (!GM.instance.frozenEntities && canMove)
 		{
 			if (rbody.isKinematic)
 			{
@@ -119,6 +121,7 @@ public class Entity : CollisionEntity
 		RewardScore (scoreReward);
 	}
 
+	// TODO Remove
 	public void JumpedOn()
 	{
 		hasBeenJumped = true;
@@ -127,7 +130,7 @@ public class Entity : CollisionEntity
 	public bool hasBeenJumped = false;
 	IEnumerator ResetJump()
 	{
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForEndOfFrame();
 		hasBeenJumped = false;
 	}
 }

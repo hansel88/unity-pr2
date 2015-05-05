@@ -76,7 +76,7 @@ public class GM : MonoBehaviour
     public bool HasMushroom
     {
         get { return this.hasMushroom; }
-		set { this.hasMushroom = value; charManager.PowerUpgrade (); print ("Has mushroom"); }
+		set { this.hasMushroom = value; charManager.PowerUpgrade (); }
     }
 #endregion
 
@@ -92,12 +92,12 @@ public class GM : MonoBehaviour
 		get {return playerIsAlive;} 
 		set {playerIsAlive = value; charMove.canMove = value;}
 	}
-	public bool freezeEntites = false;
+	public bool frozenEntities = false;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
 	private const int totalTime = 400; // Total time for a level
 	private CharacterMovement charMove;
-	private CharacterManager charManager;
+	[HideInInspector]public CharacterManager charManager;
 
     void Awake()
     {
@@ -187,12 +187,12 @@ public class GM : MonoBehaviour
 
 	public void FreezeEntities()
 	{
-		freezeEntites = true;
+		frozenEntities = true;
 	}
 
 	public void UnFreezeEntities()
 	{
-		freezeEntites = false;
+		frozenEntities = false;
 	}
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates

@@ -15,6 +15,7 @@ public class EnemyShell : Enemy
 	public void OnJumpHit()
 	{
 		JumpedOn ();
+
 		// Check if shell is moving
 		if (direction == 0) // Is not moving
 		{
@@ -34,6 +35,14 @@ public class EnemyShell : Enemy
 
 	public void OnCollide(Transform other)
 	{
-		other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
+		if (direction == 0)
+		{
+			direction = other.position.x > transform.position.x ? -1 : 1;
+			RewardScore ();
+		}
+		else
+		{
+			other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
+		}
 	}
 }

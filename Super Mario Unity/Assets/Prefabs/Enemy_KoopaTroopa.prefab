@@ -11,6 +11,7 @@ GameObject:
   - 50: {fileID: 5062160}
   - 61: {fileID: 6133204}
   - 114: {fileID: 11473808}
+  - 95: {fileID: 9556886}
   m_Layer: 0
   m_Name: Enemy_KoopaTroopa
   m_TagString: Enemy
@@ -53,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.88000011, y: -.550000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421596}
@@ -84,9 +85,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -.0399999991}
   serializedVersion: 2
   m_Size: {x: .159999996, y: .159999996}
+--- !u!95 &9556886
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162406}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa75e4eee292b4d069b605d4bf3c69d4, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11473808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,8 +119,12 @@ MonoBehaviour:
   scoreReward: 100
   movementSpeed: 1
   direction: -1
+  rotateWithDirection: 1
   spriteTransform: {fileID: 421596}
+  canMove: 1
+  anim: {fileID: 0}
   hasBeenJumped: 0
+  hasDeathAnimation: 0
   shellPrefab: {fileID: 173910, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}
 --- !u!212 &21243668
 SpriteRenderer:
@@ -128,7 +150,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300002, guid: 2e0bbbfd6d0be194d8872ae8a0af28dd, type: 3}
+  m_Sprite: {fileID: 21300080, guid: d906f3629db364a3dafe4ef7f1648a10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

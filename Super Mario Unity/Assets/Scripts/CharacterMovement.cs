@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class CharacterMovement : MonoBehaviour {
@@ -16,16 +16,21 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Awake()
 	{
-		anim = GetComponent<CharacterManager>().anim;
 		rBody = GetComponent<Rigidbody2D>();
 	}
+
+	void Start()
+	{
+		anim = GetComponent<CharacterManager>().anim;
+	}
+
 	float horizontalInput = 0f;
 	void Update () 
 	{
 		// Grounded check
 		Vector2 bl = groundedPosition.position - new Vector3(0.007f, 0.02f);
 		Vector2 tr = groundedPosition.position + new Vector3(0.007f, 0.02f);
-		grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
+		//grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
 
 		if (canMove)
 		{
@@ -33,7 +38,7 @@ public class CharacterMovement : MonoBehaviour {
 			horizontalInput = Input.GetAxisRaw ("Horizontal");
 	        if (Input.GetButtonDown("Jump") && grounded == true)
 	        {
-				Jump ();
+				Jump (false);
 	        }
 	        /*else
 	        {
@@ -62,7 +67,7 @@ public class CharacterMovement : MonoBehaviour {
 		{
 			vel -= downForce;
 		}
-		if (!GM.instance.freezeEntites)
+		if (!GM.instance.frozenEntities)
 		{
 			if (rBody.isKinematic)
 			{
@@ -81,9 +86,12 @@ public class CharacterMovement : MonoBehaviour {
 
 	}
 
-	public void Jump()
+	public void Jump(bool ignoreGrounded)
 	{
-		if (!grounded) return;
+		if (!ignoreGrounded)
+			if (!grounded) return;
+
+		grounded = false;
         anim.SetTrigger("JumpTrigger");
 		rBody.AddForce(new Vector2(0, jumpForce));
 	}
