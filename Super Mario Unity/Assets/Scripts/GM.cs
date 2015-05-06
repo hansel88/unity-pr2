@@ -160,6 +160,10 @@ public class GM : MonoBehaviour
 
 	void DoCountdown()
 	{
+		// Don't countdown if player is dead
+		if (!playerIsAlive) return;
+
+		// Countdown
 		currentCountdownTime += Time.deltaTime;
         if (Application.loadedLevel == 0)
         {

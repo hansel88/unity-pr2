@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : Entity
 {
 	public bool hasDeathAnimation = true;
+	public BoxCollider2D headCollider; // The head cillider
 
 	public override void Update()
 	{
@@ -13,6 +14,10 @@ public class Enemy : Entity
 
 	public void Die()
 	{
+		// Disable the colliders
+		boxCollider.enabled = false;
+		headCollider.enabled = false;
+
 		canMove = false;
 		RewardScore ();
 		//gameObject.SetActive (false); // TODO animate death and remove this

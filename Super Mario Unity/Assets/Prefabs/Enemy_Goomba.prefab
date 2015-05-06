@@ -16,6 +16,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &164738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 469938}
+  - 61: {fileID: 6129400}
+  - 114: {fileID: 11412360}
+  m_Layer: 10
+  m_Name: HeadCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &189088
 GameObject:
   m_ObjectHideFlags: 0
@@ -42,10 +59,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 189088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.49000001, y: -.610000014, z: 0}
+  m_LocalPosition: {x: .0379999988, y: -.354000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 430192}
+  - {fileID: 469938}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &430192
@@ -60,6 +78,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 411480}
   m_RootOrder: 0
+--- !u!4 &469938
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164738}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 411480}
+  m_RootOrder: 1
 --- !u!50 &5097562
 Rigidbody2D:
   m_ObjectHideFlags: 1
@@ -75,6 +105,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!61 &6129400
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164738}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: .0599999987}
+  serializedVersion: 2
+  m_Size: {x: .150000006, y: .0599999987}
 --- !u!61 &6192036
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -105,6 +148,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11412360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0a9cee9911274cae9ef893d4a358833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boxCollider: {fileID: 0}
 --- !u!114 &11477516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,11 +171,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46da1e6f5ac446e3badd625d9f84d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  boxCollider: {fileID: 0}
   scoreReward: 100
   movementSpeed: 1
   direction: -1
+  rotateWithDirection: 1
   spriteTransform: {fileID: 430192}
+  canMove: 1
+  anim: {fileID: 0}
+  isVisibleInCamera: 1
   hasBeenJumped: 0
+  hasDeathAnimation: 1
+  headCollider: {fileID: 6129400}
 --- !u!212 &21208282
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -10,4 +10,5 @@ public class Tags
 	public static string enemy = "Enemy";
 	public static string powerup = "Powerup";
 	public static string block = "Block";
+	public static string headCollider = "HeadCollider";
 }

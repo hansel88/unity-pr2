@@ -22,7 +22,7 @@ public class EnemyShell : Enemy
 			// Reward player with score
 			RewardScore ();
 			// Start moving shell
-			direction = 1;
+			direction = Random.value > 0.5f ? 1 : -1; // Randomized direction
 		}
 		else // Is moving
 		{

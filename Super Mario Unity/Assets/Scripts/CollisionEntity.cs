@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CollisionEntity : MonoBehaviour
 {
-	private BoxCollider2D boxCollider;
+	[HideInInspector]public BoxCollider2D boxCollider;
 	private Rect jumpRect;
 	private float jumpRectHeight = 0.05f;
 	private CharacterMovement chrMove;
@@ -11,7 +11,11 @@ public class CollisionEntity : MonoBehaviour
 	public virtual void Awake()
 	{
 		boxCollider = GetComponent<BoxCollider2D>();
-		chrMove = GetComponent<CharacterMovement>();
+	}
+
+	void Start()
+	{
+		chrMove = GM.instance.charManager.gameObject.GetComponent<CharacterMovement>();
 	}
 
 	public virtual void Update()
@@ -64,13 +68,13 @@ public class CollisionEntity : MonoBehaviour
 				if (other.collider.GetComponent<CollisionEntity>().JumpRectContains (other.contacts[0].point)
 				    && gameObject.CompareTag (Tags.player))
 				{
-					//print ("Hit " + other.gameObject.name + " toprect");
+					/*//print ("Hit " + other.gameObject.name + " toprect");
 					if (chrMove && !other.collider.GetComponent<Entity>().hasBeenJumped)
 					{
 						other.collider.GetComponent<Entity>().hasBeenJumped = true;
 						chrMove.Jump (true);
 					}
-					other.gameObject.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
+					other.gameObject.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);*/
 				}
 				else
 				{
@@ -88,7 +92,24 @@ public class CollisionEntity : MonoBehaviour
 				other.gameObject.SendMessage ("OnHit", SendMessageOptions.DontRequireReceiver);
 				//print ("Hit block!");
 			}
+			if (gameObject.CompareTag (Tags.headCollider))
+			{
+				/*if (chrMove && !GetComponent<Entity>().hasBeenJumped)
+				{
+					GetComponent<Entity>().hasBeenJumped = true;
+					chrMove.Jump (true);
+				}*/
+				StartCoroutine (DelayedJump ());
+				transform.parent.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
+				print ("jumped on");
+			}
 		}
+	}
+
+	IEnumerator DelayedJump()
+	{
+		yield return new WaitForEndOfFrame();
+		chrMove.Jump (true);
 	}
 
 	void SetJumpRect()
