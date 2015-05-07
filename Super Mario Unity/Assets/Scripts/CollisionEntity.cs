@@ -54,55 +54,42 @@ public class CollisionEntity : MonoBehaviour
 		Gizmos.DrawLine (btmLeft, topLeft);
 	}*/
 
-	void OnCollisionEnter2D(Collision2D other)
+	public virtual void OnCollisionEnter2D(Collision2D other)
 	{
-		if (!other.collider.CompareTag (Tags.ground))
+		if (other.collider.CompareTag (Tags.ground)) return;
+
+		//print (string.Format ("Entity collision [{0} -> {1}]", gameObject.tag, other.collider.tag));
+
+		if (other.collider.CompareTag (Tags.headCollider) && gameObject.CompareTag (Tags.player)) // other = head & this = player
 		{
-			if (other.collider.CompareTag (Tags.player))
-			{
-				// TODO Send hitmsg to player
-				print ("Mama mia!");
-			}
-			else if (other.collider.CompareTag (Tags.enemy))
-			{
-				if (other.collider.GetComponent<CollisionEntity>().JumpRectContains (other.contacts[0].point)
-				    && gameObject.CompareTag (Tags.player))
-				{
-					/*//print ("Hit " + other.gameObject.name + " toprect");
-					if (chrMove && !other.collider.GetComponent<Entity>().hasBeenJumped)
-					{
-						other.collider.GetComponent<Entity>().hasBeenJumped = true;
-						chrMove.Jump (true);
-					}
-					other.gameObject.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);*/
-				}
-				else
-				{
-					//print ("Hit " + other.gameObject.name + " collider");
-					other.gameObject.SendMessage ("OnCollide", transform, SendMessageOptions.DontRequireReceiver);
-				}
-			}
-			else if (other.collider.CompareTag (Tags.powerup))
-			{
-				// TODO Send pickupmsg to powerup
-				other.gameObject.SendMessage ("OnPickup", SendMessageOptions.DontRequireReceiver);
-			}
-			else if (other.collider.CompareTag (Tags.block) && JumpRectContains (other.contacts[0].point))
-			{
-				other.gameObject.SendMessage ("OnHit", SendMessageOptions.DontRequireReceiver);
-				//print ("Hit block!");
-			}
-			if (gameObject.CompareTag (Tags.headCollider))
-			{
-				/*if (chrMove && !GetComponent<Entity>().hasBeenJumped)
-				{
-					GetComponent<Entity>().hasBeenJumped = true;
-					chrMove.Jump (true);
-				}*/
-				StartCoroutine (DelayedJump ());
-				transform.parent.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
-				print ("jumped on");
-			}
+			chrMove.Jump (true);
+			other.transform.SendMessage ("OnJumpHit", SendMessageOptions.DontRequireReceiver);
+		}
+		else if (other.collider.CompareTag (Tags.player) && !gameObject.CompareTag (Tags.headCollider)) // other = player & this != head
+		{
+			// TODO Send hitmsg to player
+			print ("Mama mia!");
+		}
+		else if (other.collider.CompareTag (Tags.enemy))// && gameObject.CompareTag (Tags.player)) // other = enemy & this = player
+		{
+			//print ("Hit " + other.gameObject.name + " collider");
+			other.gameObject.SendMessage ("OnCollide", transform, SendMessageOptions.DontRequireReceiver);
+		}
+		else if (other.collider.CompareTag (Tags.powerup) && gameObject.CompareTag (Tags.player)) // other = powerup & this = player
+		{
+			// TODO Send pickupmsg to powerup
+			other.gameObject.SendMessage ("OnPickup", SendMessageOptions.DontRequireReceiver);
+		}
+		else if (other.collider.CompareTag (Tags.block) && JumpRectContains (other.contacts[0].point)) // other = block & this = contains(contact)
+		{
+			other.gameObject.SendMessage ("OnHit", SendMessageOptions.DontRequireReceiver);
+			//print ("Hit block!");
+		}
+
+		if (other.collider.CompareTag (Tags.enemy)) // other = enemy
+		{
+			//print ("oaisjdoijwf2");
+			//gameObject.SendMessage ("OnShellCollision", transform, SendMessageOptions.DontRequireReceiver);
 		}
 	}
 
@@ -116,7 +103,7 @@ public class CollisionEntity : MonoBehaviour
 	{
 		// TODO Replace with a collider
 		// Jump rect 
-		Vector2 colliderSize = new Vector3 (boxCollider.size.x, jumpRectHeight);
+		Vector2 colliderSize = new Vector3 (boxCollider.size.x * 0.9f, jumpRectHeight);
 		Vector3 worldPos = transform.TransformPoint (boxCollider.offset);
 		jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + boxCollider.bounds.extents.y);

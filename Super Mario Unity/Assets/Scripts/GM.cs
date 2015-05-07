@@ -215,3 +215,10 @@ public class GM : MonoBehaviour
 	}
 	#endregion
 }
+
+public enum DeathType
+{
+	JumpedOn,
+	ShellHit,
+	OutOfMap
+}

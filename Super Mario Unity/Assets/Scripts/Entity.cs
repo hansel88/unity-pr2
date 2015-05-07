@@ -51,8 +51,9 @@ public class Entity : CollisionEntity
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
+	public override void OnCollisionEnter2D(Collision2D other)
 	{
+		base.OnCollisionEnter2D (other);
 		if (!other.collider.CompareTag ("Ground"))
 		{
 			// Check if the collided object is on the correct side
@@ -65,7 +66,7 @@ public class Entity : CollisionEntity
 				{
 					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
 					// that way it probably wont get stuck....
-					StartCoroutine (ChangeDirection ());
+					StartCoroutine (ChangeDirection (other.collider.CompareTag (Tags.player)));
 				}
 			}
 		}
@@ -88,7 +89,7 @@ public class Entity : CollisionEntity
 		}
 	}*/
 	
-	IEnumerator ChangeDirection()
+	public virtual IEnumerator ChangeDirection(bool otherIsPlayer)
 	{
 		isChangingDirection = true;
 
@@ -124,9 +125,21 @@ public class Entity : CollisionEntity
 	// TODO Remove
 	public void JumpedOn()
 	{
-		hasBeenJumped = true;
-		StartCoroutine (ResetJump ());
+		StartCoroutine (Jump ());
+		//print ("Jumped on " + gameObject.name);
+		//hasBeenJumped = true;
+		//StartCoroutine (ResetJump ());
 	}
+	IEnumerator Jump()
+	{
+		if (hasBeenJumped) yield return null;
+		print ("Jumped on " + gameObject.name);
+		
+		hasBeenJumped = true;
+		yield return new WaitForSeconds(0.1f);
+		hasBeenJumped = false;
+	}
+
 	public bool hasBeenJumped = false;
 	IEnumerator ResetJump()
 	{

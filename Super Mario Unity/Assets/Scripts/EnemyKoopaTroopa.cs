@@ -9,9 +9,7 @@ public class EnemyKoopaTroopa : Enemy
 	public void OnJumpHit()
 	{
 		JumpedOn ();
-
 		Instantiate (shellPrefab, transform.position, Quaternion.identity);
-
 		Die ();
 	}
 

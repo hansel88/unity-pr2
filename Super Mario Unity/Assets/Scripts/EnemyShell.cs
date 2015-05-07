@@ -7,8 +7,17 @@ public class EnemyShell : Enemy
 
 	void Start()
 	{
+		headCollider.enabled = false;
+
 		// Start with no movement
 		direction = 0;
+		StartCoroutine (EnableHead ());
+	}
+
+	IEnumerator EnableHead()
+	{
+		yield return new WaitForSeconds(0.1f);
+		headCollider.enabled = true;
 	}
 
 	[ContextMenu("Hit")]
@@ -35,8 +44,16 @@ public class EnemyShell : Enemy
 
 	public void OnCollide(Transform other)
 	{
-		if (direction == 0)
+		if (other.CompareTag (Tags.enemy) && direction != 0)
 		{
+			OnShellCollision (other);
+			// TODO Dont change the shell direction here
+		}
+
+		// TODO If other == player, dont change direction
+		if (direction == 0 && !other.CompareTag (Tags.enemy))
+		{
+			print ("changdir");
 			direction = other.position.x > transform.position.x ? -1 : 1;
 			RewardScore ();
 		}
@@ -44,5 +61,10 @@ public class EnemyShell : Enemy
 		{
 			other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
 		}
+	}
+
+	public void OnShellCollision(Transform other)
+	{
+		other.SendMessage ("InstaDeath", SendMessageOptions.DontRequireReceiver);
 	}
 }

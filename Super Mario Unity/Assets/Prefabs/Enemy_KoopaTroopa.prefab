@@ -10,13 +10,14 @@ GameObject:
   - 4: {fileID: 460704}
   - 61: {fileID: 6150104}
   - 114: {fileID: 11434234}
+  - 50: {fileID: 5069380}
   m_Layer: 10
   m_Name: HeadCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &162406
 GameObject:
   m_ObjectHideFlags: 0
@@ -29,7 +30,7 @@ GameObject:
   - 61: {fileID: 6133204}
   - 114: {fileID: 11473808}
   - 95: {fileID: 9556886}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Enemy_KoopaTroopa
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -71,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.88000011, y: -.550000012, z: 0}
+  m_LocalPosition: {x: 3.03999996, y: -.75999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 421596}
@@ -105,6 +106,21 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!50 &5069380
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116924}
+  m_Mass: 9.99999975e-05
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6133204
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -128,9 +144,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .0149999997}
+  m_Offset: {x: 0, y: .0250000004}
   serializedVersion: 2
-  m_Size: {x: .150000006, y: .0599999987}
+  m_Size: {x: .109999999, y: .0599999987}
 --- !u!95 &9556886
 Animator:
   serializedVersion: 3

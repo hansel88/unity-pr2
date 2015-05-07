@@ -21,8 +21,8 @@ TagManager:
   - Player
   - CameraCollider
   - HeadCollider
-  - 
-  - 
+  - InvinciblePlayer
+  - Enemy
   - 
   - 
   - 

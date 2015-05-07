@@ -35,8 +35,22 @@ public class Enemy : Entity
 		}
 	}
 
+	public override IEnumerator ChangeDirection(bool otherIsPlayer)
+	{
+		if (otherIsPlayer && GM.instance.charManager.isInvincible)
+		{
+			yield return null;
+		}
+		StartCoroutine (base.ChangeDirection (otherIsPlayer));
+	}
+
 	public void DestroyEntity()
 	{
 		gameObject.SetActive (false);
+	}
+
+	public void InstaDeath()
+	{
+		anim.SetTrigger ("InstaDeathTrigger");
 	}
 }
