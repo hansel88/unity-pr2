@@ -15,6 +15,5 @@ public class PlayerSpriteEvents : MonoBehaviour
 	public void PowerupDone()
 	{
 		GM.instance.UnFreezeEntities ();
-		// TODO Resume game
 	}
 }

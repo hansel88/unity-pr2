@@ -6,6 +6,8 @@ public class CharacterManager : MonoBehaviour
 	public PlayerState curState;
 	public bool hasStar = false;
 	public bool isInvincible = false;
+	public GameObject fireflowerProjectilePrefab;
+	public Transform fireflowerShootPosition;
 
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
@@ -13,6 +15,8 @@ public class CharacterManager : MonoBehaviour
 	private CharacterMovement charMove;
 	private SpriteRenderer spriteRenderer;
 	private bool isDying = false;
+	private float fireTimer;
+	[SerializeField]private float fireRate = 1f;
 
 	void Awake()
 	{
@@ -25,6 +29,28 @@ public class CharacterManager : MonoBehaviour
 		charMove = GetComponent<CharacterMovement>();
 		anim = spriteTranform.GetComponent<Animator>();
 		spriteRenderer = spriteTranform.GetComponent<SpriteRenderer>();
+	}
+
+	void Update()
+	{
+		if (curState == PlayerState.Fireflower)
+		{
+			if (fireTimer < fireRate)
+			{
+				fireTimer += Time.deltaTime;
+			}
+			else if (Input.GetButtonDown ("Shoot"))
+			{
+				ShootFireflower ();
+			}
+		}
+	}
+
+	void ShootFireflower()
+	{
+		GameObject projectile = Instantiate (fireflowerProjectilePrefab, fireflowerShootPosition.position, Quaternion.identity) as GameObject;
+		projectile.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
+		fireTimer = 0f;
 	}
 
 	public void OnEnemyHit()
@@ -126,35 +152,6 @@ public class CharacterManager : MonoBehaviour
 		// Wait some time before going to deathscreen
 		yield return new WaitForSeconds(withAnimation ? 2f : 1f);
 		Application.LoadLevel (Application.loadedLevel);
-	}
-
-	public void PowerUpgrade()
-	{
-		GM.instance.FreezeEntities ();
-		if (GM.instance.CharacterStatus == GM.MarioStatus.Small && GM.instance.HasMushroom)
-		{
-			GM.instance.CharacterStatus = GM.MarioStatus.Big;
-			anim.SetBool ("Mushroom", true);
-			anim.SetBool ("IsSmall", true);
-			anim.SetTrigger ("PowerupTrigger");
-			charCollider.size = new Vector2(0.16f, 0.32f);
-			charCollider.offset = new Vector2(0f, 0.16f);
-		}
-	}
-
-	public void PowerDowngrade()
-	{
-		// TODO Make player invincible???
-
-		if (GM.instance.CharacterStatus == GM.MarioStatus.Big && GM.instance.HasMushroom)
-		{
-			GM.instance.CharacterStatus = GM.MarioStatus.Small;
-			anim.SetBool ("Mushroom", false);
-			anim.SetBool ("IsSmall", false);
-			anim.SetTrigger ("PowerupTrigger");
-			charCollider.size = new Vector2(0.16f, 0.16f);
-			charCollider.offset = new Vector2(0f, 0.08f);
-		}
 	}
 
 	void SetColliderSize()

@@ -12,6 +12,7 @@ public class CharacterMovement : MonoBehaviour {
 	public bool canMove = true;
 	private Animator anim;
 	private Rigidbody2D rBody;
+	public bool facingRight = true;
 	public Transform[] groundedChecks;
 
 	void Awake()
@@ -47,11 +48,15 @@ public class CharacterMovement : MonoBehaviour {
 				//rBody.AddForce (move * speed * Time.deltaTime);
 
 	        }*/
-
-	        if (horizontalInput < 0)
-	            transform.localScale = new Vector3(-1, 1, 1);
-			else if(horizontalInput > 0)
-	            transform.localScale = new Vector3(1, 1, 1);
+			if (facingRight && horizontalInput < 0f)
+			{
+				Flip ();
+			}
+			else if (!facingRight && horizontalInput > 0f)
+			{
+				Flip ();
+			}
+	        
 		}
 		else 
 		{
@@ -81,6 +86,13 @@ public class CharacterMovement : MonoBehaviour {
 		}
 	}
 
+	void Flip()
+	{
+		facingRight = !facingRight;
+
+		transform.localScale = new Vector3(facingRight ? 1 : -1, 1);
+	}
+	
 	void FixedUpdate()
 	{
 

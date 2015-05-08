@@ -76,7 +76,7 @@ public class GM : MonoBehaviour
     public bool HasMushroom
     {
         get { return this.hasMushroom; }
-		set { this.hasMushroom = value; charManager.PowerUpgrade (); }
+		set { this.hasMushroom = value; }
     }
 #endregion
 
