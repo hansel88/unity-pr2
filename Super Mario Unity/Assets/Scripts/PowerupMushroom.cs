@@ -9,4 +9,16 @@ public class PowerupMushroom : Powerup
 
 		GM.instance.charManager.PowerUpgrade (PlayerState.Mushroom);
 	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.player))
+		{
+			OnPickup ();
+		}
+		else
+		{
+			ChangeDirectionOnCollision (other);
+		}
+	}
 }

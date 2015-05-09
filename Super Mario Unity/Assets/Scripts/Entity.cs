@@ -1,8 +1,6 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent(typeof(BoxCollider2D))]
-[RequireComponent(typeof(Rigidbody2D))]
 public class Entity : CollisionEntity
 {
 	public int scoreReward = 100;
@@ -44,16 +42,17 @@ public class Entity : CollisionEntity
 			}
 			// Moves the object in a horizontal direction
 			transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
+			print ("moving");
 		}
-		else if (!rbody.isKinematic)
+		else if (GM.instance.frozenEntities && !rbody.isKinematic)
 		{
 			rbody.isKinematic = true;
 		}
 	}
 
-	public override void OnCollisionEnter2D(Collision2D other)
+	/*public override void OnCollisionEnter2D(Collision2D other)
 	{
-		base.OnCollisionEnter2D (other);
+		//base.OnCollisionEnter2D (other);
 		if (!other.collider.CompareTag ("Ground"))
 		{
 			// Check if the collided object is on the correct side
@@ -66,7 +65,27 @@ public class Entity : CollisionEntity
 				{
 					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
 					// that way it probably wont get stuck....
-					StartCoroutine (ChangeDirection (other.collider.CompareTag (Tags.player)));
+					StartCoroutine (TurnAround (other.collider.CompareTag (Tags.player)));
+				}
+			}
+		}
+	}*/
+
+	public void ChangeDirectionOnCollision(Collision2D other)
+	{
+		if (!other.collider.CompareTag ("Ground"))
+		{
+			// Check if the collided object is on the correct side
+			Vector3 otherPos = other.transform.position;
+			Vector3 pos = transform.position;
+			if ((otherPos.x > pos.x && direction == 1) || (otherPos.x < pos.x && direction == -1))
+			{
+				// Check if we are already changing direction before turning
+				if (!isChangingDirection && gameObject.activeInHierarchy)
+				{
+					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
+					// that way it probably wont get stuck....
+					StartCoroutine (TurnAround ());
 				}
 			}
 		}
@@ -89,7 +108,7 @@ public class Entity : CollisionEntity
 		}
 	}*/
 	
-	public virtual IEnumerator ChangeDirection(bool otherIsPlayer)
+	public virtual IEnumerator TurnAround()
 	{
 		isChangingDirection = true;
 
@@ -123,13 +142,15 @@ public class Entity : CollisionEntity
 	}
 
 	// TODO Remove
-	public void JumpedOn()
+	/*public void JumpedOn()
 	{
-		StartCoroutine (Jump ());
+		print ("jump");
+		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
+		//StartCoroutine (Jump ());
 		//print ("Jumped on " + gameObject.name);
 		//hasBeenJumped = true;
 		//StartCoroutine (ResetJump ());
-	}
+	}*/
 	IEnumerator Jump()
 	{
 		if (hasBeenJumped) yield return null;

@@ -10,6 +10,7 @@ public class CollisionEntity : MonoBehaviour
 
 	public virtual void Awake()
 	{
+		print ("awake");
 		boxCollider = GetComponent<BoxCollider2D>();
 	}
 
@@ -54,7 +55,7 @@ public class CollisionEntity : MonoBehaviour
 		Gizmos.DrawLine (btmLeft, topLeft);
 	}*/
 
-	public virtual void OnCollisionEnter2D(Collision2D other)
+	/*public virtual void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.collider.CompareTag (Tags.ground)) return;
 
@@ -91,7 +92,7 @@ public class CollisionEntity : MonoBehaviour
 			//print ("oaisjdoijwf2");
 			//gameObject.SendMessage ("OnShellCollision", transform, SendMessageOptions.DontRequireReceiver);
 		}
-	}
+	}*/
 
 	IEnumerator DelayedJump()
 	{

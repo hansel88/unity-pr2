@@ -9,4 +9,12 @@ public class PowerupFireflower : Powerup
 
 		GM.instance.charManager.PowerUpgrade (PlayerState.Fireflower);
 	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.player))
+		{
+			OnPickup ();
+		}
+	}
 }

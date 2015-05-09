@@ -10,4 +10,16 @@ public class PowerupLife : Powerup
 		GM.instance.Lives ++;
 		GUIManager.instance.PopRewardText(transform.position, "+1up");
 	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.player))
+		{
+			OnPickup ();
+		}
+		else
+		{
+			ChangeDirectionOnCollision (other);
+		}
+	}
 }

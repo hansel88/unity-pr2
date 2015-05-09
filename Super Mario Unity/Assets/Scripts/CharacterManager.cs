@@ -8,16 +8,17 @@ public class CharacterManager : MonoBehaviour
 	public bool isInvincible = false;
 	public GameObject fireflowerProjectilePrefab;
 	public Transform fireflowerShootPosition;
-
+	
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
-	private BoxCollider2D charCollider;
+	[HideInInspector]public BoxCollider2D charCollider;
 	private CharacterMovement charMove;
 	private SpriteRenderer spriteRenderer;
 	private bool isDying = false;
 	private float fireTimer;
 	[SerializeField]private float fireRate = 1f;
-
+	public int fireflowerCount = 0;
+	
 	void Awake()
 	{
 		if (!spriteTranform)
@@ -29,69 +30,91 @@ public class CharacterManager : MonoBehaviour
 		charMove = GetComponent<CharacterMovement>();
 		anim = spriteTranform.GetComponent<Animator>();
 		spriteRenderer = spriteTranform.GetComponent<SpriteRenderer>();
+		fireTimer = fireRate;
 	}
-
+	
 	void Update()
 	{
-		if (curState == PlayerState.Fireflower)
+		if (curState == PlayerState.Fireflower && !GM.instance.frozenEntities)
 		{
 			if (fireTimer < fireRate)
 			{
 				fireTimer += Time.deltaTime;
 			}
-			else if (Input.GetButtonDown ("Shoot"))
+			else if (Input.GetButtonDown ("Shoot") && fireflowerCount < 2)
 			{
 				ShootFireflower ();
 			}
 		}
 	}
+	
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.enemy))
+		{
 
+		}
+	}
+	
+	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol)
+	{
+		float jumpRectHeight = 0.02f;
+		Vector2 colliderSize = new Vector3 (headCol.size.x, jumpRectHeight);
+		Vector3 worldPos = headCol.transform.TransformPoint (headCol.offset);
+		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
+		jumpRect.center = new Vector2(worldPos.x, worldPos.y + headCol.bounds.extents.y);
+		
+		return jumpRect.Contains (colPoint);
+	}
+	
 	void ShootFireflower()
 	{
+		anim.SetTrigger ("FireflowerShoot");
+		fireflowerCount ++;
 		GameObject projectile = Instantiate (fireflowerProjectilePrefab, fireflowerShootPosition.position, Quaternion.identity) as GameObject;
 		projectile.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
 		fireTimer = 0f;
 	}
-
+	
 	public void OnEnemyHit()
 	{
 		if (isInvincible)
 		{
 			return;
 		}
-
+		
 		GM.instance.FreezeEntities ();
-
+		
 		SetAnimatioTriggers (false);
 		isInvincible = true;
-
+		
 		switch(curState)
 		{
-			case PlayerState.Small:
-				StartCoroutine (Die (true));
-				break;
-			case PlayerState.Mushroom:
-				curState = PlayerState.Small;
-				// TODO To small
-				break;
-			case PlayerState.Fireflower:
-				curState = PlayerState.Small;
-				// TODO To small
-				break;
+		case PlayerState.Small:
+			StartCoroutine (Die (true));
+			break;
+		case PlayerState.Mushroom:
+			curState = PlayerState.Small;
+			// TODO To small
+			break;
+		case PlayerState.Fireflower:
+			curState = PlayerState.Small;
+			// TODO To small
+			break;
 		}
-
-
+		
+		
 		SetColliderSize ();
-
+		
 		if (!isDying)
 		{
 			StartCoroutine (FlashInvincible (3));
 		}
 	}
-
+	
 	public void PowerUpgrade(PlayerState toState)
 	{
-		if ((int)curState >= (int)toState)
+		if ((int)curState > (int)toState)
 		{
 			int scoreReward = 1000;
 			GM.instance.Score += scoreReward;
@@ -99,61 +122,68 @@ public class CharacterManager : MonoBehaviour
 		}
 		else
 		{
+			if (curState == PlayerState.Mushroom && toState == PlayerState.Mushroom)
+			{
+				toState = PlayerState.Fireflower;
+			}
+
 			GM.instance.FreezeEntities ();
 			curState = toState;
 			SetAnimatioTriggers (true);
 		}
 	}
-
+	
 	void SetAnimatioTriggers(bool poweringUp)
 	{
 		anim.SetBool ("PoweringUp", poweringUp);
 		anim.SetInteger ("PlayerState", (int)curState);
 		anim.SetTrigger ("PowerupTrigger");
 	}
-
+	
 	IEnumerator FlashInvincible(int seconds)
 	{
+		gameObject.layer = LayerMask.NameToLayer ("InvinciblePlayer");
 		float waitTime = 0.2f; // Time to wait between flashes
-
+		
 		// Flashing loop
 		for (int i = 0; i < seconds / waitTime; i ++)
 		{
 			ToggleSpriteVisibility (i % 2 == 0);
 			yield return new WaitForSeconds(0.2f);
 		}
-
+		
 		// Make sure player is fully visible when finished with the invincibility
 		ToggleSpriteVisibility (true);
-
+		
 		isInvincible = false;
+		gameObject.layer = LayerMask.NameToLayer ("Player");
 	}
 	
 	public IEnumerator Die(bool withAnimation)
 	{
 		// If we are already dying, don't die again
 		if (isDying) yield return null;
-
+		
 		// Set that we are dying so we can't double die
 		isDying = true;
-
+		
 		// Disable charactercollider
 		charCollider.enabled = false;
-
+		
 		// Tell GM we are dead
 		GM.instance.PlayerIsAlive = false;
-
+		
 		// Animate death
 		if (withAnimation)
 		{
 			anim.SetTrigger ("DeathTrigger");
 		}
-
+		
 		// Wait some time before going to deathscreen
 		yield return new WaitForSeconds(withAnimation ? 2f : 1f);
 		Application.LoadLevel (Application.loadedLevel);
 	}
-
+	
 	void SetColliderSize()
 	{
 		if (curState == PlayerState.Small)
@@ -167,7 +197,7 @@ public class CharacterManager : MonoBehaviour
 			charCollider.offset = new Vector2(0f, 0.16f);
 		}
 	}
-
+	
 	void ToggleSpriteVisibility(bool fullVisible)
 	{
 		Color col = spriteRenderer.color;

@@ -89,6 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 150
+  movementVelocity: {x: 2, y: 1.70000005}
 --- !u!212 &21220934
 SpriteRenderer:
   m_ObjectHideFlags: 1

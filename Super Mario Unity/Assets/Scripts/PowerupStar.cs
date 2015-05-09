@@ -9,4 +9,16 @@ public class PowerupStar : Powerup
 
 		GM.instance.HasStar = true;
 	}
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.player))
+		{
+			OnPickup ();
+		}
+		else
+		{
+			ChangeDirectionOnCollision (other);
+		}
+	}
 }

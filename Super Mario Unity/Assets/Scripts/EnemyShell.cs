@@ -14,6 +14,54 @@ public class EnemyShell : Enemy
 		StartCoroutine (EnableHead ());
 	}
 
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.collider.CompareTag (Tags.player))
+		{
+			// Check with the player to make sure this wasnt a headhit (player jumped on this enemy)
+			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
+			if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
+			{
+				JumpedOn ();
+				// Check if shell is moving
+				if (direction == 0) // Is not moving
+				{
+					// Reward player with score
+					RewardScore ();
+					// Start moving shell
+					direction = Random.value > 0.5f ? 1 : -1; // Randomized direction
+				}
+				else // Is moving
+				{
+					// Reward player with score
+					RewardScore (scoreMovingReward);
+					// Stop shell
+					direction = 0;
+				}
+			}
+			else
+			{
+				if (direction == 0)
+				{
+					direction = other.transform.position.x > transform.position.x ? -1 : 1;
+					RewardScore ();
+				}
+				else
+				{
+					charManager.OnEnemyHit ();
+				}
+			}
+		}
+		else if (other.collider.CompareTag (Tags.enemy))
+		{
+			other.collider.GetComponent<Enemy>().InstaDeath ();
+		}
+		else
+		{
+			ChangeDirectionOnCollision (other);
+		}
+	}
+
 	IEnumerator EnableHead()
 	{
 		yield return new WaitForSeconds(0.1f);

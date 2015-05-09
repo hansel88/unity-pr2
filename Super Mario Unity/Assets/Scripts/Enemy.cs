@@ -5,6 +5,8 @@ public class Enemy : Entity
 {
 	public bool hasDeathAnimation = true;
 	public BoxCollider2D headCollider; // The head cillider
+	public bool isDying = false;
+	private bool hasJumped = false;
 
 	public override void Update()
 	{
@@ -14,13 +16,15 @@ public class Enemy : Entity
 
 	public void Die()
 	{
+		if (isDying) return;
+
+		isDying = true;
+
 		// Disable the colliders
 		boxCollider.enabled = false;
-		headCollider.enabled = false;
 
 		canMove = false;
 		RewardScore ();
-		//gameObject.SetActive (false); // TODO animate death and remove this
 
 		if (hasDeathAnimation)
 		{
@@ -35,13 +39,12 @@ public class Enemy : Entity
 		}
 	}
 
-	public override IEnumerator ChangeDirection(bool otherIsPlayer)
+	public void JumpedOn()
 	{
-		if (otherIsPlayer && GM.instance.charManager.isInvincible)
-		{
-			yield return null;
-		}
-		StartCoroutine (base.ChangeDirection (otherIsPlayer));
+		if (hasJumped) return;
+
+		hasJumped = true;
+		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
 	}
 
 	public void DestroyEntity()
@@ -52,5 +55,6 @@ public class Enemy : Entity
 	public void InstaDeath()
 	{
 		anim.SetTrigger ("InstaDeathTrigger");
+		canMove = false;
 	}
 }
