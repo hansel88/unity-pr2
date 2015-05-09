@@ -345,7 +345,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 173910, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}
@@ -387,13 +387,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 491288, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 21219710, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300100, guid: 3df70161684fd4bf0a470916d80889a8,
-        type: 3}
     - target: {fileID: 11499118, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
       propertyPath: goombaCol
       value: 
@@ -555,7 +550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1001 &750161075
 Prefab:
   m_ObjectHideFlags: 0
@@ -597,7 +592,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 173910, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}

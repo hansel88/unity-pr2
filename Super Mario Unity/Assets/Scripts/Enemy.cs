@@ -8,9 +8,8 @@ public class Enemy : Entity
 	public bool isDying = false;
 	private bool hasJumped = false;
 
-	public override void Update()
+	void Update()
 	{
-		base.Update ();
 		HorizontalMovement ();
 	}
 

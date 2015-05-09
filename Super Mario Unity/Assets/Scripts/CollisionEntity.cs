@@ -10,7 +10,6 @@ public class CollisionEntity : MonoBehaviour
 
 	public virtual void Awake()
 	{
-		print ("awake");
 		boxCollider = GetComponent<BoxCollider2D>();
 	}
 

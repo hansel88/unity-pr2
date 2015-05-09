@@ -129,6 +129,7 @@ public class CharacterManager : MonoBehaviour
 
 			GM.instance.FreezeEntities ();
 			curState = toState;
+			SetColliderSize ();
 			SetAnimatioTriggers (true);
 		}
 	}

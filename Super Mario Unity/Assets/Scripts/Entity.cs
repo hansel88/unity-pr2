@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class Entity : CollisionEntity
+public class Entity : MonoBehaviour
 {
 	public int scoreReward = 100;
 	public float movementSpeed = 3f;
@@ -13,12 +13,13 @@ public class Entity : CollisionEntity
 	[HideInInspector]public Animator anim;
 	private Rigidbody2D rbody;
 	public bool isVisibleInCamera = true;
+	public BoxCollider2D boxCollider;
 
-	public override void Awake()
+	void Awake()
 	{
-		base.Awake ();
 		rbody = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
+		boxCollider = GetComponent<BoxCollider2D>();
 	}
 
 	void Start()
@@ -42,34 +43,12 @@ public class Entity : CollisionEntity
 			}
 			// Moves the object in a horizontal direction
 			transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
-			print ("moving");
 		}
 		else if (GM.instance.frozenEntities && !rbody.isKinematic)
 		{
 			rbody.isKinematic = true;
 		}
 	}
-
-	/*public override void OnCollisionEnter2D(Collision2D other)
-	{
-		//base.OnCollisionEnter2D (other);
-		if (!other.collider.CompareTag ("Ground"))
-		{
-			// Check if the collided object is on the correct side
-			Vector3 otherPos = other.transform.position;
-			Vector3 pos = transform.position;
-			if ((otherPos.x > pos.x && direction == 1) || (otherPos.x < pos.x && direction == -1))
-			{
-				// Check if we are already changing direction before turning
-				if (!isChangingDirection && gameObject.activeInHierarchy)
-				{
-					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
-					// that way it probably wont get stuck....
-					StartCoroutine (TurnAround (other.collider.CompareTag (Tags.player)));
-				}
-			}
-		}
-	}*/
 
 	public void ChangeDirectionOnCollision(Collision2D other)
 	{
@@ -139,32 +118,5 @@ public class Entity : CollisionEntity
 	public void RewardScore()
 	{
 		RewardScore (scoreReward);
-	}
-
-	// TODO Remove
-	/*public void JumpedOn()
-	{
-		print ("jump");
-		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
-		//StartCoroutine (Jump ());
-		//print ("Jumped on " + gameObject.name);
-		//hasBeenJumped = true;
-		//StartCoroutine (ResetJump ());
-	}*/
-	IEnumerator Jump()
-	{
-		if (hasBeenJumped) yield return null;
-		print ("Jumped on " + gameObject.name);
-		
-		hasBeenJumped = true;
-		yield return new WaitForSeconds(0.1f);
-		hasBeenJumped = false;
-	}
-
-	public bool hasBeenJumped = false;
-	IEnumerator ResetJump()
-	{
-		yield return new WaitForEndOfFrame();
-		hasBeenJumped = false;
 	}
 }

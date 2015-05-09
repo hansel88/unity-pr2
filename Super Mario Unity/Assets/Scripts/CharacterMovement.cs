@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour {
 	private Rigidbody2D rBody;
 	public bool facingRight = true;
 	public Transform[] groundedChecks;
+	private bool previousFacingRight = true;
 
 	void Awake()
 	{
@@ -88,6 +89,11 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Flip()
 	{
+		// TODO Remove??
+		if ((previousFacingRight && !facingRight) || (!previousFacingRight && facingRight))
+			anim.SetTrigger ("FlipTrigger");
+		previousFacingRight = facingRight;
+
 		facingRight = !facingRight;
 
 		transform.localScale = new Vector3(facingRight ? 1 : -1, 1);

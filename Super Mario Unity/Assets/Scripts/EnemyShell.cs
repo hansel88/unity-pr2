@@ -20,6 +20,12 @@ public class EnemyShell : Enemy
 		{
 			// Check with the player to make sure this wasnt a headhit (player jumped on this enemy)
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
+			if (charManager.hasStar)
+			{
+				InstaDeath ();
+				return;
+			}
+
 			if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
 			{
 				JumpedOn ();
@@ -52,7 +58,7 @@ public class EnemyShell : Enemy
 				}
 			}
 		}
-		else if (other.collider.CompareTag (Tags.enemy))
+		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
 		{
 			other.collider.GetComponent<Enemy>().InstaDeath ();
 		}
