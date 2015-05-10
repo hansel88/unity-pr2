@@ -5,8 +5,10 @@ public class EnemyShell : Enemy
 {
 	public int scoreMovingReward = 100;
 
-	void Start()
+	public override void Start()
 	{
+		base.Start ();
+
 		headCollider.enabled = false;
 
 		// Start with no movement

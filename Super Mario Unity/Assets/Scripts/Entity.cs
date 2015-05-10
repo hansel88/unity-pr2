@@ -11,18 +11,18 @@ public class Entity : MonoBehaviour
 	public bool canMove = true;
 	private bool isChangingDirection = false;
 	[HideInInspector]public Animator anim;
-	private Rigidbody2D rbody;
+	[HideInInspector]public Rigidbody2D rBody;
 	public bool isVisibleInCamera = true;
-	public BoxCollider2D boxCollider;
+	[HideInInspector]public BoxCollider2D boxCollider;
 
 	void Awake()
 	{
-		rbody = GetComponent<Rigidbody2D>();
+		rBody = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		boxCollider = GetComponent<BoxCollider2D>();
 	}
 
-	void Start()
+	public virtual void Start()
 	{
 		// Use the first child as a spritetransform incase nothing is assigned
 		if (!spriteTransform)
@@ -34,19 +34,26 @@ public class Entity : MonoBehaviour
 
 	public void HorizontalMovement()
 	{
-		if (!isVisibleInCamera) return;
 		if (!GM.instance.frozenEntities && canMove)
 		{
-			if (rbody.isKinematic)
+			if (rBody.isKinematic)
 			{
-				rbody.isKinematic = false;
+				if (anim)
+				{
+					anim.enabled = true;
+				}
+				rBody.isKinematic = false;
 			}
 			// Moves the object in a horizontal direction
-			transform.Translate ((transform.right * direction) * movementSpeed * Time.deltaTime);
+			transform.Translate ((Vector3.right * direction) * movementSpeed * Time.deltaTime);
 		}
-		else if (GM.instance.frozenEntities && !rbody.isKinematic)
+		else if (GM.instance.frozenEntities && !rBody.isKinematic)
 		{
-			rbody.isKinematic = true;
+			if (anim)
+			{
+				anim.enabled = false;
+			}
+			rBody.isKinematic = true;
 		}
 	}
 
@@ -69,30 +76,11 @@ public class Entity : MonoBehaviour
 			}
 		}
 	}
-
-	/*public virtual void OnCollide(Transform other)
-	{
-		print ("On entity collide");
-		// Check if the collided object is on the correct side
-		Vector3 otherPos = other.position;
-		Vector3 pos = transform.position;
-		if ((otherPos.x > pos.x && direction == 1) || (otherPos.x < pos.x && direction == -1))
-		{
-			print ("Change dir");
-			// Check if we are already changing direction before turning
-			if (!isChangingDirection && gameObject.activeInHierarchy)
-			{
-				StartCoroutine (ChangeDirection ());
-			}
-		}
-	}*/
 	
 	public virtual IEnumerator TurnAround()
 	{
+		print ("turning");
 		isChangingDirection = true;
-
-		// Wait for end of frame to continue som we don't turn around while still colliding
-		yield return new WaitForEndOfFrame();
 
 		// Change direction
 		direction *= -1;
@@ -104,6 +92,9 @@ public class Entity : MonoBehaviour
 			scale.x *= -1;
 			spriteTransform.localScale = scale;
 		}
+
+		// Wait for end of frame to continue som we don't turn around while still colliding
+		yield return new WaitForEndOfFrame();
 
 		isChangingDirection = false;
 	}

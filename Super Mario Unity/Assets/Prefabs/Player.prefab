@@ -270,7 +270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   downForce: .100000001
-  speed: 120
+  speed: 100
   jumpForce: 250
   groundedLayers:
     serializedVersion: 2
@@ -278,6 +278,7 @@ MonoBehaviour:
   groundedPosition: {fileID: 424236}
   grounded: 1
   canMove: 1
+  facingRight: 1
   groundedChecks:
   - {fileID: 430036}
   - {fileID: 432424}
@@ -311,7 +312,9 @@ MonoBehaviour:
   fireflowerShootPosition: {fileID: 459368}
   spriteTranform: {fileID: 416144}
   anim: {fileID: 0}
+  charCollider: {fileID: 0}
   fireRate: .300000012
+  fireflowerCount: 0
 --- !u!212 &21219710
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -336,7 +339,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300056, guid: 3df70161684fd4bf0a470916d80889a8, type: 3}
+  m_Sprite: {fileID: 21300480, guid: 3df70161684fd4bf0a470916d80889a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

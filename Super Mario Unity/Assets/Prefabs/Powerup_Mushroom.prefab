@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 138016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .046682477, y: -.33078137, z: 0}
+  m_LocalPosition: {x: -.432999998, y: -.490999997, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 442680}
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f40cf5f05ae74494ca7541b54995896a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   scoreReward: 100
   movementSpeed: 2
   direction: 1
@@ -106,8 +105,9 @@ MonoBehaviour:
   spriteTransform: {fileID: 442680}
   canMove: 1
   anim: {fileID: 0}
+  rBody: {fileID: 0}
   isVisibleInCamera: 1
-  hasBeenJumped: 0
+  boxCollider: {fileID: 0}
 --- !u!212 &21215624
 SpriteRenderer:
   m_ObjectHideFlags: 1

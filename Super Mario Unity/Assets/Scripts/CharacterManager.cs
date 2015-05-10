@@ -18,7 +18,8 @@ public class CharacterManager : MonoBehaviour
 	private float fireTimer;
 	[SerializeField]private float fireRate = 1f;
 	public int fireflowerCount = 0;
-	
+	private float starTimer;
+
 	void Awake()
 	{
 		if (!spriteTranform)
@@ -46,16 +47,21 @@ public class CharacterManager : MonoBehaviour
 				ShootFireflower ();
 			}
 		}
-	}
-	
-	void OnCollisionEnter2D(Collision2D other)
-	{
-		if (other.collider.CompareTag (Tags.enemy))
-		{
 
+		// Star timer
+		if (hasStar)
+		{
+			if (starTimer > 0f)
+			{
+				starTimer -= Time.deltaTime;
+			}
+			else
+			{
+				EndStarPowerup ();
+			}
 		}
 	}
-	
+
 	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol)
 	{
 		float jumpRectHeight = 0.02f;
@@ -75,6 +81,15 @@ public class CharacterManager : MonoBehaviour
 		projectile.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
 		fireTimer = 0f;
 	}
+
+	public void DeductFireflowerCount()
+	{
+		fireflowerCount --;
+		if (fireflowerCount < 0)
+		{
+			fireflowerCount = 0;
+		}
+	}
 	
 	public void OnEnemyHit()
 	{
@@ -85,7 +100,7 @@ public class CharacterManager : MonoBehaviour
 		
 		GM.instance.FreezeEntities ();
 		
-		SetAnimatioTriggers (false);
+		SetAnimationTriggers (false);
 		isInvincible = true;
 		
 		switch(curState)
@@ -130,14 +145,30 @@ public class CharacterManager : MonoBehaviour
 			GM.instance.FreezeEntities ();
 			curState = toState;
 			SetColliderSize ();
-			SetAnimatioTriggers (true);
+			SetAnimationTriggers (true);
 		}
 	}
-	
-	void SetAnimatioTriggers(bool poweringUp)
+
+	public void PickupStarPowerup()
+	{
+		hasStar = true;
+		starTimer = 12f;
+		SetAnimationTriggers (true);
+	}
+
+	void EndStarPowerup()
+	{
+		hasStar = false;
+		starTimer = 0f;
+		anim.SetInteger ("PlayerState", (int)curState);
+		anim.SetBool ("HasStar", hasStar);
+	}
+
+	void SetAnimationTriggers(bool poweringUp)
 	{
 		anim.SetBool ("PoweringUp", poweringUp);
 		anim.SetInteger ("PlayerState", (int)curState);
+		anim.SetBool ("HasStar", hasStar);
 		anim.SetTrigger ("PowerupTrigger");
 	}
 	

@@ -3,15 +3,11 @@ using System.Collections;
 
 public class FireflowerProjectile : MonoBehaviour
 {
-	[SerializeField]private float movementForce = 10f;
 	[SerializeField]private Vector2 movementVelocity = new Vector2(2f, 2f);
 	private Vector2 curVel;
 	private Animator anim;
 	private Rigidbody2D rBody;
-	private Vector2 bounceVelocity;
-	private bool saveBounceVelocity = true;
 	private float normalThreshold = 0.9f;
-	private float savedHorizontalVelocity = 0f;
 	private Vector2 savedVelocity;
 
 	void Awake()
@@ -34,13 +30,14 @@ public class FireflowerProjectile : MonoBehaviour
 			rBody.isKinematic = false;
 		}
 	}
-
+	
 	public void Initialize(bool moveRight)
 	{
-		//rBody.AddForce ((moveRight ? Vector2.right : -Vector2.right) * movementForce);
 		movementVelocity.x *= moveRight ? 1 : -1;
 		curVel = movementVelocity;
 		rBody.velocity = curVel;
+
+		Invoke ("Explode", 7f);
 	}
 
 	public void OnCollisionEnter2D(Collision2D other)
@@ -65,7 +62,8 @@ public class FireflowerProjectile : MonoBehaviour
 
 	void Explode()
 	{
-		GM.instance.charManager.fireflowerCount --;
+		CancelInvoke ("Explode");
+		GM.instance.charManager.DeductFireflowerCount ();
 		anim.SetTrigger ("Explode");
 		rBody.isKinematic = true;
 		rBody.velocity = Vector2.zero;
@@ -73,6 +71,7 @@ public class FireflowerProjectile : MonoBehaviour
 	
 	public void DestroyEntity()
 	{
+		CancelInvoke ("Explode");
 		// TODO Pool
 		gameObject.SetActive (false);
 	}
