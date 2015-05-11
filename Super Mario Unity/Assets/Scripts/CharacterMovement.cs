@@ -16,6 +16,9 @@ public class CharacterMovement : MonoBehaviour {
 	public Transform[] groundedChecks;
 	private bool previousFacingRight = true;
 
+    public GameObject jumpSmall;
+    public GameObject jumpBig;
+
 	void Awake()
 	{
 		rBody = GetComponent<Rigidbody2D>();
@@ -108,6 +111,11 @@ public class CharacterMovement : MonoBehaviour {
 	{
 		if (!ignoreGrounded)
 			if (!grounded) return;
+
+        if (GM.instance.HasMushroom)
+            GameObject.Instantiate(jumpBig);
+        else
+            GameObject.Instantiate(jumpSmall);
 
 		grounded = false;
         anim.SetTrigger("JumpTrigger");

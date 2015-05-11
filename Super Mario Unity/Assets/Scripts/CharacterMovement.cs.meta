@@ -1,10 +1,13 @@
 fileFormatVersion: 2
 guid: 8889899725d9d4f4c81c85be9ae770af
-timeCreated: 1430126721
+timeCreated: 1431341578
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - groundedPosition: {instanceID: 0}
+  - jumpSmall: {fileID: 111940, guid: cfdfac2a2dba45d41a6627e416cef75f, type: 2}
+  - jumpBig: {fileID: 111940, guid: e48499e1aed12ef4b8f6145530c46ef0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -85,7 +85,7 @@ public class GM : MonoBehaviour
 	public enum MarioPowerupStatus{Small, Big, Fireflower, Star};
 	public MarioPowerupStatus marioPowerupStatus;
 
-	public GameObject player;
+    public GameObject player;
 	private bool playerIsAlive = true;
 	public bool PlayerIsAlive 
 	{ 
