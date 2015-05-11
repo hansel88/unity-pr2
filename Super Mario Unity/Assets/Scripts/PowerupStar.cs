@@ -11,21 +11,26 @@ public class PowerupStar : Powerup
 	void Update()
 	{
 		SetCurVel ();
-		// Freeze/unfreeze fireball
-		if (GM.instance.frozenEntities && !rBody.isKinematic)
+
+		if (isActive)
 		{
-			savedVelocity = rBody.velocity;
-			rBody.isKinematic = true;
-		}
-		else if (!GM.instance.frozenEntities && rBody.isKinematic)
-		{
-			rBody.velocity = savedVelocity;
-			rBody.isKinematic = false;
+			if (GM.instance.frozenEntities && !rBody.isKinematic)
+			{
+				savedVelocity = rBody.velocity;
+				rBody.isKinematic = true;
+			}
+			else if (!GM.instance.frozenEntities && rBody.isKinematic)
+			{
+				rBody.velocity = savedVelocity;
+				rBody.isKinematic = false;
+			}
 		}
 	}
 	
 	public void OnCollisionEnter2D(Collision2D other)
 	{
+		//if (!isActive) return;
+
 		float normalX = other.contacts[0].normal.x;
 		if (other.collider.CompareTag (Tags.player))
 		{

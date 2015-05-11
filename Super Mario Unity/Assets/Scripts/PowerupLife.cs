@@ -5,6 +5,8 @@ public class PowerupLife : Powerup
 {
 	public override void OnPickup()
 	{
+		if (!isActive) return;
+
 		base.OnPickup ();
 		
 		GM.instance.Lives ++;

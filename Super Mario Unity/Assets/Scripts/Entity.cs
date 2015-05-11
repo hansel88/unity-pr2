@@ -79,7 +79,6 @@ public class Entity : MonoBehaviour
 	
 	public virtual IEnumerator TurnAround()
 	{
-		print ("turning");
 		isChangingDirection = true;
 
 		// Change direction

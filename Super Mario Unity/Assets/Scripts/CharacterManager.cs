@@ -11,7 +11,7 @@ public class CharacterManager : MonoBehaviour
 	
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
-	[HideInInspector]public BoxCollider2D charCollider;
+	public BoxCollider2D charCollider;
 	private CharacterMovement charMove;
 	private SpriteRenderer spriteRenderer;
 	private bool isDying = false;
@@ -63,15 +63,58 @@ public class CharacterManager : MonoBehaviour
 				EndStarPowerup ();
 			}
 		}
-	}
 
-	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol)
+		//ValidHeadHit (Vector3.zero, charCollider);
+		//ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
+	}
+	
+	/*void OnDrawGizmos()
 	{
-		float jumpRectHeight = 0.02f;
-		Vector2 colliderSize = new Vector3 (headCol.size.x, jumpRectHeight);
+		Gizmos.color = Color.red;
+		Gizmos.DrawLine (v1, v2);
+		Gizmos.DrawLine (v2, v4);
+		Gizmos.DrawLine (v4, v3);
+		Gizmos.DrawLine (v3, v1);
+		print ("draw");
+	}
+	Vector3 v1;
+	Vector3 v2;
+	Vector3 v3;
+	Vector3 v4;*/
+
+	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol, float jumpRectHeight = 0.07f)
+	{
+		//float jumpRectHeight = 0.02f;
+		Vector2 colliderSize = new Vector3 (headCol.size.x * 0.95f, jumpRectHeight);
 		Vector3 worldPos = headCol.transform.TransformPoint (headCol.offset);
 		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + headCol.bounds.extents.y);
+
+		/*v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
+
+		return jumpRect.Contains (colPoint);
+	}
+
+	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float jumpRectHeight = 0.02f)
+	{
+		// TODO Optimize this
+
+		//float jumpRectHeight = 0.02f;
+		Vector2 colliderSize = new Vector3 (size.x * 0.95f, jumpRectHeight);
+		GameObject temp = new GameObject("Temp");
+		temp.transform.position = pos;
+		Vector3 worldPos = temp.transform.TransformPoint (offset);
+		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
+		jumpRect.center = new Vector2(worldPos.x, worldPos.y + b.extents.y);
+		Destroy (temp);
+		
+		/*v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
 		
 		return jumpRect.Contains (colPoint);
 	}

@@ -84,7 +84,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: .0799999982}
   serializedVersion: 2
   m_Size: {x: .159999996, y: .159999996}
 --- !u!114 &11478020
@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b3ac30e4540743869c6c1fe41ab7f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   scoreReward: 100
   movementSpeed: 2
   direction: 1
@@ -106,8 +105,10 @@ MonoBehaviour:
   spriteTransform: {fileID: 454212}
   canMove: 1
   anim: {fileID: 0}
+  rBody: {fileID: 0}
   isVisibleInCamera: 1
-  hasBeenJumped: 0
+  boxCollider: {fileID: 0}
+  isActive: 1
 --- !u!212 &21239702
 SpriteRenderer:
   m_ObjectHideFlags: 1

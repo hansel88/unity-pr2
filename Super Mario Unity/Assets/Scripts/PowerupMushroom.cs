@@ -5,6 +5,8 @@ public class PowerupMushroom : Powerup
 {
 	public override void OnPickup()
 	{
+		if (!isActive) return;
+
 		base.OnPickup ();
 
 		GM.instance.charManager.PowerUpgrade (PlayerState.Mushroom);
