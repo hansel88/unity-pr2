@@ -17,6 +17,9 @@ public class CharacterMovement : MonoBehaviour {
 	private bool previousFacingRight = true;
 	private float cameraEdgeMargin = 0.09f;
 
+    public GameObject jumpSmall;
+    public GameObject jumpBig;
+
 	void Awake()
 	{
 		rBody = GetComponent<Rigidbody2D>();
@@ -120,6 +123,11 @@ public class CharacterMovement : MonoBehaviour {
 	{
 		if (!ignoreGrounded)
 			if (!grounded) return;
+
+        if (GM.instance.HasMushroom)
+            GameObject.Instantiate(jumpBig);
+        else
+            GameObject.Instantiate(jumpSmall);
 
 		grounded = false;
         anim.SetTrigger("JumpTrigger");
