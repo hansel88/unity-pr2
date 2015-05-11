@@ -8,7 +8,7 @@ public class BoxCoin : MonoBehaviour
 	public void StopCoin()
 	{
 		GM.instance.Score += reward;
-		GUIManager.instance.PopRewardText (transform.position, "+" + reward);
+		GUIManager.instance.PopRewardText (transform.GetChild (0).position, "+" + reward);
 		gameObject.SetActive (false); // TODO Pool
 	}
 }

@@ -65,24 +65,23 @@ public class CharacterManager : MonoBehaviour
 		}
 
 		//ValidHeadHit (Vector3.zero, charCollider);
-		//ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
+		ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
 	}
 	
-	/*void OnDrawGizmos()
+	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
 		Gizmos.DrawLine (v1, v2);
 		Gizmos.DrawLine (v2, v4);
 		Gizmos.DrawLine (v4, v3);
 		Gizmos.DrawLine (v3, v1);
-		print ("draw");
 	}
 	Vector3 v1;
 	Vector3 v2;
 	Vector3 v3;
-	Vector3 v4;*/
+	Vector3 v4;
 
-	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol, float jumpRectHeight = 0.07f)
+	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol, float jumpRectHeight = 0.02f)
 	{
 		//float jumpRectHeight = 0.02f;
 		Vector2 colliderSize = new Vector3 (headCol.size.x * 0.95f, jumpRectHeight);
@@ -98,12 +97,12 @@ public class CharacterManager : MonoBehaviour
 		return jumpRect.Contains (colPoint);
 	}
 
-	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float jumpRectHeight = 0.02f)
+	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float rectHeight = 0.05f)
 	{
 		// TODO Optimize this
 
 		//float jumpRectHeight = 0.02f;
-		Vector2 colliderSize = new Vector3 (size.x * 0.95f, jumpRectHeight);
+		Vector2 colliderSize = new Vector3 (size.x * 0.95f, rectHeight);
 		GameObject temp = new GameObject("Temp");
 		temp.transform.position = pos;
 		Vector3 worldPos = temp.transform.TransformPoint (offset);
@@ -111,10 +110,10 @@ public class CharacterManager : MonoBehaviour
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + b.extents.y);
 		Destroy (temp);
 		
-		/*v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
 		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
 		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
-		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
 		
 		return jumpRect.Contains (colPoint);
 	}

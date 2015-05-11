@@ -12,7 +12,7 @@ public class BlockPowerup : Block
 	private int curActivateCount;
 	private Powerup curPowerup;
 
-	 void OnActivate(CharacterManager charManager)
+	 void OnHit(CharacterManager charManager)
 	{
 		isActive = curActivateCount < activateCount;
 		if (!isActive) return;
@@ -41,8 +41,9 @@ public class BlockPowerup : Block
 			curPowerup.rBody.isKinematic = true;
 			powerupObj.transform.SetParent (itemMoverParent);
 		}
-
-		base.OnActivate (curActivateCount >= activateCount);
+		anim.SetBool ("DisableBlock", curActivateCount >= activateCount);
+		
+		base.OnActivate ();
 	}
 
 	public void StartPowerup()
@@ -68,10 +69,11 @@ public class BlockPowerup : Block
 		{
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			//if (charManager.ValidHeadHit (other.contacts[0].point, charManager.charCollider))
+
 			if (charManager.ValidHeadHit (other.contacts[0].point, charManager.transform.position, charManager.charCollider.size,
-			                              charManager.charCollider.offset, charManager.charCollider.bounds));
+			                              charManager.charCollider.offset, charManager.charCollider.bounds))
 			{
-				OnActivate (charManager);
+				OnHit (charManager);
 			}
 		}
 		else

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 708745d2750d2452b8a94f3963669c4b
-timeCreated: 1431366860
+timeCreated: 1431370092
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -2646,8 +2646,8 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .439999998}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ItemSpriteSheet_207
       rect:
@@ -2656,8 +2656,8 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .439999998}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ItemSpriteSheet_208
       rect:
@@ -2666,8 +2666,8 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .439999998}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ItemSpriteSheet_209
       rect:
@@ -2676,8 +2676,8 @@ TextureImporter:
         y: 224
         width: 16
         height: 16
-      alignment: 7
-      pivot: {x: .5, y: 0}
+      alignment: 9
+      pivot: {x: .5, y: .439999998}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ItemSpriteSheet_210
       rect:
