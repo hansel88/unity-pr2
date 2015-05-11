@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 451900}
   - 82: {fileID: 8203146}
   m_Layer: 0
-  m_Name: powerUp
+  m_Name: pause
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
