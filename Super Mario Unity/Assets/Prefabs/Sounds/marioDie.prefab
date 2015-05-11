@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 451900}
   - 82: {fileID: 8203146}
   m_Layer: 0
-  m_Name: jumpBig
+  m_Name: marioDie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24380714, guid: 7277c4dd6d86a1c4c927f43fb5e91ddf,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0eeda076a69f14748a1ec153e2b28111, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ac430649b71534242b0d98cc35be9f49, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

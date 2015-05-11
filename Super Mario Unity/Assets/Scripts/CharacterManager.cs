@@ -20,6 +20,9 @@ public class CharacterManager : MonoBehaviour
 	public int fireflowerCount = 0;
 	private float starTimer;
 
+    public GameObject marioDieSound;
+    public GameObject powerUpSound;
+
 	void Awake()
 	{
 		if (!spriteTranform)
@@ -137,6 +140,7 @@ public class CharacterManager : MonoBehaviour
 		}
 		else
 		{
+            Destroy(GameObject.Instantiate(powerUpSound), 2);
 			if (curState == PlayerState.Mushroom && toState == PlayerState.Mushroom)
 			{
 				toState = PlayerState.Fireflower;
@@ -210,9 +214,12 @@ public class CharacterManager : MonoBehaviour
 		{
 			anim.SetTrigger ("DeathTrigger");
 		}
-		
+        //GameObject.Instantiate(marioDieSound);
+        Destroy(GameObject.Instantiate(marioDieSound), 4);
+
+        yield return new WaitForSeconds(3f);
 		// Wait some time before going to deathscreen
-		yield return new WaitForSeconds(withAnimation ? 2f : 1f);
+		//yield return new WaitForSeconds(withAnimation ? 2f : 1f);
 		Application.LoadLevel (Application.loadedLevel);
 	}
 	
