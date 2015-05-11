@@ -20,6 +20,8 @@ public class CharacterManager : MonoBehaviour
 	public int fireflowerCount = 0;
 	private float starTimer;
 
+    public GameObject marioDieSound;
+
 	void Awake()
 	{
 		if (!spriteTranform)
@@ -210,6 +212,8 @@ public class CharacterManager : MonoBehaviour
 		{
 			anim.SetTrigger ("DeathTrigger");
 		}
+        //GameObject.Instantiate(marioDieSound);
+        Destroy(GameObject.Instantiate(marioDieSound), 4);
 		
 		// Wait some time before going to deathscreen
 		yield return new WaitForSeconds(withAnimation ? 2f : 1f);

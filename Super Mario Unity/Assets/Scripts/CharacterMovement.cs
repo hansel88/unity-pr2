@@ -125,9 +125,9 @@ public class CharacterMovement : MonoBehaviour {
 			if (!grounded) return;
 
         if (GM.instance.HasMushroom)
-            GameObject.Instantiate(jumpBig);
+            Destroy(GameObject.Instantiate(jumpBig), 2);
         else
-            GameObject.Instantiate(jumpSmall);
+            Destroy(GameObject.Instantiate(jumpSmall), 2);
 
 		grounded = false;
         anim.SetTrigger("JumpTrigger");
