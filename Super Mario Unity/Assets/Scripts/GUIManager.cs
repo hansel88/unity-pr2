@@ -12,10 +12,32 @@ public class GUIManager : MonoBehaviour
 	public GameObject rewardPrefab;
 
 	public static GUIManager instance;
+    private bool isPaused = false;
 
 	void Awake()
 	{
 		instance = this;
+	}
+
+
+
+    void Update () 
+    {
+		if (Input.GetKeyDown("p"))
+        {
+            if(isPaused)
+            {
+                isPaused = false;
+                Time.timeScale = 0;
+            }
+            else
+            {
+                isPaused = true;
+                Time.timeScale = 1;
+            }
+
+        }
+
 	}
 
 	public void ChangeScoreText(int score)

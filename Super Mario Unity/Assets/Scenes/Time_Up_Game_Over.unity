@@ -115,10 +115,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de44d911757af46e0995ab3d7380de09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewardCanvas: {fileID: 0}
   textScore: {fileID: 527297991}
   textCoin: {fileID: 1787261512}
   textTime: {fileID: 981765401}
   textLevel: {fileID: 694081859}
+  rewardPrefab: {fileID: 0}
 --- !u!114 &136741964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marioPowerupStatus: 0
+  player: {fileID: 0}
+  frozenEntities: 0
+  charManager: {fileID: 0}
+  camWorldTopRight: {x: 0, y: 0, z: 0}
+  camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!4 &136741965
 Transform:
   m_ObjectHideFlags: 0
@@ -239,6 +247,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marioPowerupStatus: 0
+  player: {fileID: 0}
+  frozenEntities: 0
+  charManager: {fileID: 0}
+  camWorldTopRight: {x: 0, y: 0, z: 0}
+  camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!114 &410144526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,6 +264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  marioPowerupStatus: 0
+  player: {fileID: 0}
+  frozenEntities: 0
+  charManager: {fileID: 0}
+  camWorldTopRight: {x: 0, y: 0, z: 0}
+  camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!114 &527297991 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11477336, guid: 1f46491d4c2fc914eb8a539832e184c6,
@@ -460,6 +480,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 318891c27ce5d0147b8d6d0505e1213b, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1699976173
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.0819866583
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .016397167
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451900, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1787261512 stripped
 MonoBehaviour:
