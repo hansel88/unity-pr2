@@ -9,6 +9,7 @@ public class FireflowerProjectile : MonoBehaviour
 	private Rigidbody2D rBody;
 	private float normalThreshold = 0.9f;
 	private Vector2 savedVelocity;
+	private bool hasExploded = false;
 
 	void Awake()
 	{
@@ -44,29 +45,35 @@ public class FireflowerProjectile : MonoBehaviour
 	{
 		float normalX = other.contacts[0].normal.x;
 		curVel = Vector2.zero;
-		if (other.collider.CompareTag (Tags.enemy))
+		if (!hasExploded)
 		{
-			other.collider.SendMessage ("InstaDeath", 200, SendMessageOptions.DontRequireReceiver);
-			Explode ();
-		}
-		else if (normalX > normalThreshold || normalX < -normalThreshold)
-		{
-			Explode ();
-		}
-		else if (!GM.instance.frozenEntities && !rBody.isKinematic)
-		{
-			curVel = movementVelocity;
+			if (other.collider.CompareTag (Tags.enemy))
+			{
+				other.collider.SendMessage ("InstaDeath", 200, SendMessageOptions.DontRequireReceiver);
+				Explode ();
+			}
+			else if (normalX > normalThreshold || normalX < -normalThreshold)
+			{
+				Explode ();
+			}
+			else if (!GM.instance.frozenEntities && !rBody.isKinematic)
+			{
+				curVel = movementVelocity;
+			}
 		}
 		rBody.velocity = curVel;
 	}
 
 	void Explode()
 	{
-		CancelInvoke ("Explode");
-		GM.instance.charManager.DeductFireflowerCount ();
+		// Prevent it to explode again
+		if (hasExploded) return;
+		hasExploded = true;
+
+		GM.instance.charManager.fireflowerCount --;
+
 		anim.SetTrigger ("Explode");
-		rBody.isKinematic = true;
-		rBody.velocity = Vector2.zero;
+		rBody.gravityScale = 0f;
 	}
 	
 	public void DestroyEntity()
