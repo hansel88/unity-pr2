@@ -22,7 +22,7 @@ public class EnemyGoomba : Enemy
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
-				InstaDeath ();
+				InstaDeath (100);
 				return;
 			}
 

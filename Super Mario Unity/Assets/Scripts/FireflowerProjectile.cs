@@ -46,7 +46,7 @@ public class FireflowerProjectile : MonoBehaviour
 		curVel = Vector2.zero;
 		if (other.collider.CompareTag (Tags.enemy))
 		{
-			other.collider.SendMessage ("InstaDeath", SendMessageOptions.DontRequireReceiver);
+			other.collider.SendMessage ("InstaDeath", 200, SendMessageOptions.DontRequireReceiver);
 			Explode ();
 		}
 		else if (normalX > normalThreshold || normalX < -normalThreshold)

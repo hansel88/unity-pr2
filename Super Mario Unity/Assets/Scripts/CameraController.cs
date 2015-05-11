@@ -4,8 +4,8 @@ using System.Collections;
 public class CameraController : MonoBehaviour {
 
     public Transform Player;        // Reference to the player's transform.
-	public Transform leftCollider;
 	public Transform centerTransform;
+	public Transform[] edgeColliders;
 
     void Awake()
     {
@@ -16,11 +16,22 @@ public class CameraController : MonoBehaviour {
 
 	void Start()
 	{
-		leftCollider.SetParent (null);
-		leftCollider.position = new Vector3(GM.instance.camWorldBottomLeft.x - 0.5f, centerTransform.position.y, 0f);
-		leftCollider.GetComponent<BoxCollider2D>().size = new Vector2(1f, Vector2.Distance (new Vector2(0f, GM.instance.camWorldBottomLeft.y), 
-		                                                                                    new Vector2(0f, GM.instance.camWorldTopRight.y)));
-		leftCollider.SetParent (transform);
+		float screenHeight = Vector2.Distance (new Vector2(0f, GM.instance.camWorldBottomLeft.y), 
+		                                       new Vector2(0f, GM.instance.camWorldTopRight.y));
+		SetEdgeCollider (edgeColliders[0], 
+		                 new Vector3(GM.instance.camWorldBottomLeft.x - 0.5f, centerTransform.position.y, 0f), 
+		                 new Vector2(1f, screenHeight));
+		SetEdgeCollider (edgeColliders[1], 
+		                 new Vector3(GM.instance.camWorldTopRight.x + 0.5f, centerTransform.position.y, 0f), 
+		                 new Vector2(1f, screenHeight));
+	}
+
+	void SetEdgeCollider(Transform collider, Vector3 pos, Vector3 size)
+	{
+		collider.SetParent (null);
+		collider.position = pos;
+		collider.GetComponent<BoxCollider2D>().size = size;
+		collider.SetParent (transform);
 	}
 
     void FixedUpdate()

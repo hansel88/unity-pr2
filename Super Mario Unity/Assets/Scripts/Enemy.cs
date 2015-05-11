@@ -51,9 +51,10 @@ public class Enemy : Entity
 		gameObject.SetActive (false);
 	}
 
-	public void InstaDeath()
+	public void InstaDeath(int pointReward)
 	{
 		anim.SetTrigger ("InstaDeathTrigger");
+		RewardScore (pointReward);
 		canMove = false;
 	}
 }
