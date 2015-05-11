@@ -363,6 +363,22 @@ Prefab:
       value: 
       objectReference: {fileID: 21300100, guid: 3df70161684fd4bf0a470916d80889a8,
         type: 3}
+    - target: {fileID: 11499118, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
+      propertyPath: marioDieSound
+      value: 
+      objectReference: {fileID: 111940, guid: 7177a07f38b46724a97da5d85dc21374, type: 2}
+    - target: {fileID: 11499118, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
+      propertyPath: powerUpSound
+      value: 
+      objectReference: {fileID: 111940, guid: 7db8ae276fbb1c048baca25259c8e12c, type: 2}
+    - target: {fileID: 11470472, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
+      propertyPath: jumpSmall
+      value: 
+      objectReference: {fileID: 111940, guid: cfdfac2a2dba45d41a6627e416cef75f, type: 2}
+    - target: {fileID: 11470472, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
+      propertyPath: jumpBig
+      value: 
+      objectReference: {fileID: 111940, guid: e48499e1aed12ef4b8f6145530c46ef0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
   m_IsPrefabParent: 0
