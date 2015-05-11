@@ -87,7 +87,7 @@ public class GM : MonoBehaviour
 
     public GameObject player;
 	private bool playerIsAlive = true;
-	public bool PlayerIsAlive 
+	public bool PlayerIsAlive   
 	{ 
 		get {return playerIsAlive;} 
 		set {playerIsAlive = value; charMove.canMove = value;}
