@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Kills stuff when touched (for when stuff falls through holes)
 public class DeathBarrier : MonoBehaviour
 {
 	void OnCollisionEnter2D(Collision2D other)
