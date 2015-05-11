@@ -27,7 +27,7 @@ public class EnemyKoopaTroopa : Enemy
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
-				InstaDeath ();
+				InstaDeath (200);
 				return;
 			}
 

@@ -24,7 +24,7 @@ public class EnemyShell : Enemy
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
-				InstaDeath ();
+				InstaDeath (200);
 				return;
 			}
 
@@ -62,7 +62,7 @@ public class EnemyShell : Enemy
 		}
 		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
 		{
-			other.collider.GetComponent<Enemy>().InstaDeath ();
+			other.collider.GetComponent<Enemy>().InstaDeath (800);
 		}
 		else
 		{
@@ -98,7 +98,7 @@ public class EnemyShell : Enemy
 		}
 	}
 
-	public void OnCollide(Transform other)
+	/*public void OnCollide(Transform other)
 	{
 		if (other.CompareTag (Tags.enemy) && direction != 0)
 		{
@@ -117,7 +117,7 @@ public class EnemyShell : Enemy
 		{
 			other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
 		}
-	}
+	}*/
 
 	public void OnShellCollision(Transform other)
 	{

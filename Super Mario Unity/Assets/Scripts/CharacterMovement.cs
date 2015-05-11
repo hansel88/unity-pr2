@@ -15,6 +15,7 @@ public class CharacterMovement : MonoBehaviour {
 	public bool facingRight = true;
 	public Transform[] groundedChecks;
 	private bool previousFacingRight = true;
+	private float cameraEdgeMargin = 0.09f;
 
     public GameObject jumpSmall;
     public GameObject jumpBig;
@@ -66,6 +67,17 @@ public class CharacterMovement : MonoBehaviour {
 		{
 			horizontalInput = 0f;
 		}
+
+		// Clamp position to camera
+		/*float xPos = transform.position.x;
+		if (xPos < GM.instance.camWorldBottomLeft.x + cameraEdgeMargin)
+		{
+			horizontalInput = Mathf.Clamp (horizontalInput, 0f, 1f);
+		}
+		else if (xPos > GM.instance.camWorldTopRight.x - cameraEdgeMargin)
+		{
+			horizontalInput = Mathf.Clamp (horizontalInput, -1f, 0f);
+		}*/
 
 		anim.SetBool ("Walking", horizontalInput < 0f || horizontalInput > 0f);
 		//anim.SetFloat("movementSpeed", h);
