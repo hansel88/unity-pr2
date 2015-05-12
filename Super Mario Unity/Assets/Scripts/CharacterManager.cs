@@ -8,7 +8,8 @@ public class CharacterManager : MonoBehaviour
 	public bool isInvincible = false;
 	public GameObject fireflowerProjectilePrefab;
 	public Transform fireflowerShootPosition;
-	
+	public Transform headCollider;
+
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
 	public BoxCollider2D charCollider;
@@ -287,11 +288,13 @@ public class CharacterManager : MonoBehaviour
 		{
 			charCollider.size = new Vector2(0.16f, 0.16f);
 			charCollider.offset = new Vector2(0f, 0.08f);
+			headCollider.localPosition = new Vector3(0f, 0.14f);
 		}
 		else
 		{
 			charCollider.size = new Vector2(0.16f, 0.32f);
 			charCollider.offset = new Vector2(0f, 0.16f);
+			headCollider.localPosition = new Vector3(0f, 0.3f);
 		}
 	}
 	
@@ -300,6 +303,23 @@ public class CharacterManager : MonoBehaviour
 		Color col = spriteRenderer.color;
 		col.a = fullVisible ? 1f : 0.5f;
 		spriteRenderer.color = col;
+	}
+
+	public void OnHeadHit(Collider2D other)
+	{
+		print ("Hit head collider");
+		if (other.CompareTag (Tags.block))
+		{
+			BlockPowerup bPowerup = other.GetComponent<BlockPowerup>();
+			if (bPowerup)
+			{
+				bPowerup.OnHit (this);
+			}
+			else
+			{
+				other.GetComponent<BlockBrick>().OnHit (this);
+			}
+		}
 	}
 }
 

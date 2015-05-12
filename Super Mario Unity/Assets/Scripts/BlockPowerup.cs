@@ -18,8 +18,11 @@ public class BlockPowerup : MonoBehaviour
 		anim = GetComponent<Animator>();
 	}
 
-	void OnHit(CharacterManager charManager)
+	public void OnHit(CharacterManager charManager)
 	{
+		if (charManager.hasHitBlock) return;
+		charManager.hasHitBlock = true;
+
 		isActive = curActivateCount < activateCount;
 		if (!isActive) return;
 		curActivateCount ++;
@@ -70,7 +73,7 @@ public class BlockPowerup : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (!isActive) return;
+		/*if (!isActive) return;
 
 		if (other.collider.CompareTag (Tags.player))
 		{
@@ -91,6 +94,6 @@ public class BlockPowerup : MonoBehaviour
 			{
 				OnHit (null);
 			}
-		}
+		}*/
 	}
 }

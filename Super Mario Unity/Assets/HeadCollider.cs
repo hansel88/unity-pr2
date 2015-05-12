@@ -4,9 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(BoxCollider2D))]
 public class HeadCollider : CollisionEntity
 {
-	void Awake()
+	void OnTriggerEnter2D(Collider2D other)
 	{
-		gameObject.tag = Tags.headCollider;
-		gameObject.layer = LayerMask.NameToLayer ("HeadCollider");
+		transform.parent.SendMessage ("OnHeadHit", other, SendMessageOptions.DontRequireReceiver);
 	}
 }

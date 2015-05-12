@@ -109,4 +109,9 @@ public class Entity : MonoBehaviour
 	{
 		RewardScore (scoreReward);
 	}
+
+	public void OnHeadHit(Collider2D other)
+	{
+		print ("Hit head collider");
+	}
 }

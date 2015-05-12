@@ -7,7 +7,6 @@ public class CharacterMovement : MonoBehaviour {
     public float speed = 1.0f;
     public float jumpForce = 200.0f;
 	public LayerMask groundedLayers;
-	public Transform groundedPosition;
     public bool grounded = true;
 	public bool canMove = true;
 	private Animator anim;
@@ -33,11 +32,6 @@ public class CharacterMovement : MonoBehaviour {
 	float horizontalInput = 0f;
 	void Update () 
 	{
-		// Grounded check
-		Vector2 bl = groundedPosition.position - new Vector3(0.007f, 0.02f);
-		Vector2 tr = groundedPosition.position + new Vector3(0.007f, 0.02f);
-		//grounded = Physics2D.OverlapArea (groundedChecks[0].position, groundedChecks[1].position, groundedLayers);
-
 		if (canMove)
 		{
 	        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);

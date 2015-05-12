@@ -9,8 +9,11 @@ public class BlockBrick : MonoBehaviour
 	public Vector2[] particleVectors = new Vector2[4];
 	public int activateReward = 0;
 
-	public void OnHit()
+	public void OnHit(CharacterManager charManager)
 	{
+		if (charManager.hasHitBlock) return;
+		charManager.hasHitBlock = true;
+
 		GM.instance.Score += activateReward;
 
 		for (int i = 0; i < brickParticles.Length; i ++)
@@ -24,7 +27,7 @@ public class BlockBrick : MonoBehaviour
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.collider.CompareTag (Tags.player))
+		/*if (other.collider.CompareTag (Tags.player))
 		{
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.ValidHeadHit (other.contacts[0].point, charManager.transform.position, charManager.charCollider.size,
@@ -41,6 +44,6 @@ public class BlockBrick : MonoBehaviour
 			{
 				OnHit ();
 			}
-		}
+		}*/
 	}
 }
