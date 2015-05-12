@@ -10,7 +10,7 @@ public class PowerupLife : Powerup
 		base.OnPickup ();
 		
 		GM.instance.Lives ++;
-		GUIManager.instance.PopRewardText(transform.position, "+1up");
+		GUIManager.instance.PopRewardText(transform.position, "1up");
 	}
 
 	void OnCollisionEnter2D(Collision2D other)

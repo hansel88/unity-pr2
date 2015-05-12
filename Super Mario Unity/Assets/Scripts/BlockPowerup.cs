@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BlockPowerup : Block
+public class BlockPowerup : MonoBehaviour
 {
 	public enum BlockContent {Coin, Mushroom, Fireflower, Star, OneUp};
 	public BlockContent content = BlockContent.Coin;
@@ -11,8 +11,14 @@ public class BlockPowerup : Block
 	private bool isActive = true;
 	private int curActivateCount;
 	private Powerup curPowerup;
+	private Animator anim;
+	
+	void Awake()
+	{
+		anim = GetComponent<Animator>();
+	}
 
-	 void OnHit(CharacterManager charManager)
+	void OnHit(CharacterManager charManager)
 	{
 		isActive = curActivateCount < activateCount;
 		if (!isActive) return;
@@ -26,7 +32,8 @@ public class BlockPowerup : Block
 		else
 		{
 			// Change item to fireflower if player already has mushroom or fireflower
-			if (content == BlockContent.Mushroom && (int)charManager.curState >= (int)PlayerState.Mushroom) 
+			//if (content == BlockContent.Mushroom && (int)charManager.curState >= (int)PlayerState.Mushroom) 
+			if (content == BlockContent.Mushroom && (int)GM.instance.charManager.curState >= (int)PlayerState.Mushroom) 
 			{
 				content = BlockContent.Fireflower;
 			}
@@ -43,7 +50,7 @@ public class BlockPowerup : Block
 		}
 		anim.SetBool ("DisableBlock", curActivateCount >= activateCount);
 		
-		base.OnActivate ();
+		anim.SetTrigger ("ActivateTrigger");
 	}
 
 	public void StartPowerup()
@@ -71,14 +78,19 @@ public class BlockPowerup : Block
 			//if (charManager.ValidHeadHit (other.contacts[0].point, charManager.charCollider))
 
 			if (charManager.ValidHeadHit (other.contacts[0].point, charManager.transform.position, charManager.charCollider.size,
-			                              charManager.charCollider.offset, charManager.charCollider.bounds))
+			                              charManager.charCollider.offset, charManager.charCollider.bounds) 
+			    && !charManager.hasHitBlock && isActive)
 			{
+				charManager.hasHitBlock = true;
 				OnHit (charManager);
 			}
 		}
-		else
+		else if (other.collider.CompareTag (Tags.enemy))
 		{
-
+			if (other.collider.GetComponent<EnemyShell>())
+			{
+				OnHit (null);
+			}
 		}
 	}
 }

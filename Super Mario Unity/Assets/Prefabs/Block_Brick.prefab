@@ -11,7 +11,6 @@ GameObject:
   - 114: {fileID: 11423004}
   - 61: {fileID: 6179002}
   - 50: {fileID: 5035692}
-  - 95: {fileID: 9534248}
   m_Layer: 0
   m_Name: Block_Brick
   m_TagString: Block
@@ -88,23 +87,6 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .159999996, y: .159999996}
---- !u!95 &9534248
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 180370}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 82f0859d9884e4058a1767545e7972d3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11423004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +98,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bc6cc3bec6af425b8b3bdfaa420fd0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  brickParticlePrefab: {fileID: 173164, guid: a0fb23323aab74f79999bb8f3cfdbc17, type: 2}
+  brickParticles:
+  - {fileID: 21300016, guid: d92be009b43fc494a86b7bcbeab79603, type: 3}
+  - {fileID: 21300022, guid: d92be009b43fc494a86b7bcbeab79603, type: 3}
+  - {fileID: 21300024, guid: d92be009b43fc494a86b7bcbeab79603, type: 3}
+  - {fileID: 21300026, guid: d92be009b43fc494a86b7bcbeab79603, type: 3}
+  particleForce: 250
+  particleVectors:
+  - {x: -.200000003, y: .800000012}
+  - {x: .200000003, y: .800000012}
+  - {x: .400000006, y: .600000024}
+  - {x: -.400000006, y: .600000024}
   activateReward: 50
 --- !u!212 &21237574
 SpriteRenderer:

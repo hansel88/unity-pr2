@@ -19,6 +19,7 @@ public class CharacterManager : MonoBehaviour
 	[SerializeField]private float fireRate = 1f;
 	public int fireflowerCount = 0;
 	private float starTimer;
+	public bool hasHitBlock = false;
 
     public GameObject marioDieSound;
     public GameObject powerUpSound;
@@ -67,7 +68,23 @@ public class CharacterManager : MonoBehaviour
 		//ValidHeadHit (Vector3.zero, charCollider);
 		ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
 	}
-	
+
+	void OnCollisionEnter2D(Collision2D other)
+	{
+		if (!other.collider.CompareTag (Tags.enemy) 
+		    && !other.collider.CompareTag (Tags.powerup) 
+		    && !other.collider.CompareTag (Tags.player))
+		{
+			Vector3 normal = other.contacts[0].point.normalized;
+			//print ("N: " + normal);
+			if (normal.x < 0f && normal.y < -0.05f)
+			{
+				charMove.grounded = true;
+				hasHitBlock = false;
+			}
+		}
+	}
+
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.red;
@@ -89,15 +106,14 @@ public class CharacterManager : MonoBehaviour
 		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + headCol.bounds.extents.y);
 
-		/*v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
 		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
 		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
-		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);*/
-
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
 		return jumpRect.Contains (colPoint);
 	}
 
-	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float rectHeight = 0.05f)
+	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float rectHeight = 0.07f)
 	{
 		// TODO Optimize this
 
@@ -174,11 +190,11 @@ public class CharacterManager : MonoBehaviour
 	
 	public void PowerUpgrade(PlayerState toState)
 	{
-		if ((int)curState > (int)toState)
+		if ((int)curState >= (int)toState)
 		{
 			int scoreReward = 1000;
 			GM.instance.Score += scoreReward;
-			GUIManager.instance.PopRewardText (transform.position, "+" + scoreReward);
+			GUIManager.instance.PopRewardText (transform.position, scoreReward.ToString ());
 		}
 		else
 		{

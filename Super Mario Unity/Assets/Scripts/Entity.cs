@@ -102,7 +102,7 @@ public class Entity : MonoBehaviour
 	{
 		// Give the player score points
 		GM.instance.Score += score;
-		GUIManager.instance.PopRewardText (transform.position, "+" + score);
+		GUIManager.instance.PopRewardText (transform.position, score.ToString ());
 	}
 
 	public void RewardScore()

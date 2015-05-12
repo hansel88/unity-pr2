@@ -12,7 +12,7 @@ public class DeathBarrier : MonoBehaviour
 		}
 		else
 		{
-			other.gameObject.SetActive (false);
+			Destroy (other.gameObject);
 		}
 	}
 
@@ -24,7 +24,7 @@ public class DeathBarrier : MonoBehaviour
 		}
 		else
 		{
-			other.gameObject.SetActive (false);
+			Destroy (other.gameObject);
 		}
 	}
 }

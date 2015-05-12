@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// TODO Delete
 public class Block : MonoBehaviour
 {
 	[HideInInspector]public Animator anim;
@@ -12,6 +13,7 @@ public class Block : MonoBehaviour
 
 	public void OnActivate()
 	{
-		anim.SetTrigger ("ActivateTrigger");
+		if (anim)
+			anim.SetTrigger ("ActivateTrigger");
 	}
 }
