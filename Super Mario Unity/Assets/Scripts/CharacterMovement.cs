@@ -117,7 +117,7 @@ public class CharacterMovement : MonoBehaviour {
 	{
 		if (!ignoreGrounded)
 			if (!grounded) return;
-
+		print ("jump!");
         if (GM.instance.HasMushroom)
             Destroy(GameObject.Instantiate(jumpBig), 2);
         else if (jumpSmall != null)

@@ -14,6 +14,12 @@ public class BlockBrick : MonoBehaviour
 		if (charManager.hasHitBlock) return;
 		charManager.hasHitBlock = true;
 
+		if (charManager.curState == PlayerState.Small)
+		{
+			// TODO Animate block being hit
+			return;
+		}
+
 		GM.instance.Score += activateReward;
 
 		for (int i = 0; i < brickParticles.Length; i ++)
@@ -37,13 +43,13 @@ public class BlockBrick : MonoBehaviour
 				charManager.hasHitBlock = true;
 				OnHit ();
 			}
-		}
-		else if (other.collider.CompareTag (Tags.enemy))
+		}*/
+		if (other.collider.CompareTag (Tags.enemy))
 		{
 			if (other.collider.GetComponent<EnemyShell>())
 			{
-				OnHit ();
+				OnHit (null);
 			}
-		}*/
+		}
 	}
 }

@@ -164,21 +164,28 @@ public class CharacterManager : MonoBehaviour
 		
 		SetAnimationTriggers (false);
 		isInvincible = true;
-		
-		switch(curState)
+
+		if (curState == PlayerState.Small)
+		{
+			StartCoroutine (Die (true));
+		}
+		else
+		{
+			curState = PlayerState.Small;
+		}
+
+		/*switch(curState)
 		{
 		case PlayerState.Small:
 			StartCoroutine (Die (true));
 			break;
 		case PlayerState.Mushroom:
 			curState = PlayerState.Small;
-			// TODO To small
 			break;
 		case PlayerState.Fireflower:
 			curState = PlayerState.Small;
-			// TODO To small
 			break;
-		}
+		}*/
 		
 		
 		SetColliderSize ();
@@ -307,7 +314,6 @@ public class CharacterManager : MonoBehaviour
 
 	public void OnHeadHit(Collider2D other)
 	{
-		print ("Hit head collider");
 		if (other.CompareTag (Tags.block))
 		{
 			BlockPowerup bPowerup = other.GetComponent<BlockPowerup>();

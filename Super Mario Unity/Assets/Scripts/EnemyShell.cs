@@ -28,7 +28,7 @@ public class EnemyShell : Enemy
 				return;
 			}
 
-			if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
+			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
 			{
 				JumpedOn ();
 				// Check if shell is moving
@@ -58,6 +58,15 @@ public class EnemyShell : Enemy
 				{
 					charManager.OnEnemyHit ();
 				}
+			}*/
+			if (direction == 0)
+			{
+				direction = other.transform.position.x > transform.position.x ? -1 : 1;
+				RewardScore ();
+			}
+			else
+			{
+				charManager.OnEnemyHit ();
 			}
 		}
 		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
@@ -118,6 +127,13 @@ public class EnemyShell : Enemy
 			other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
 		}
 	}*/
+
+	public override void OnHeadHit(Collider2D other)
+	{
+		base.OnHeadHit (other);
+		print ("head hit");
+		OnJumpHit ();
+	}
 
 	public void OnShellCollision(Transform other)
 	{

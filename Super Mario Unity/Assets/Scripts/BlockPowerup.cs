@@ -20,8 +20,11 @@ public class BlockPowerup : MonoBehaviour
 
 	public void OnHit(CharacterManager charManager)
 	{
-		if (charManager.hasHitBlock) return;
-		charManager.hasHitBlock = true;
+		if (charManager)
+		{
+			if (charManager.hasHitBlock) return;
+			charManager.hasHitBlock = true;
+		}
 
 		isActive = curActivateCount < activateCount;
 		if (!isActive) return;
@@ -87,13 +90,13 @@ public class BlockPowerup : MonoBehaviour
 				charManager.hasHitBlock = true;
 				OnHit (charManager);
 			}
-		}
-		else if (other.collider.CompareTag (Tags.enemy))
+		}*/
+		if (other.collider.CompareTag (Tags.enemy))
 		{
 			if (other.collider.GetComponent<EnemyShell>())
 			{
 				OnHit (null);
 			}
-		}*/
+		}
 	}
 }
