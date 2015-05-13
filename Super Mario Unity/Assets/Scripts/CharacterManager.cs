@@ -21,6 +21,7 @@ public class CharacterManager : MonoBehaviour
 	public int fireflowerCount = 0;
 	private float starTimer;
 	public bool hasHitBlock = false;
+	public bool lastHitHead = false;
 
     public GameObject marioDieSound;
     public GameObject powerUpSound;
@@ -67,7 +68,7 @@ public class CharacterManager : MonoBehaviour
 		}
 
 		//ValidHeadHit (Vector3.zero, charCollider);
-		ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
+		//ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -83,16 +84,20 @@ public class CharacterManager : MonoBehaviour
 				charMove.grounded = true;
 				hasHitBlock = false;
 			}
+			if (other.collider.CompareTag (Tags.block) && transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
+			{
+				other.collider.SendMessage ("OnHit", this, SendMessageOptions.DontRequireReceiver);
+			}
 		}
 	}
 
 	void OnDrawGizmos()
 	{
-		Gizmos.color = Color.red;
+		/*Gizmos.color = Color.red;
 		Gizmos.DrawLine (v1, v2);
 		Gizmos.DrawLine (v2, v4);
 		Gizmos.DrawLine (v4, v3);
-		Gizmos.DrawLine (v3, v1);
+		Gizmos.DrawLine (v3, v1);*/
 	}
 	Vector3 v1;
 	Vector3 v2;

@@ -144,7 +144,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93a7c0d90101b4c88a5e263b9c719e9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
   content: 1
   activateCount: 1
   itemPrefabs:
@@ -154,6 +153,7 @@ MonoBehaviour:
   - {fileID: 142640, guid: ff20b1211b51d474bbf9d4fa167a594a, type: 2}
   - {fileID: 112750, guid: 5bd8426f20bec44959a2334dac3a31b8, type: 2}
   itemMoverParent: {fileID: 426670}
+  powerUpAppearSound: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
 --- !u!212 &21205800
 SpriteRenderer:
   m_ObjectHideFlags: 1

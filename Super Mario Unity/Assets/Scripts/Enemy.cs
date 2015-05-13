@@ -11,6 +11,11 @@ public class Enemy : Entity
 	void Update()
 	{
 		HorizontalMovement ();
+		//boxCollider.enabled = !isDying;
+		if (boxCollider.enabled && isDying)
+		{
+			boxCollider.enabled = false;
+		}
 	}
 
 	public void Die()
@@ -20,7 +25,7 @@ public class Enemy : Entity
 		isDying = true;
 
 		// Disable the colliders
-		boxCollider.enabled = false;
+		boxCollider.enabled = true;
 
 		canMove = false;
 		RewardScore ();
@@ -40,9 +45,7 @@ public class Enemy : Entity
 
 	public void JumpedOn()
 	{
-		if (hasJumped) return;
 
-		hasJumped = true;
 		GM.instance.charManager.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
 	}

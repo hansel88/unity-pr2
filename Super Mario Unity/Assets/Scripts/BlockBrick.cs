@@ -9,17 +9,25 @@ public class BlockBrick : MonoBehaviour
 	public Vector2[] particleVectors = new Vector2[4];
 	public int activateReward = 0;
     public GameObject blockBreakSound;
+	private Animator anim;
+
+	void Awake()
+	{
+		anim = GetComponent<Animator>();
+	}
 
 	public void OnHit(CharacterManager charManager)
 	{
 		if (charManager)
 		{
+			print ("hit brick");
 			if (charManager.hasHitBlock) return;
 			charManager.hasHitBlock = true;
 
 			if (charManager.curState == PlayerState.Small)
 			{
-				// TODO Animate block being hit
+				print ("small hit");
+				anim.SetTrigger ("ActivateTrigger");
 				return;
 			}
 		}

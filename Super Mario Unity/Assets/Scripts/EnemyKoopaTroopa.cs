@@ -31,11 +31,19 @@ public class EnemyKoopaTroopa : Enemy
 				return;
 			}
 
-			if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
+			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
 			{
 				JumpedOn ();
 				Instantiate (shellPrefab, transform.position, Quaternion.identity);
 				Die ();
+			}
+			else
+			{
+				charManager.OnEnemyHit ();
+			}*/
+			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f, -0.04f))
+			{
+				OnHeadHit (other.collider);
 			}
 			else
 			{
@@ -46,5 +54,17 @@ public class EnemyKoopaTroopa : Enemy
 		{
 			ChangeDirectionOnCollision (other);
 		}
+	}
+
+	public override void OnHeadHit(Collider2D other)
+	{
+		// Stop colliding if player is already hit
+		if (other.CompareTag (Tags.player))
+		{
+			if (other.GetComponent<CharacterManager>().isInvincible) return;
+		}
+		
+		base.OnHeadHit (other);
+		OnJumpHit ();
 	}
 }

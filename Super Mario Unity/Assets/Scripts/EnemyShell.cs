@@ -59,14 +59,21 @@ public class EnemyShell : Enemy
 					charManager.OnEnemyHit ();
 				}
 			}*/
-			if (direction == 0)
+			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
 			{
-				direction = other.transform.position.x > transform.position.x ? -1 : 1;
-				RewardScore ();
+				OnHeadHit (other.collider);
 			}
 			else
 			{
-				charManager.OnEnemyHit ();
+				if (direction == 0)
+				{
+					direction = other.transform.position.x > transform.position.x ? -1 : 1;
+					RewardScore ();
+				}
+				else
+				{
+					charManager.OnEnemyHit ();
+				}
 			}
 		}
 		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
@@ -132,6 +139,12 @@ public class EnemyShell : Enemy
 
 	public override void OnHeadHit(Collider2D other)
 	{
+		// Stop colliding if player is already hit
+		if (other.CompareTag (Tags.player))
+		{
+			if (other.GetComponent<CharacterManager>().isInvincible) return;
+		}
+
 		base.OnHeadHit (other);
 		OnJumpHit ();
 	}
