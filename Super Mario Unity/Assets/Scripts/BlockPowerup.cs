@@ -12,6 +12,7 @@ public class BlockPowerup : MonoBehaviour
 	private int curActivateCount;
 	private Powerup curPowerup;
 	private Animator anim;
+    public GameObject powerUpAppearSound;
 	
 	void Awake()
 	{
@@ -29,6 +30,8 @@ public class BlockPowerup : MonoBehaviour
 		isActive = curActivateCount < activateCount;
 		if (!isActive) return;
 		curActivateCount ++;
+
+        Destroy(GameObject.Instantiate(powerUpAppearSound), 2);
 
 		if (content == BlockContent.Coin)
 		{
