@@ -4,7 +4,6 @@ using System.Collections;
 public class Enemy : Entity
 {
 	public bool hasDeathAnimation = true;
-	public BoxCollider2D headCollider; // The head cillider
 	public bool isDying = false;
 	private bool hasJumped = false;
 

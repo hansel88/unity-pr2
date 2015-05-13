@@ -64,8 +64,6 @@ public class EnemyGoomba : Enemy
 		if (other.CompareTag (Tags.player))
 		{
 			CharacterManager charManager = other.GetComponent<CharacterManager>();
-			charManager.lastHitHead = true;
-			StartCoroutine (headreset ());
 			if (charManager.isInvincible) return;
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
@@ -76,6 +74,6 @@ public class EnemyGoomba : Enemy
 	IEnumerator headreset()
 	{
 		yield return new WaitForSeconds(0.5f);
-		GM.instance.charManager.lastHitHead = false;
+		//GM.instance.charManager.lastHitHead = false;
 	}
 }

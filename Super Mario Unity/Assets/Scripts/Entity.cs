@@ -83,7 +83,6 @@ public class Entity : MonoBehaviour
 
 		// Change direction
 		direction *= -1;
-		print ("changing direction");
 		// Rotate spritetransform
 		if (rotateWithDirection)
 		{

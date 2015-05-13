@@ -3,21 +3,19 @@ using System.Collections;
 
 public class CharacterMovement : MonoBehaviour {
 
-	public float downForce = 10f;
-    public float speed = 1.0f;
-    public float jumpForce = 200.0f;
-	public LayerMask groundedLayers;
-    public bool grounded = true;
-	public bool canMove = true;
+	[SerializeField]private float downForce = 0.1f; // Force to apply when in the air
+	[SerializeField]private float movementSpeed = 100f;
+	[SerializeField]private float jumpForce = 250f;
+	[SerializeField]private GameObject jumpSmall;
+	[SerializeField]private GameObject jumpBig;
+
+    [HideInInspector]public bool grounded = true;
+	public bool canMove = true; // TODO Remove?
 	private Animator anim;
 	private Rigidbody2D rBody;
-	public bool facingRight = true;
-	public Transform[] groundedChecks;
-	private bool previousFacingRight = true;
-	private float cameraEdgeMargin = 0.09f;
-
-    public GameObject jumpSmall;
-    public GameObject jumpBig;
+	[HideInInspector]public bool facingRight = true;
+	private bool previousFacingRight = true; // TODO remove?
+	private float horizontalInput = 0f;
 
 	void Awake()
 	{
@@ -26,27 +24,25 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Start()
 	{
-		anim = GetComponent<CharacterManager>().anim;
+		// Get the animator for the player sprite
+		anim = GetComponent<CharacterManager>().spriteTransform.GetComponent<Animator>();
 	}
 
-	float horizontalInput = 0f;
 	void Update () 
 	{
+		// Check if we can move
 		if (canMove)
 		{
-	        //var move = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
+			// Get input
 			horizontalInput = Input.GetAxisRaw ("Horizontal");
+
+			// Jumping
 	        if (Input.GetButtonDown("Jump") && grounded == true)
 	        {
 				Jump (false);
 	        }
-	        /*else
-	        {
-	            //GetComponent<Animator>().SetBool("WalkingRight", true); 
-	            //transform.position += move * speed * Time.deltaTime;
-				//rBody.AddForce (move * speed * Time.deltaTime);
-
-	        }*/
+	        
+			// Flipping
 			if (facingRight && horizontalInput < 0f)
 			{
 				Flip ();
@@ -62,33 +58,28 @@ public class CharacterMovement : MonoBehaviour {
 			horizontalInput = 0f;
 		}
 
-		// Clamp position to camera
-		/*float xPos = transform.position.x;
-		if (xPos < GM.instance.camWorldBottomLeft.x + cameraEdgeMargin)
-		{
-			horizontalInput = Mathf.Clamp (horizontalInput, 0f, 1f);
-		}
-		else if (xPos > GM.instance.camWorldTopRight.x - cameraEdgeMargin)
-		{
-			horizontalInput = Mathf.Clamp (horizontalInput, -1f, 0f);
-		}*/
-
+		// Set the animator parameters
 		anim.SetBool ("Walking", horizontalInput < 0f || horizontalInput > 0f);
-		//anim.SetFloat("movementSpeed", h);
 		anim.SetBool("Grounded", grounded);
 
+		// Manage the y velocity
 		float vel = rBody.velocity.y;
 		if (!grounded)
 		{
+			// Add some downforce when in the air
 			vel -= downForce;
 		}
+
+		// Check if the game is frozen
 		if (!GM.instance.frozenEntities)
 		{
 			if (rBody.isKinematic)
 			{
 				rBody.isKinematic = false;
 			}
-			rBody.velocity = new Vector2(horizontalInput * speed * Time.deltaTime, vel);
+
+			// Apply the input and the velocity to the rigidbody
+			rBody.velocity = new Vector2(horizontalInput * movementSpeed * Time.deltaTime, vel);
 		}
 		else if (!rBody.isKinematic)
 		{
@@ -103,23 +94,28 @@ public class CharacterMovement : MonoBehaviour {
 			anim.SetTrigger ("FlipTrigger");
 		previousFacingRight = facingRight;
 
+		// Flip the spirte
 		facingRight = !facingRight;
-
 		transform.localScale = new Vector3(facingRight ? 1 : -1, 1);
 	}
 
 	public void Jump(bool ignoreGrounded)
 	{
+		// Check if we want to ignore the grounded value
 		if (!ignoreGrounded)
 			if (!grounded) return;
 
+		// Play the jump SFX
 		if (GM.instance.HasMushroom)
             Destroy(GameObject.Instantiate(jumpBig), 2);
         else if (jumpSmall != null)
             Destroy(GameObject.Instantiate(jumpSmall), 2);
 
+		// Set us to not grounded and trigger the animtor
 		grounded = false;
         anim.SetTrigger("JumpTrigger");
+
+		// Add the jumpforce to the rigidbody
 		rBody.AddForce(new Vector2(0, jumpForce));
 	}
 }

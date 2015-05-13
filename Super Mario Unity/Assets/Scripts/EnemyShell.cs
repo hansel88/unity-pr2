@@ -9,11 +9,11 @@ public class EnemyShell : Enemy
 	{
 		base.Start ();
 
-		headCollider.enabled = false;
+		//headCollider.enabled = false;
 
 		// Start with no movement
 		direction = 0;
-		StartCoroutine (EnableHead ());
+		//StartCoroutine (EnableHead ());
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -86,12 +86,6 @@ public class EnemyShell : Enemy
 		}
 	}
 
-	IEnumerator EnableHead()
-	{
-		yield return new WaitForSeconds(0.1f);
-		headCollider.enabled = true;
-	}
-
 	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
@@ -142,7 +136,9 @@ public class EnemyShell : Enemy
 		// Stop colliding if player is already hit
 		if (other.CompareTag (Tags.player))
 		{
-			if (other.GetComponent<CharacterManager>().isInvincible) return;
+			CharacterManager charManager = other.GetComponent<CharacterManager>();
+			if (charManager.isInvincible) return;
+			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 
 		base.OnHeadHit (other);

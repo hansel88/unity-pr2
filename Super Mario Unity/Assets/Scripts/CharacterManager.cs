@@ -3,52 +3,52 @@ using System.Collections;
 
 public class CharacterManager : MonoBehaviour
 {
-	public PlayerState curState;
-	public bool hasStar = false;
-	public bool isInvincible = false;
-	public GameObject fireflowerProjectilePrefab;
-	public Transform fireflowerShootPosition;
-	public Transform headCollider;
-
-	public Transform spriteTranform;
-	[HideInInspector]public Animator anim;
-	public BoxCollider2D charCollider;
-	private CharacterMovement charMove;
-	private SpriteRenderer spriteRenderer;
-	private bool isDying = false;
-	private float fireTimer;
-	[SerializeField]private float fireRate = 1f;
-	public int fireflowerCount = 0;
-	private float starTimer;
-	public bool hasHitBlock = false;
-	public bool lastHitHead = false;
-
+	[SerializeField]private GameObject fireflowerProjectilePrefab; // The prefab for the fireflower projectile
+	[SerializeField]private Transform fireflowerShootPosition; // Transform for where the fireflowerprojectiles will spawn
+	public Transform spriteTransform; // The players sprite object
+	[SerializeField]private float fireRate = 1f; // Firerate of the fireflower shooting
     public GameObject marioDieSound;
     public GameObject powerUpSound;
+	
+	[HideInInspector]public PlayerState curState; // Current player state
+	[HideInInspector]public bool hasStar = false; // If we have a star or not
+	[HideInInspector]public bool isInvincible = false; // If we are invincible or not
+	private SpriteRenderer spriteRenderer; // Spriterenderer of the sprite object
+	private Animator anim;
+	private BoxCollider2D charCollider;
+	private CharacterMovement charMove;
+	private bool isDying = false; // To check if we are in the process of dying
+	private float fireTimer; // Timer for firerate
+	[HideInInspector]public int fireflowerCount = 0; // Number of fireflower projectiles in play
+	private float starTimer; // Timer for the star powerup
+	[HideInInspector]public bool hasHitBlock = false; // To check if we already hit a block this jump 
+	// TODO Make it so that when hitting block, take the closest (the one we hit the most)
 
 	void Awake()
 	{
-		if (!spriteTranform)
+		if (!spriteTransform)
 		{
 			Debug.LogWarning ("No spritetransform assigned to the player!", this);
 			Debug.Break ();
 		}
 		charCollider = GetComponent<BoxCollider2D>();
 		charMove = GetComponent<CharacterMovement>();
-		anim = spriteTranform.GetComponent<Animator>();
-		spriteRenderer = spriteTranform.GetComponent<SpriteRenderer>();
+		anim = spriteTransform.GetComponent<Animator>();
+		spriteRenderer = spriteTransform.GetComponent<SpriteRenderer>();
 		fireTimer = fireRate;
 	}
 	
 	void Update()
 	{
-		if (curState == PlayerState.Fireflower && !GM.instance.frozenEntities)
+		// Fire rate timer and shooting
+		if (curState == PlayerState.Fireflower && !GM.instance.frozenEntities) // If we have fireflower powerup and the game isn't frozen
 		{
+			// Check if we are ready to fire
 			if (fireTimer < fireRate)
 			{
 				fireTimer += Time.deltaTime;
 			}
-			else if (Input.GetButtonDown ("Shoot") && fireflowerCount < 2)
+			else if (Input.GetButtonDown ("Shoot") && fireflowerCount < 2) // Only allow shooting when there are less than 2 projectiles out
 			{
 				ShootFireflower ();
 			}
@@ -66,24 +66,23 @@ public class CharacterManager : MonoBehaviour
 				EndStarPowerup ();
 			}
 		}
-
-		//ValidHeadHit (Vector3.zero, charCollider);
-		//ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		if (!other.collider.CompareTag (Tags.enemy) 
-		    && !other.collider.CompareTag (Tags.powerup) 
-		    && !other.collider.CompareTag (Tags.player))
+		// Grounded check
+		if (!other.collider.CompareTag (Tags.enemy) && !other.collider.CompareTag (Tags.powerup) && !other.collider.CompareTag (Tags.player))
 		{
+			// If the collided normal are correct, we are grounded
+			// TODO Fix...
 			Vector3 normal = other.contacts[0].point.normalized;
-			//print ("N: " + normal);
 			if (normal.x < 0f && normal.y < -0.05f)
 			{
 				charMove.grounded = true;
 				hasHitBlock = false;
 			}
+
+			// Send hit message if we jumped up into a block
 			if (other.collider.CompareTag (Tags.block) && transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
 			{
 				other.collider.SendMessage ("OnHit", this, SendMessageOptions.DontRequireReceiver);
@@ -91,55 +90,6 @@ public class CharacterManager : MonoBehaviour
 		}
 	}
 
-	void OnDrawGizmos()
-	{
-		/*Gizmos.color = Color.red;
-		Gizmos.DrawLine (v1, v2);
-		Gizmos.DrawLine (v2, v4);
-		Gizmos.DrawLine (v4, v3);
-		Gizmos.DrawLine (v3, v1);*/
-	}
-	Vector3 v1;
-	Vector3 v2;
-	Vector3 v3;
-	Vector3 v4;
-
-	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol, float jumpRectHeight = 0.02f)
-	{
-		//float jumpRectHeight = 0.02f;
-		Vector2 colliderSize = new Vector3 (headCol.size.x * 0.95f, jumpRectHeight);
-		Vector3 worldPos = headCol.transform.TransformPoint (headCol.offset);
-		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
-		jumpRect.center = new Vector2(worldPos.x, worldPos.y + headCol.bounds.extents.y);
-
-		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
-		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
-		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
-		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
-		return jumpRect.Contains (colPoint);
-	}
-
-	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float rectHeight = 0.07f)
-	{
-		// TODO Optimize this
-
-		//float jumpRectHeight = 0.02f;
-		Vector2 colliderSize = new Vector3 (size.x * 0.95f, rectHeight);
-		GameObject temp = new GameObject("Temp");
-		temp.transform.position = pos;
-		Vector3 worldPos = temp.transform.TransformPoint (offset);
-		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
-		jumpRect.center = new Vector2(worldPos.x, worldPos.y + b.extents.y);
-		Destroy (temp);
-		
-		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
-		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
-		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
-		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
-		
-		return jumpRect.Contains (colPoint);
-	}
-	
 	void ShootFireflower()
 	{
 		anim.SetTrigger ("FireflowerShoot");
@@ -149,52 +99,39 @@ public class CharacterManager : MonoBehaviour
 		fireTimer = 0f;
 	}
 
-	public void DeductFireflowerCount()
-	{
-		fireflowerCount --;
-		if (fireflowerCount < 0)
-		{
-			fireflowerCount = 0;
-		}
-	}
-	
 	public void OnEnemyHit()
 	{
+		// Stop if we are invincible 
 		if (isInvincible)
 		{
 			return;
 		}
-		
+
+		// Freeze all entities
 		GM.instance.FreezeEntities ();
-		
+
+		// Set the animationtriggers
 		SetAnimationTriggers (false);
+
+		// Make us invincible
 		isInvincible = true;
 
+		// Check what state we are in
 		if (curState == PlayerState.Small)
 		{
+			// Die if we are small
 			StartCoroutine (Die (true));
 		}
 		else
 		{
+			// Go to small
 			curState = PlayerState.Small;
 		}
 
-		/*switch(curState)
-		{
-		case PlayerState.Small:
-			StartCoroutine (Die (true));
-			break;
-		case PlayerState.Mushroom:
-			curState = PlayerState.Small;
-			break;
-		case PlayerState.Fireflower:
-			curState = PlayerState.Small;
-			break;
-		}*/
-		
-		
+		// Set the collider size since we changed size
 		SetColliderSize ();
-		
+
+		// If we aren't dying, make us invincible
 		if (!isDying)
 		{
 			StartCoroutine (FlashInvincible (3));
@@ -203,29 +140,43 @@ public class CharacterManager : MonoBehaviour
 	
 	public void PowerUpgrade(PlayerState toState)
 	{
-		if ((int)curState >= (int)toState)
+		// Check what state we are in
+		if ((int)curState >= (int)toState) // Pickup is a state lower than us
 		{
+			// Award score to player
 			int scoreReward = 1000;
 			GM.instance.Score += scoreReward;
 			GUIManager.instance.PopRewardText (transform.position, scoreReward.ToString ());
 		}
 		else
 		{
+			// Play powerup sound
             Destroy(GameObject.Instantiate(powerUpSound), 2);
+
+			// If the pickup is a mushroom and we already have a mushrom
 			if (curState == PlayerState.Mushroom && toState == PlayerState.Mushroom)
 			{
+				// Set the state to fireflower
 				toState = PlayerState.Fireflower;
 			}
 
+			// Freese entities
 			GM.instance.FreezeEntities ();
+
+			// Set the state
 			curState = toState;
+
+			// Set the collider sizes
 			SetColliderSize ();
+
+			// set the animationtriggers
 			SetAnimationTriggers (true);
 		}
 	}
 
 	public void PickupStarPowerup()
 	{
+		// Activate the starpowerup
 		hasStar = true;
 		starTimer = 12f;
 		SetAnimationTriggers (true);
@@ -233,6 +184,7 @@ public class CharacterManager : MonoBehaviour
 
 	void EndStarPowerup()
 	{
+		// Deactivate the starpowerup
 		hasStar = false;
 		starTimer = 0f;
 		anim.SetInteger ("PlayerState", (int)curState);
@@ -241,6 +193,7 @@ public class CharacterManager : MonoBehaviour
 
 	void SetAnimationTriggers(bool poweringUp)
 	{
+		// Set the animationtriggers needed for the state animations
 		anim.SetBool ("PoweringUp", poweringUp);
 		anim.SetInteger ("PlayerState", (int)curState);
 		anim.SetBool ("HasStar", hasStar);
@@ -249,7 +202,9 @@ public class CharacterManager : MonoBehaviour
 	
 	IEnumerator FlashInvincible(int seconds)
 	{
+		// Set the layer so we aren't colliding with entities while invincible
 		gameObject.layer = LayerMask.NameToLayer ("InvinciblePlayer");
+
 		float waitTime = 0.2f; // Time to wait between flashes
 		
 		// Flashing loop
@@ -261,7 +216,8 @@ public class CharacterManager : MonoBehaviour
 		
 		// Make sure player is fully visible when finished with the invincibility
 		ToggleSpriteVisibility (true);
-		
+
+		// End the invincibility
 		isInvincible = false;
 		gameObject.layer = LayerMask.NameToLayer ("Player");
 	}
@@ -288,30 +244,30 @@ public class CharacterManager : MonoBehaviour
         //GameObject.Instantiate(marioDieSound);
         Destroy(GameObject.Instantiate(marioDieSound), 4);
 
-        yield return new WaitForSeconds(3f);
 		// Wait some time before going to deathscreen
+        yield return new WaitForSeconds(3f);
 		//yield return new WaitForSeconds(withAnimation ? 2f : 1f);
 		Application.LoadLevel (Application.loadedLevel);
 	}
 	
 	void SetColliderSize()
 	{
+		// Check what state we are in and set the collider settings appropriately
 		if (curState == PlayerState.Small)
 		{
 			charCollider.size = new Vector2(0.16f, 0.16f);
 			charCollider.offset = new Vector2(0f, 0.08f);
-			headCollider.localPosition = new Vector3(0f, 0.14f);
 		}
 		else
 		{
 			charCollider.size = new Vector2(0.16f, 0.32f);
 			charCollider.offset = new Vector2(0f, 0.16f);
-			headCollider.localPosition = new Vector3(0f, 0.3f);
 		}
 	}
 	
 	void ToggleSpriteVisibility(bool fullVisible)
 	{
+		// Toggle the sprite alpha depending on the bool parameter
 		Color col = spriteRenderer.color;
 		col.a = fullVisible ? 1f : 0.5f;
 		spriteRenderer.color = col;
@@ -319,9 +275,13 @@ public class CharacterManager : MonoBehaviour
 
 	public void OnHeadHit(Collider2D other)
 	{
+		// Check if we hit a block
 		if (other.CompareTag (Tags.block))
 		{
+			// Try to get the block component
 			BlockPowerup bPowerup = other.GetComponent<BlockPowerup>();
+
+			// Check if the component is null (if so get the other block component)
 			if (bPowerup)
 			{
 				bPowerup.OnHit (this);
@@ -334,6 +294,7 @@ public class CharacterManager : MonoBehaviour
 	}
 }
 
+// The states the player can be in
 public enum PlayerState
 {
 	Small,

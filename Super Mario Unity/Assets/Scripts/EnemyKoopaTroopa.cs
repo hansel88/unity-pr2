@@ -61,7 +61,9 @@ public class EnemyKoopaTroopa : Enemy
 		// Stop colliding if player is already hit
 		if (other.CompareTag (Tags.player))
 		{
-			if (other.GetComponent<CharacterManager>().isInvincible) return;
+			CharacterManager charManager = other.GetComponent<CharacterManager>();
+			if (charManager.isInvincible) return;
+			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 		
 		base.OnHeadHit (other);
