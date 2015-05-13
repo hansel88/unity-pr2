@@ -99,6 +99,7 @@ public class GM : MonoBehaviour
 	private CharacterMovement charMove;
 	[HideInInspector]public CharacterManager charManager;
     public GameObject gameOverSound;
+    public GameObject timerWarningSound;
 
     void Awake()
     {
@@ -178,6 +179,8 @@ public class GM : MonoBehaviour
 			// TODO Gameover
             Destroy(GameObject.Instantiate(gameOverSound), 15);
 		}
+        else if(Timer <= 100)
+            Destroy(GameObject.Instantiate(timerWarningSound), 15);
 	}
 
 	void ResetCountdown()
