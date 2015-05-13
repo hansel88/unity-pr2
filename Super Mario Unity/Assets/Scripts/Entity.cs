@@ -79,7 +79,6 @@ public class Entity : MonoBehaviour
 	
 	public virtual IEnumerator TurnAround()
 	{
-		print ("turning");
 		isChangingDirection = true;
 
 		// Change direction
@@ -103,11 +102,16 @@ public class Entity : MonoBehaviour
 	{
 		// Give the player score points
 		GM.instance.Score += score;
-		GUIManager.instance.PopRewardText (transform.position, "+" + score);
+		GUIManager.instance.PopRewardText (transform.position, score.ToString ());
 	}
 
 	public void RewardScore()
 	{
 		RewardScore (scoreReward);
+	}
+
+	public virtual void OnHeadHit(Collider2D other)
+	{
+		print ("Hit head collider");
 	}
 }

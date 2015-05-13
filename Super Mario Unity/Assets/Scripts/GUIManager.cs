@@ -59,7 +59,7 @@ public class GUIManager : MonoBehaviour
 			return;
 		}
 
-		textCoin.text = string.Format ("x{0}", coins);
+		textCoin.text = string.Format ("x{0:00}", coins);
 	}
 
 	public void ChangeTimeText(int time)

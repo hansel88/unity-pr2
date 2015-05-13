@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d92be009b43fc494a86b7bcbeab79603
-timeCreated: 1430133967
+timeCreated: 1431443138
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,9 +12,12 @@ TextureImporter:
     21300010: BoxSpriteSheet_5
     21300012: BoxSpriteSheet_6
     21300014: BoxSpriteSheet_7
-    21300016: BoxSpriteSheet_8
+    21300016: BoxSpriteSheet_p4
     21300018: BoxSpriteSheet_9
     21300020: BoxSpriteSheet_10
+    21300022: BoxSpriteSheet_p2
+    21300024: BoxSpriteSheet_p1
+    21300026: BoxSpriteSheet_p3
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -140,13 +143,13 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BoxSpriteSheet_8
+    - name: BoxSpriteSheet_p4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
-        width: 16
-        height: 16
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,6 +170,36 @@ TextureImporter:
         y: 0
         width: 16
         height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BoxSpriteSheet_p2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BoxSpriteSheet_p1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BoxSpriteSheet_p3
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 8
+        height: 8
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

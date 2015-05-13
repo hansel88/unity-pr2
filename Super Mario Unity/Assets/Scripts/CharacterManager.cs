@@ -8,10 +8,11 @@ public class CharacterManager : MonoBehaviour
 	public bool isInvincible = false;
 	public GameObject fireflowerProjectilePrefab;
 	public Transform fireflowerShootPosition;
-	
+	public Transform headCollider;
+
 	public Transform spriteTranform;
 	[HideInInspector]public Animator anim;
-	[HideInInspector]public BoxCollider2D charCollider;
+	public BoxCollider2D charCollider;
 	private CharacterMovement charMove;
 	private SpriteRenderer spriteRenderer;
 	private bool isDying = false;
@@ -19,6 +20,7 @@ public class CharacterManager : MonoBehaviour
 	[SerializeField]private float fireRate = 1f;
 	public int fireflowerCount = 0;
 	private float starTimer;
+	public bool hasHitBlock = false;
 
     public GameObject marioDieSound;
     public GameObject powerUpSound;
@@ -63,15 +65,72 @@ public class CharacterManager : MonoBehaviour
 				EndStarPowerup ();
 			}
 		}
+
+		//ValidHeadHit (Vector3.zero, charCollider);
+		ValidHeadHit (Vector3.zero, transform.position, charCollider.size, charCollider.offset, charCollider.bounds);
 	}
 
-	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol)
+	void OnCollisionEnter2D(Collision2D other)
 	{
-		float jumpRectHeight = 0.02f;
-		Vector2 colliderSize = new Vector3 (headCol.size.x, jumpRectHeight);
+		if (!other.collider.CompareTag (Tags.enemy) 
+		    && !other.collider.CompareTag (Tags.powerup) 
+		    && !other.collider.CompareTag (Tags.player))
+		{
+			Vector3 normal = other.contacts[0].point.normalized;
+			//print ("N: " + normal);
+			if (normal.x < 0f && normal.y < -0.05f)
+			{
+				charMove.grounded = true;
+				hasHitBlock = false;
+			}
+		}
+	}
+
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.red;
+		Gizmos.DrawLine (v1, v2);
+		Gizmos.DrawLine (v2, v4);
+		Gizmos.DrawLine (v4, v3);
+		Gizmos.DrawLine (v3, v1);
+	}
+	Vector3 v1;
+	Vector3 v2;
+	Vector3 v3;
+	Vector3 v4;
+
+	public bool ValidHeadHit(Vector2 colPoint, BoxCollider2D headCol, float jumpRectHeight = 0.02f)
+	{
+		//float jumpRectHeight = 0.02f;
+		Vector2 colliderSize = new Vector3 (headCol.size.x * 0.95f, jumpRectHeight);
 		Vector3 worldPos = headCol.transform.TransformPoint (headCol.offset);
 		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
 		jumpRect.center = new Vector2(worldPos.x, worldPos.y + headCol.bounds.extents.y);
+
+		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
+		return jumpRect.Contains (colPoint);
+	}
+
+	public bool ValidHeadHit(Vector2 colPoint, Vector3 pos, Vector2 size, Vector2 offset, Bounds b, float rectHeight = 0.07f)
+	{
+		// TODO Optimize this
+
+		//float jumpRectHeight = 0.02f;
+		Vector2 colliderSize = new Vector3 (size.x * 0.95f, rectHeight);
+		GameObject temp = new GameObject("Temp");
+		temp.transform.position = pos;
+		Vector3 worldPos = temp.transform.TransformPoint (offset);
+		Rect jumpRect = new Rect(0f, 0f, colliderSize.x, colliderSize.y);
+		jumpRect.center = new Vector2(worldPos.x, worldPos.y + b.extents.y);
+		Destroy (temp);
+		
+		v1 = new Vector3( jumpRect.xMin, jumpRect.yMax, worldPos.z);
+		v2 = new Vector3( jumpRect.xMax, jumpRect.yMax, worldPos.z);
+		v3 = new Vector3( jumpRect.xMin, jumpRect.yMin, worldPos.z);
+		v4 = new Vector3( jumpRect.xMax, jumpRect.yMin, worldPos.z);
 		
 		return jumpRect.Contains (colPoint);
 	}
@@ -105,21 +164,28 @@ public class CharacterManager : MonoBehaviour
 		
 		SetAnimationTriggers (false);
 		isInvincible = true;
-		
-		switch(curState)
+
+		if (curState == PlayerState.Small)
+		{
+			StartCoroutine (Die (true));
+		}
+		else
+		{
+			curState = PlayerState.Small;
+		}
+
+		/*switch(curState)
 		{
 		case PlayerState.Small:
 			StartCoroutine (Die (true));
 			break;
 		case PlayerState.Mushroom:
 			curState = PlayerState.Small;
-			// TODO To small
 			break;
 		case PlayerState.Fireflower:
 			curState = PlayerState.Small;
-			// TODO To small
 			break;
-		}
+		}*/
 		
 		
 		SetColliderSize ();
@@ -132,11 +198,11 @@ public class CharacterManager : MonoBehaviour
 	
 	public void PowerUpgrade(PlayerState toState)
 	{
-		if ((int)curState > (int)toState)
+		if ((int)curState >= (int)toState)
 		{
 			int scoreReward = 1000;
 			GM.instance.Score += scoreReward;
-			GUIManager.instance.PopRewardText (transform.position, "+" + scoreReward);
+			GUIManager.instance.PopRewardText (transform.position, scoreReward.ToString ());
 		}
 		else
 		{
@@ -229,11 +295,13 @@ public class CharacterManager : MonoBehaviour
 		{
 			charCollider.size = new Vector2(0.16f, 0.16f);
 			charCollider.offset = new Vector2(0f, 0.08f);
+			headCollider.localPosition = new Vector3(0f, 0.14f);
 		}
 		else
 		{
 			charCollider.size = new Vector2(0.16f, 0.32f);
 			charCollider.offset = new Vector2(0f, 0.16f);
+			headCollider.localPosition = new Vector3(0f, 0.3f);
 		}
 	}
 	
@@ -242,6 +310,22 @@ public class CharacterManager : MonoBehaviour
 		Color col = spriteRenderer.color;
 		col.a = fullVisible ? 1f : 0.5f;
 		spriteRenderer.color = col;
+	}
+
+	public void OnHeadHit(Collider2D other)
+	{
+		if (other.CompareTag (Tags.block))
+		{
+			BlockPowerup bPowerup = other.GetComponent<BlockPowerup>();
+			if (bPowerup)
+			{
+				bPowerup.OnHit (this);
+			}
+			else
+			{
+				other.GetComponent<BlockBrick>().OnHit (this);
+			}
+		}
 	}
 }
 

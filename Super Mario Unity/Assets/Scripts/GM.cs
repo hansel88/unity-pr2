@@ -152,12 +152,6 @@ public class GM : MonoBehaviour
 			// TODO Reward player with points
 		}
 	}
-
-	public void PowerPlayerDown()
-	{
-
-	}
-
 	void DoCountdown()
 	{
 		// Don't countdown if player is dead

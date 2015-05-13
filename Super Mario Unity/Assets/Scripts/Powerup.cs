@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Powerup : Entity
 {
+	public bool isActive = true;
+
 	void Update()
 	{
 		HorizontalMovement ();

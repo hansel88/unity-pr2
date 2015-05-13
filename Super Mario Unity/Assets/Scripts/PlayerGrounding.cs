@@ -12,6 +12,6 @@ public class PlayerGrounding : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		charMove.grounded = true;
+		//charMove.grounded = true;
 	}
 }
