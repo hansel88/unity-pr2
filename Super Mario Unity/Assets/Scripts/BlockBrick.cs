@@ -11,13 +11,16 @@ public class BlockBrick : MonoBehaviour
 
 	public void OnHit(CharacterManager charManager)
 	{
-		if (charManager.hasHitBlock) return;
-		charManager.hasHitBlock = true;
-
-		if (charManager.curState == PlayerState.Small)
+		if (charManager)
 		{
-			// TODO Animate block being hit
-			return;
+			if (charManager.hasHitBlock) return;
+			charManager.hasHitBlock = true;
+
+			if (charManager.curState == PlayerState.Small)
+			{
+				// TODO Animate block being hit
+				return;
+			}
 		}
 
 		GM.instance.Score += activateReward;

@@ -43,6 +43,7 @@ public class Enemy : Entity
 		if (hasJumped) return;
 
 		hasJumped = true;
+		GM.instance.charManager.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
 	}
 

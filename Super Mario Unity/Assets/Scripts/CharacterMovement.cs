@@ -107,18 +107,13 @@ public class CharacterMovement : MonoBehaviour {
 
 		transform.localScale = new Vector3(facingRight ? 1 : -1, 1);
 	}
-	
-	void FixedUpdate()
-	{
-
-	}
 
 	public void Jump(bool ignoreGrounded)
 	{
 		if (!ignoreGrounded)
 			if (!grounded) return;
-		print ("jump!");
-        if (GM.instance.HasMushroom)
+
+		if (GM.instance.HasMushroom)
             Destroy(GameObject.Instantiate(jumpBig), 2);
         else if (jumpSmall != null)
             Destroy(GameObject.Instantiate(jumpSmall), 2);

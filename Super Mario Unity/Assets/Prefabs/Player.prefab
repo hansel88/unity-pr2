@@ -184,7 +184,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 135162}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .144999996, z: 0}
+  m_LocalPosition: {x: 0, y: .140000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 491288}
@@ -243,11 +243,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 135162}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .100000001, y: .0500000007}
+  m_Size: {x: .129999995, y: .0500000007}
 --- !u!61 &6181572
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -330,7 +330,6 @@ MonoBehaviour:
   groundedLayers:
     serializedVersion: 2
     m_Bits: 4294967039
-  groundedPosition: {fileID: 424236}
   grounded: 1
   canMove: 1
   facingRight: 1
@@ -367,9 +366,10 @@ MonoBehaviour:
   fireflowerProjectilePrefab: {fileID: 158672, guid: 1e3296e65287448f496bd4d86725671a,
     type: 2}
   fireflowerShootPosition: {fileID: 459368}
+  headCollider: {fileID: 469472}
   spriteTranform: {fileID: 416144}
   anim: {fileID: 0}
-  charCollider: {fileID: 0}
+  charCollider: {fileID: 6179126}
   fireRate: .300000012
   fireflowerCount: 0
   hasHitBlock: 0

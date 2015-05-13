@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &141944
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 173910}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.78985119, y: -.800000012, z: 0}
+  m_LocalPosition: {x: -14.9700003, y: -.800000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 477840}
@@ -113,11 +113,11 @@ BoxCollider2D:
   m_GameObject: {fileID: 113770}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: .0599999987}
   serializedVersion: 2
-  m_Size: {x: .109999999, y: .0599999987}
+  m_Size: {x: .129999995, y: .0599999987}
 --- !u!61 &6174304
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -171,18 +171,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f43e7b59bc0ce47faaae37132572b347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   scoreReward: 500
-  movementSpeed: 3
+  movementSpeed: 1
   direction: 1
   rotateWithDirection: 1
   spriteTransform: {fileID: 477840}
   canMove: 1
   anim: {fileID: 0}
+  rBody: {fileID: 0}
   isVisibleInCamera: 1
-  hasBeenJumped: 0
+  boxCollider: {fileID: 0}
   hasDeathAnimation: 1
   headCollider: {fileID: 6152172}
+  isDying: 0
   scoreMovingReward: 100
 --- !u!212 &21269854
 SpriteRenderer:
