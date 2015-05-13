@@ -8,6 +8,7 @@ public class BlockBrick : MonoBehaviour
 	public float particleForce = 10f;
 	public Vector2[] particleVectors = new Vector2[4];
 	public int activateReward = 0;
+    public GameObject blockBreakSound;
 
 	public void OnHit(CharacterManager charManager)
 	{
@@ -27,6 +28,7 @@ public class BlockBrick : MonoBehaviour
 
 		for (int i = 0; i < brickParticles.Length; i ++)
 		{
+            Destroy(GameObject.Instantiate(blockBreakSound), 2);
 			GameObject obj = Instantiate (brickParticlePrefab, transform.position, Quaternion.identity) as GameObject;
 			obj.GetComponent<SpriteRenderer>().sprite = brickParticles[i];
 			obj.GetComponent<Rigidbody2D>().AddForce (particleVectors[i] * particleForce);
