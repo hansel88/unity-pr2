@@ -98,6 +98,7 @@ public class GM : MonoBehaviour
 	private const int totalTime = 400; // Total time for a level
 	private CharacterMovement charMove;
 	[HideInInspector]public CharacterManager charManager;
+    public GameObject gameOverSound;
 
     void Awake()
     {
@@ -175,6 +176,7 @@ public class GM : MonoBehaviour
 		if (Timer <= 0)
 		{
 			// TODO Gameover
+            Destroy(GameObject.Instantiate(gameOverSound), 15);
 		}
 	}
 
