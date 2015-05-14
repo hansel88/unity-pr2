@@ -52,6 +52,7 @@ public class EnemyKoopaTroopa : Enemy
 		}
 		else
 		{
+			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
 	}

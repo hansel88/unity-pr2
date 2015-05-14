@@ -82,6 +82,7 @@ public class EnemyShell : Enemy
 		}
 		else
 		{
+			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
 	}

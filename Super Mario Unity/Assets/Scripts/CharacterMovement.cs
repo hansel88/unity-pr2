@@ -9,7 +9,7 @@ public class CharacterMovement : MonoBehaviour {
 	[SerializeField]private GameObject jumpSmall;
 	[SerializeField]private GameObject jumpBig;
 
-    [HideInInspector]public bool grounded = true;
+    public bool grounded = true;
 	public bool canMove = true; // TODO Remove?
 	private Animator anim;
 	private Rigidbody2D rBody;
@@ -112,10 +112,34 @@ public class CharacterMovement : MonoBehaviour {
             Destroy(GameObject.Instantiate(jumpSmall), 2);
 
 		// Set us to not grounded and trigger the animtor
-		grounded = false;
+		//grounded = false;
         anim.SetTrigger("JumpTrigger");
 
 		// Add the jumpforce to the rigidbody
 		rBody.AddForce(new Vector2(0, jumpForce));
+	}
+
+	void OnTriggerStay2D(Collider2D other)
+	{
+		// Check if we should be grounded
+		if (ValidGroundTag (other.tag) && !grounded)
+		{
+			grounded = true;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other)
+	{
+		// Check if we shouldn't be grounded
+		if (ValidGroundTag (other.tag))
+		{
+			grounded = false;
+		}
+	}
+
+	bool ValidGroundTag(string groundTag)
+	{
+		// Checks if the tag is not any of the specified (A.K.A. we can be grounded)
+		return !(groundTag.Equals (Tags.enemy) || groundTag.Equals (Tags.player) || groundTag.Equals (Tags.powerup));
 	}
 }

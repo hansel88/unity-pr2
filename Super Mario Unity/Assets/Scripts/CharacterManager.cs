@@ -22,15 +22,17 @@ public class CharacterManager : MonoBehaviour
 	[HideInInspector]public int fireflowerCount = 0; // Number of fireflower projectiles in play
 	private float starTimer; // Timer for the star powerup
 	[HideInInspector]public bool hasHitBlock = false; // To check if we already hit a block this jump 
-	// TODO Make it so that when hitting block, take the closest (the one we hit the most)
+	// TODO Replace the current block hit system so that when hitting block, take the closest (the one we hit the most)
 
 	void Awake()
 	{
+		// Stop if a spritetransform isn't assigned
 		if (!spriteTransform)
 		{
 			Debug.LogWarning ("No spritetransform assigned to the player!", this);
 			Debug.Break ();
 		}
+		// Get the component references
 		charCollider = GetComponent<BoxCollider2D>();
 		charMove = GetComponent<CharacterMovement>();
 		anim = spriteTransform.GetComponent<Animator>();
@@ -78,7 +80,7 @@ public class CharacterManager : MonoBehaviour
 			Vector3 normal = other.contacts[0].point.normalized;
 			if (normal.x < 0f && normal.y < -0.05f)
 			{
-				charMove.grounded = true;
+				//charMove.grounded = true;
 				hasHitBlock = false;
 			}
 
@@ -92,10 +94,14 @@ public class CharacterManager : MonoBehaviour
 
 	void ShootFireflower()
 	{
+		// Trigger the animation
 		anim.SetTrigger ("FireflowerShoot");
+		// Increase the projectile count
 		fireflowerCount ++;
+		// Instantiate and initialize the projectile
 		GameObject projectile = Instantiate (fireflowerProjectilePrefab, fireflowerShootPosition.position, Quaternion.identity) as GameObject;
 		projectile.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
+		// Reset the firetimer
 		fireTimer = 0f;
 	}
 

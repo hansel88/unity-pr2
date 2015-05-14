@@ -48,7 +48,7 @@ public class EnemyGoomba : Enemy
 		}
 		else
 		{
-			print ("root dir change");
+			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
 	}
