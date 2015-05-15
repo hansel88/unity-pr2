@@ -1934,8 +1934,6 @@ MonoBehaviour:
   charManager: {fileID: 0}
   gameOverSound: {fileID: 111940, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
   timerWarningSound: {fileID: 111940, guid: d1613145030ce974e9eb08756429989b, type: 2}
-  gameOverSound: {fileID: 0}
-  timerWarningSound: {fileID: 0}
   camWorldTopRight: {x: 0, y: 0, z: 0}
   camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!4 &1397479442
@@ -2314,6 +2312,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11468224, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
+      propertyPath: shootFireballSound
+      value: 
+      objectReference: {fileID: 111940, guid: 7528ba7c788a11b4f8cf2fcaaf796f8d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
   m_IsPrefabParent: 0
