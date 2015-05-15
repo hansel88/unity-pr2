@@ -814,15 +814,9 @@ Prefab:
       value: Block_Questionmark 1
       objectReference: {fileID: 0}
     - target: {fileID: 11496408, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
-<<<<<<< HEAD
       propertyPath: powerUpAppearSound
       value: 
       objectReference: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
-=======
-      propertyPath: content
-      value: 2
-      objectReference: {fileID: 0}
->>>>>>> 1519fafb7e4c7387f3f5b045057c3d3989495067
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
   m_IsPrefabParent: 0

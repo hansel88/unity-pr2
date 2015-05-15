@@ -9,6 +9,7 @@ public class CharacterManager : MonoBehaviour
 	[SerializeField]private float fireRate = 1f; // Firerate of the fireflower shooting
     public GameObject marioDieSound;
     public GameObject powerUpSound;
+    public GameObject shootFireballSound;
 	
 	[HideInInspector]public PlayerState curState; // Current player state
 	[HideInInspector]public bool hasStar = false; // If we have a star or not
@@ -94,6 +95,9 @@ public class CharacterManager : MonoBehaviour
 
 	void ShootFireflower()
 	{
+        //Play fireball sound
+        Destroy(GameObject.Instantiate(shootFireballSound), 2);
+
 		// Trigger the animation
 		anim.SetTrigger ("FireflowerShoot");
 		// Increase the projectile count
