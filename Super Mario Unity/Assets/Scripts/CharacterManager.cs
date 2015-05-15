@@ -304,6 +304,11 @@ public class CharacterManager : MonoBehaviour
 			}
 		}
 	}
+
+	public IEnumerator AnimatePipeEntering()
+	{
+		yield return new WaitForEndOfFrame();
+	}
 }
 
 // The states the player can be in
