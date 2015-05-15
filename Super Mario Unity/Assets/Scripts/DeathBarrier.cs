@@ -8,6 +8,7 @@ public class DeathBarrier : MonoBehaviour
 	{
 		if (other.gameObject.CompareTag (Tags.player))
 		{
+			print ("deathbarrer die");
 			StartCoroutine (other.gameObject.GetComponent<CharacterManager>().Die (false));
 		}
 		else
@@ -20,6 +21,7 @@ public class DeathBarrier : MonoBehaviour
 	{
 		if (other.CompareTag (Tags.player))
 		{
+			print ("deathbarrer die");
 			StartCoroutine (other.GetComponent<CharacterManager>().Die (false));
 		}
 		else

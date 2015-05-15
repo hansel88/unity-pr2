@@ -18,10 +18,11 @@ public class CharacterMovement : MonoBehaviour {
 	private bool previousFacingRight = true; // TODO remove?
 	private float horizontalInput = 0f;
     private bool jumpPressed = false;
-
+	private CharacterManager charManager;
 
 	void Awake()
 	{
+		charManager = GetComponent<CharacterManager>();
 		rBody = GetComponent<Rigidbody2D>();
 	}
 
@@ -122,9 +123,9 @@ public class CharacterMovement : MonoBehaviour {
 			if (!grounded) return;
 
 		// Play the jump SFX
-		if (GM.instance.HasMushroom)
+		if (charManager.curState != PlayerState.Small)
             Destroy(GameObject.Instantiate(jumpBig), 2);
-        else if (jumpSmall != null)
+        else
             Destroy(GameObject.Instantiate(jumpSmall), 2);
 
 		// Set us to not grounded and trigger the animtor

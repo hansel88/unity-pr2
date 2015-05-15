@@ -1,13 +1,13 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &115368
+--- !u!1 &145466
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 441424}
+  - 4: {fileID: 472788}
   m_Layer: 8
   m_Name: FireflowerShootPosition
   m_TagString: Untagged
@@ -15,52 +15,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &116704
+--- !u!1 &148590
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 446304}
-  m_Layer: 8
-  m_Name: GroundedCheckLeft
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &120812
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 488852}
-  - 212: {fileID: 21271568}
-  - 95: {fileID: 9529664}
-  - 114: {fileID: 11434686}
-  m_Layer: 8
-  m_Name: MarioSprite
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &143994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 490766}
-  - 50: {fileID: 5060108}
-  - 61: {fileID: 6138048}
-  - 114: {fileID: 11493240}
-  - 114: {fileID: 11468224}
-  - 61: {fileID: 6196142}
+  - 4: {fileID: 483016}
+  - 50: {fileID: 5031666}
+  - 61: {fileID: 6149566}
+  - 114: {fileID: 11452270}
+  - 114: {fileID: 11442394}
+  - 61: {fileID: 6182730}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -68,121 +35,68 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &150560
+--- !u!1 &160416
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 486662}
+  - 4: {fileID: 448398}
+  - 212: {fileID: 21269686}
+  - 95: {fileID: 9521518}
+  - 114: {fileID: 11462662}
   m_Layer: 8
-  m_Name: GroundedCheckRight
+  m_Name: MarioSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!1 &195828
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 452478}
-  - 61: {fileID: 6165186}
-  - 114: {fileID: 11423816}
-  m_Layer: 8
-  m_Name: GroundedCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &441424
+  m_IsActive: 1
+--- !u!4 &448398
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 115368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0599999987, y: .159999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 490766}
-  m_RootOrder: 4
---- !u!4 &446304
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 116704}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.075000003, y: -.159999996, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 490766}
-  m_RootOrder: 2
---- !u!4 &452478
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195828}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -.145999998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 490766}
-  m_RootOrder: 1
---- !u!4 &486662
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 150560}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .075000003, y: -.140000001, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 490766}
-  m_RootOrder: 3
---- !u!4 &488852
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120812}
+  m_GameObject: {fileID: 160416}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 490766}
+  m_Father: {fileID: 483016}
   m_RootOrder: 0
---- !u!4 &490766
+--- !u!4 &472788
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 145466}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .0599999987, y: .159999996, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 483016}
+  m_RootOrder: 1
+--- !u!4 &483016
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 148590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -16.4799995, y: -.879999995, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 488852}
-  - {fileID: 452478}
-  - {fileID: 446304}
-  - {fileID: 486662}
-  - {fileID: 441424}
+  - {fileID: 448398}
+  - {fileID: 472788}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5060108
+--- !u!50 &5031666
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 148590}
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
@@ -192,12 +106,12 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
---- !u!61 &6138048
+--- !u!61 &6149566
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 148590}
   m_Enabled: 1
   m_Material: {fileID: 6200000, guid: 8de063f6b492e49999cb98b9a61f49a6, type: 2}
   m_IsTrigger: 0
@@ -205,25 +119,12 @@ BoxCollider2D:
   m_Offset: {x: 0, y: .0799999982}
   serializedVersion: 2
   m_Size: {x: .159999996, y: .159999996}
---- !u!61 &6165186
+--- !u!61 &6182730
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195828}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .170000002}
-  serializedVersion: 2
-  m_Size: {x: .150000006, y: .0500000007}
---- !u!61 &6196142
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 148590}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -231,13 +132,13 @@ BoxCollider2D:
   m_Offset: {x: 0, y: .0199999996}
   serializedVersion: 2
   m_Size: {x: .129999995, y: .0500000007}
---- !u!95 &9529664
+--- !u!95 &9521518
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120812}
+  m_GameObject: {fileID: 160416}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 73cfe562e33d43244a98a6e83fa83974, type: 2}
@@ -248,34 +149,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11423816
+--- !u!114 &11442394
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 195828}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4ac6322e39ec494f936547fb0693f2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11434686
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120812}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e718cf8afcfbc425e8712501c4ec4b8d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &11468224
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 148590}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6e36edf68a414575ae23ea14200304f, type: 3}
@@ -283,22 +162,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireflowerProjectilePrefab: {fileID: 158672, guid: 1e3296e65287448f496bd4d86725671a,
     type: 2}
-  fireflowerShootPosition: {fileID: 441424}
-  spriteTransform: {fileID: 488852}
+  fireflowerShootPosition: {fileID: 472788}
+  spriteTransform: {fileID: 448398}
   fireRate: .300000012
   marioDieSound: {fileID: 111940, guid: 7177a07f38b46724a97da5d85dc21374, type: 2}
   powerUpSound: {fileID: 111940, guid: 7db8ae276fbb1c048baca25259c8e12c, type: 2}
+  shootFireballSound: {fileID: 111940, guid: 7528ba7c788a11b4f8cf2fcaaf796f8d, type: 2}
   curState: 0
   hasStar: 0
   isInvincible: 0
+  groundTriggerCollider: {fileID: 6182730}
   fireflowerCount: 0
   hasHitBlock: 0
---- !u!114 &11493240
+--- !u!114 &11452270
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 143994}
+  m_GameObject: {fileID: 148590}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8889899725d9d4f4c81c85be9ae770af, type: 3}
@@ -312,12 +193,23 @@ MonoBehaviour:
   grounded: 1
   canMove: 1
   facingRight: 1
---- !u!212 &21271568
+--- !u!114 &11462662
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 160416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e718cf8afcfbc425e8712501c4ec4b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!212 &21269686
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120812}
+  m_GameObject: {fileID: 160416}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -347,5 +239,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 143994}
+  m_RootGameObject: {fileID: 148590}
   m_IsPrefabParent: 1

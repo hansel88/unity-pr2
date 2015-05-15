@@ -64,7 +64,6 @@ public class GUIManager : MonoBehaviour
 
 	public void ChangeTimeText(int time)
 	{
-		print ("TimeText: " + textTime);
 		if (!textTime) 
 		{
 			Debug.LogError ("No textTime assigned!", gameObject);

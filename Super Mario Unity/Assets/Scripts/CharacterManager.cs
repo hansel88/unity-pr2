@@ -11,12 +11,13 @@ public class CharacterManager : MonoBehaviour
     public GameObject powerUpSound;
     public GameObject shootFireballSound;
 	
-	[HideInInspector]public PlayerState curState; // Current player state
-	[HideInInspector]public bool hasStar = false; // If we have a star or not
+	public PlayerState curState; // Current player state
+	public bool hasStar = false; // If we have a star or not
 	[HideInInspector]public bool isInvincible = false; // If we are invincible or not
 	private SpriteRenderer spriteRenderer; // Spriterenderer of the sprite object
 	private Animator anim;
 	private BoxCollider2D charCollider;
+	[SerializeField]private BoxCollider2D groundTriggerCollider; // Collider for ground checking
 	private CharacterMovement charMove;
 	private bool isDying = false; // To check if we are in the process of dying
 	private float fireTimer; // Timer for firerate
@@ -33,6 +34,7 @@ public class CharacterManager : MonoBehaviour
 			Debug.LogWarning ("No spritetransform assigned to the player!", this);
 			Debug.Break ();
 		}
+
 		// Get the component references
 		charCollider = GetComponent<BoxCollider2D>();
 		charMove = GetComponent<CharacterMovement>();
@@ -74,7 +76,8 @@ public class CharacterManager : MonoBehaviour
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		// Grounded check
-		if (!other.collider.CompareTag (Tags.enemy) && !other.collider.CompareTag (Tags.powerup) && !other.collider.CompareTag (Tags.player))
+		if (!other.collider.CompareTag (Tags.enemy) && !other.collider.CompareTag (Tags.powerup) 
+		    && !other.collider.CompareTag (Tags.player))
 		{
 			// If the collided normal are correct, we are grounded
 			// TODO Fix...
@@ -82,7 +85,7 @@ public class CharacterManager : MonoBehaviour
 			if (normal.x < 0f && normal.y < -0.05f)
 			{
 				//charMove.grounded = true;
-				hasHitBlock = false;
+				hasHitBlock = false; // TODO Move this to where we ground ourselves
 			}
 
 			// Send hit message if we jumped up into a block
@@ -103,8 +106,8 @@ public class CharacterManager : MonoBehaviour
 		// Increase the projectile count
 		fireflowerCount ++;
 		// Instantiate and initialize the projectile
-		GameObject projectile = Instantiate (fireflowerProjectilePrefab, fireflowerShootPosition.position, Quaternion.identity) as GameObject;
-		projectile.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
+		GameObject proj = Instantiate (fireflowerProjectilePrefab, fireflowerShootPosition.position, Quaternion.identity) as GameObject;
+		proj.GetComponent<FireflowerProjectile>().Initialize (charMove.facingRight);
 		// Reset the firetimer
 		fireTimer = 0f;
 	}
@@ -151,7 +154,7 @@ public class CharacterManager : MonoBehaviour
 	public void PowerUpgrade(PlayerState toState)
 	{
 		// Check what state we are in
-		if ((int)curState >= (int)toState) // Pickup is a state lower than us
+		if ((int)curState > (int)toState) // Pickup is a state lower than us
 		{
 			// Award score to player
 			int scoreReward = 1000;
@@ -170,8 +173,11 @@ public class CharacterManager : MonoBehaviour
 				toState = PlayerState.Fireflower;
 			}
 
-			// Freese entities
-			GM.instance.FreezeEntities ();
+			// Only freeze entites when we don't have star and we aren't goin to fireflower
+			if (!hasStar && toState != PlayerState.Fireflower)
+			{
+				GM.instance.FreezeEntities ();
+			}
 
 			// Set the state
 			curState = toState;
@@ -236,30 +242,32 @@ public class CharacterManager : MonoBehaviour
 	{
 		// If we are already dying, don't die again
 		if (isDying) yield return null;
-		
+
 		// Set that we are dying so we can't double die
 		isDying = true;
 		
-		// Disable charactercollider
+		// Disable charactercolliders
 		charCollider.enabled = false;
+		groundTriggerCollider.enabled = false;
+
 		
 		// Tell GM we are dead
 		GM.instance.PlayerIsAlive = false;
-		
+		GM.instance.Lives --;
+
 		// Animate death
 		if (withAnimation)
 		{
 			anim.SetTrigger ("DeathTrigger");
 		}
-        //GameObject.Instantiate(marioDieSound);
-        GM.instance.GetComponent<AudioSource>().Stop();
+        GM.instance.source.Stop();
         Destroy(GameObject.Instantiate(marioDieSound), 4);
-
 
 		// Wait some time before going to deathscreen
         yield return new WaitForSeconds(3f);
 		//yield return new WaitForSeconds(withAnimation ? 2f : 1f);
-		Application.LoadLevel (Application.loadedLevel);
+		//Application.LoadLevel (Application.loadedLevel);
+		GM.instance.CheckGameOver ();
 	}
 	
 	void SetColliderSize()

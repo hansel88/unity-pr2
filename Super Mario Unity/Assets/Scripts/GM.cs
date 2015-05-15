@@ -18,11 +18,15 @@ public class GM : MonoBehaviour
 		}
     }
 
-    private int lives = 0;
+    private int lives = 3;
     public int Lives
     {
         get { return this.lives; }
-        set { this.lives = value; }
+        set 
+		{ 
+			this.lives = value;
+			// TODO Load gameover menu here
+		}
     }
 
     private int coins = 0;
@@ -48,58 +52,21 @@ public class GM : MonoBehaviour
 	}
     #endregion
 
-    #region status and powerup properties
-
-    public enum MarioStatus { Big, Small };
-
-    private MarioStatus characterStatus = MarioStatus.Small;
-    public MarioStatus CharacterStatus
-    {
-        get { return this.characterStatus; }
-        set { this.characterStatus = value; }
-    }
-
-    private bool hasFireFly = false;
-    public bool HasFireFly
-    {
-        get { return this.hasFireFly; }
-        set { this.hasFireFly = value; }
-    }
-
-    private bool hasStar = false;
-    public bool HasStar
-    {
-        get { return this.hasStar; }
-        set { this.hasStar = value; }
-    }
-
-    private bool hasMushroom = false;
-    public bool HasMushroom
-    {
-        get { return this.hasMushroom; }
-		set { this.hasMushroom = value; }
-    }
-#endregion
-
-	// TODO Remove
-	public enum PowerupItem{Mushroom, Fireflower, Star};
-	public enum MarioPowerupStatus{Small, Big, Fireflower, Star};
-	public MarioPowerupStatus marioPowerupStatus;
-
     public GameObject player;
 	private bool playerIsAlive = true;
 	public bool PlayerIsAlive   
 	{ 
-		get {return playerIsAlive;} 
-		set {playerIsAlive = value; charMove.canMove = value;}
+		get { return playerIsAlive; } 
+		set { playerIsAlive = value; charMove.canMove = value; }
 	}
 	public bool frozenEntities = false;
 	public bool frozenEntitiesCooldown = false;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
-	private const int totalTime = 400; // Total time for a level
+	private const int totalTime = 4; // Total time for a level
 	private CharacterMovement charMove;
 	[HideInInspector]public CharacterManager charManager;
+	[HideInInspector]public AudioSource source;
     public GameObject gameOverSound;
     public GameObject timerWarningSound;
     public GameObject fireworksSound;
@@ -109,6 +76,7 @@ public class GM : MonoBehaviour
     {
         if (instance == null)
             instance = this;
+		// TODO Dont destroy on load?
         else if (instance != this)
             Destroy(gameObject);
 
@@ -122,61 +90,68 @@ public class GM : MonoBehaviour
 		ResetCountdown ();
 
 		UpdateScreenBounds ();
+
+		source = GetComponent<AudioSource>();
     }
 
 	void Update()
 	{
-		DoCountdown ();
+		DoTimerCountdown ();
 	}
 
     #region methods
-    private void checkGameOver()
+    public void CheckGameOver()
     {
-        //TODO
-
-        //if lose
-        Destroy(Instantiate(gameOverSound), 10);
-
-        //if win play fireworks-sound
-        Destroy(Instantiate(stageClear), 10);
-        Thread.Sleep(6000);
-        Destroy(Instantiate(fireworksSound), 10);
-
-
-        saveHighScore();
+		if (Lives <= 0) // Out of lives --> game over
+		{
+        	saveHighScore();
+       		Destroy(Instantiate(gameOverSound), 10);
+			// TODO Game over
+		}
+		else // Have more lives --> continue
+		{
+			// TODO Continue
+			Application.LoadLevel (Application.loadedLevel);
+		}
     }
 
-	void DoCountdown()
+	public void StageClear()
+	{
+        saveHighScore();
+		Destroy(Instantiate(stageClear), 10);
+		Thread.Sleep(6000);
+		Destroy(Instantiate(fireworksSound), 10);
+	}
+
+	void DoTimerCountdown()
 	{
 		// Don't countdown if player is dead
 		if (!playerIsAlive) return;
 
 		// Countdown
 		currentCountdownTime += Time.deltaTime;
-        if (Application.loadedLevel == 0)
-        {
-            if (currentCountdownTime >= secondRatio)
-            {
-                Timer -= 1;
-                currentCountdownTime = 0f;
-                CheckTimer();
-            }
-        }
+		if (currentCountdownTime >= secondRatio)
+		{
+			Timer --;
+			currentCountdownTime = 0f;
+			CheckTimer();
+		}
 	}
 
 	void CheckTimer()
 	{
-		if (Timer <= 0)
+		if (Timer == 0)
 		{
 			// TODO Gameover
-            GetComponent<AudioSource>().Pause();
-            Destroy(GameObject.Instantiate(gameOverSound), 15);
+            source.Pause();
+			print ("time death");
+			StartCoroutine (charManager.Die (true));
 		}
         else if(Timer == 100)
         {
-            GetComponent<AudioSource>().Pause();
+            source.Pause();
             Destroy(GameObject.Instantiate(timerWarningSound), 15);
-            GetComponent<AudioSource>().PlayDelayed(3f);
+            source.PlayDelayed(3f);
         }
 
 	}
@@ -230,6 +205,14 @@ public class GM : MonoBehaviour
         if(this.Score > HighestScore || HighestScore == null)
             PlayerPrefs.SetInt("Highscore", this.Score);
     }
+
+	void OnLevelWasLoaded(int id)
+	{
+		/*Vector3 entrancePoint = GameObject.FindGameObjectWithTag (Tags.entrancePoint).transform.position;
+		transform.localPosition = new Vector3(entrancePoint.x, transform.position.y);
+		charMove.transform.SetParent (null);
+		charMove.transform.position = entrancePoint;*/
+	}
 }
 
 public enum DeathType
