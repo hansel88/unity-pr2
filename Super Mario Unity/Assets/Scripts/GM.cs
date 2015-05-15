@@ -134,6 +134,7 @@ public class GM : MonoBehaviour
 
         //if win play fireworks-sound
         Destroy(Instantiate(fireworksSound), 10);
+        saveHighScore();
     }
 
 	void DoCountdown()
@@ -217,7 +218,7 @@ public class GM : MonoBehaviour
         int HighestScore = PlayerPrefs.GetInt("Highscore");
 
         //Saving this score as the highest if it is
-        if(this.Score > HighestScore)
+        if(this.Score > HighestScore || HighestScore == null)
             PlayerPrefs.SetInt("Highscore", this.Score);
     }
 }
