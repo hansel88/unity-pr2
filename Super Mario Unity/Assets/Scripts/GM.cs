@@ -155,10 +155,15 @@ public class GM : MonoBehaviour
 		if (Timer <= 0)
 		{
 			// TODO Gameover
+            GetComponent<AudioSource>().Pause();
             Destroy(GameObject.Instantiate(gameOverSound), 15);
 		}
-        else if(Timer <= 100)
+        else if(Timer == 100)
+        {
+            GetComponent<AudioSource>().Pause();
             Destroy(GameObject.Instantiate(timerWarningSound), 15);
+        }
+
 	}
 
 	void ResetCountdown()

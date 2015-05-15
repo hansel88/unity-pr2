@@ -252,7 +252,9 @@ public class CharacterManager : MonoBehaviour
 			anim.SetTrigger ("DeathTrigger");
 		}
         //GameObject.Instantiate(marioDieSound);
+        GM.instance.GetComponent<AudioSource>().Stop();
         Destroy(GameObject.Instantiate(marioDieSound), 4);
+
 
 		// Wait some time before going to deathscreen
         yield return new WaitForSeconds(3f);
