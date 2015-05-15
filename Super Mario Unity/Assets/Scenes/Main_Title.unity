@@ -560,6 +560,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerAmount: 0
+--- !u!1 &930929505 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 133860, guid: 1f46491d4c2fc914eb8a539832e184c6, type: 2}
+  m_PrefabInternal: {fileID: 304787522}
+--- !u!114 &930929506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 930929505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ce76ce0cf9feab4dbc411e89f39a936, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1252657822}
 --- !u!224 &1129609157 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22449908, guid: 1f46491d4c2fc914eb8a539832e184c6,
