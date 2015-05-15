@@ -9,11 +9,11 @@ public class EnemyShell : Enemy
 	{
 		base.Start ();
 
-		headCollider.enabled = false;
+		//headCollider.enabled = false;
 
 		// Start with no movement
 		direction = 0;
-		StartCoroutine (EnableHead ());
+		//StartCoroutine (EnableHead ());
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
@@ -59,14 +59,21 @@ public class EnemyShell : Enemy
 					charManager.OnEnemyHit ();
 				}
 			}*/
-			if (direction == 0)
+			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
 			{
-				direction = other.transform.position.x > transform.position.x ? -1 : 1;
-				RewardScore ();
+				OnHeadHit (other.collider);
 			}
 			else
 			{
-				charManager.OnEnemyHit ();
+				if (direction == 0)
+				{
+					direction = other.transform.position.x > transform.position.x ? -1 : 1;
+					RewardScore ();
+				}
+				else
+				{
+					charManager.OnEnemyHit ();
+				}
 			}
 		}
 		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
@@ -75,14 +82,9 @@ public class EnemyShell : Enemy
 		}
 		else
 		{
+			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
-	}
-
-	IEnumerator EnableHead()
-	{
-		yield return new WaitForSeconds(0.1f);
-		headCollider.enabled = true;
 	}
 
 	[ContextMenu("Hit")]
@@ -132,6 +134,14 @@ public class EnemyShell : Enemy
 
 	public override void OnHeadHit(Collider2D other)
 	{
+		// Stop colliding if player is already hit
+		if (other.CompareTag (Tags.player))
+		{
+			CharacterManager charManager = other.GetComponent<CharacterManager>();
+			if (charManager.isInvincible) return;
+			charManager.GetComponent<CharacterMovement>().Jump (true);
+		}
+
 		base.OnHeadHit (other);
 		OnJumpHit ();
 	}

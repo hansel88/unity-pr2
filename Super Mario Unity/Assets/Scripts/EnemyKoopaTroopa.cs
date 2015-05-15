@@ -31,7 +31,7 @@ public class EnemyKoopaTroopa : Enemy
 				return;
 			}
 
-			if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
+			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
 			{
 				JumpedOn ();
 				Instantiate (shellPrefab, transform.position, Quaternion.identity);
@@ -40,11 +40,34 @@ public class EnemyKoopaTroopa : Enemy
 			else
 			{
 				charManager.OnEnemyHit ();
+			}*/
+			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f, -0.04f))
+			{
+				OnHeadHit (other.collider);
+			}
+			else
+			{
+				charManager.OnEnemyHit ();
 			}
 		}
 		else
 		{
+			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
+	}
+
+	public override void OnHeadHit(Collider2D other)
+	{
+		// Stop colliding if player is already hit
+		if (other.CompareTag (Tags.player))
+		{
+			CharacterManager charManager = other.GetComponent<CharacterManager>();
+			if (charManager.isInvincible) return;
+			charManager.GetComponent<CharacterMovement>().Jump (true);
+		}
+		
+		base.OnHeadHit (other);
+		OnJumpHit ();
 	}
 }

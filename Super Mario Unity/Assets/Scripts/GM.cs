@@ -93,6 +93,7 @@ public class GM : MonoBehaviour
 		set {playerIsAlive = value; charMove.canMove = value;}
 	}
 	public bool frozenEntities = false;
+	public bool frozenEntitiesCooldown = false;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
 	private const int totalTime = 400; // Total time for a level
@@ -131,29 +132,6 @@ public class GM : MonoBehaviour
         //TODO
     }
 
-	public void PowerPlayerUp(PowerupItem powerup)
-	{
-		// TODO Improve
-		if (marioPowerupStatus == MarioPowerupStatus.Small && powerup == PowerupItem.Mushroom)
-		{
-			marioPowerupStatus = MarioPowerupStatus.Big;
-			// TODO Animate getting mushroom
-		}
-		if (marioPowerupStatus == MarioPowerupStatus.Small && powerup == PowerupItem.Fireflower)
-		{
-			marioPowerupStatus = MarioPowerupStatus.Fireflower;
-			// TODO Animate from small to fireflower
-		}
-		if (marioPowerupStatus == MarioPowerupStatus.Big && powerup == PowerupItem.Fireflower)
-		{
-			marioPowerupStatus = MarioPowerupStatus.Fireflower;
-			// TODO Animate from big to firelfower
-		}
-		if (marioPowerupStatus == MarioPowerupStatus.Fireflower && (powerup == PowerupItem.Mushroom || powerup == PowerupItem.Fireflower))
-		{
-			// TODO Reward player with points
-		}
-	}
 	void DoCountdown()
 	{
 		// Don't countdown if player is dead
@@ -191,11 +169,19 @@ public class GM : MonoBehaviour
 	public void FreezeEntities()
 	{
 		frozenEntities = true;
+		frozenEntitiesCooldown = true;
 	}
 
 	public void UnFreezeEntities()
 	{
 		frozenEntities = false;
+		StartCoroutine (ResetFreezeCooldown ());
+	}
+
+	IEnumerator ResetFreezeCooldown()
+	{
+		yield return new WaitForSeconds(0.05f);
+		frozenEntitiesCooldown = false;
 	}
 
 	[HideInInspector]public Vector3 camWorldTopRight; // Top right of screen in world coordinates

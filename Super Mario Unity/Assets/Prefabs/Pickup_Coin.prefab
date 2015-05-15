@@ -65,12 +65,12 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 199806}
-  m_Mass: 1
+  m_Mass: 9.99999975e-05
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: 0
   m_FixedAngle: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -82,7 +82,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 199806}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
@@ -95,19 +95,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 199806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb0030911d64844c4a176ca3c0b29864, type: 3}
+  m_Script: {fileID: 11500000, guid: 8f720b13eeb0842a59b6d4c964888f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreReward: 100
-  movementSpeed: 0
-  direction: 0
-  rotateWithDirection: 0
-  spriteTransform: {fileID: 433150}
-  canMove: 0
-  anim: {fileID: 0}
-  rBody: {fileID: 0}
-  isVisibleInCamera: 1
-  boxCollider: {fileID: 0}
+  coinPickupSound: {fileID: 111940, guid: bbe35919cff17954faa0be4c4da2499c, type: 2}
 --- !u!212 &21261076
 SpriteRenderer:
   m_ObjectHideFlags: 1
