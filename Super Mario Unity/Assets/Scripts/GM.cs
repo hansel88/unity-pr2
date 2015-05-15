@@ -134,10 +134,15 @@ public class GM : MonoBehaviour
     {
         //TODO
 
+        //if lose
+        Destroy(Instantiate(gameOverSound), 10);
+
         //if win play fireworks-sound
         Destroy(Instantiate(stageClear), 10);
         Thread.Sleep(6000);
         Destroy(Instantiate(fireworksSound), 10);
+
+
         saveHighScore();
     }
 
