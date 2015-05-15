@@ -7,6 +7,7 @@ public class CharacterManager : MonoBehaviour
 	[SerializeField]private Transform fireflowerShootPosition; // Transform for where the fireflowerprojectiles will spawn
 	public Transform spriteTransform; // The players sprite object
 	[SerializeField]private float fireRate = 1f; // Firerate of the fireflower shooting
+	[SerializeField]private LayerMask blockRaycastMask; // Layermask for raycasting blocks
     public GameObject marioDieSound;
     public GameObject powerUpSound;
     public GameObject shootFireballSound;
@@ -24,7 +25,6 @@ public class CharacterManager : MonoBehaviour
 	[HideInInspector]public int fireflowerCount = 0; // Number of fireflower projectiles in play
 	private float starTimer; // Timer for the star powerup
 	[HideInInspector]public bool hasHitBlock = false; // To check if we already hit a block this jump 
-	// TODO Replace the current block hit system so that when hitting block, take the closest (the one we hit the most)
 
 	void Awake()
 	{
@@ -72,26 +72,39 @@ public class CharacterManager : MonoBehaviour
 			}
 		}
 	}
+	private float[] offset = new float[]{0f, 0.08f, -0.08f};
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		// Grounded check
-		if (!other.collider.CompareTag (Tags.enemy) && !other.collider.CompareTag (Tags.powerup) 
-		    && !other.collider.CompareTag (Tags.player))
+		// Check if we hit block
+		if (other.collider.CompareTag (Tags.block))
 		{
-			// If the collided normal are correct, we are grounded
-			// TODO Fix...
-			Vector3 normal = other.contacts[0].point.normalized;
-			if (normal.x < 0f && normal.y < -0.05f)
-			{
-				//charMove.grounded = true;
-				hasHitBlock = false; // TODO Move this to where we ground ourselves
-			}
+			// Stop if block is underneath us
+			Vector3 pos = transform.position;
+			if (other.transform.position.y < pos.y)  return;
 
-			// Send hit message if we jumped up into a block
-			if (other.collider.CompareTag (Tags.block) && transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
+			// Set the origin height of the raycast (depening on the size of the player)
+			float yOrigin = pos.y + (curState == PlayerState.Small ? 0.08f : 0.16f);
+
+			// Get the distance from the block
+			float distance = Vector2.Distance (transform.position, other.transform.position);
+
+			// Raycast three times (from the center of the player, and on both sides), that way we cover the whole width of the player
+			for (int i = 0; i < offset.Length; i ++)
 			{
-				other.collider.SendMessage ("OnHit", this, SendMessageOptions.DontRequireReceiver);
+				// Set the origin of the raycast (
+				Vector2 origin = new Vector2(pos.x + offset[i], yOrigin);
+
+				// Raycast
+				RaycastHit2D hit = Physics2D.Raycast (origin, Vector2.up, distance, blockRaycastMask);
+				if (hit.collider)
+				{
+					// Send the hit message to the block we hit
+					hit.collider.SendMessage ("OnHit", this, SendMessageOptions.DontRequireReceiver);
+
+					// Stop because we already hit a block this jump, so no need to raycast more
+					break;
+				}
 			}
 		}
 	}

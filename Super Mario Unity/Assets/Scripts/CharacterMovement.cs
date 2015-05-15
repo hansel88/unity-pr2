@@ -136,7 +136,6 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Flip()
 	{
-		// TODO Remove??
 		if ((previousFacingRight && !facingRight) || (!previousFacingRight && facingRight))
 			anim.SetTrigger ("FlipTrigger");
 		previousFacingRight = facingRight;
@@ -164,8 +163,6 @@ public class CharacterMovement : MonoBehaviour {
         anim.SetTrigger("JumpTrigger");
 
 		// Add the jumpforce to the rigidbody
-		//rBody.AddForce(new Vector2(0,Mathf.Clamp(jumpForce, 250f, 350f)));
-        //jumpForce = 250f;
 		rBody.AddForce (Vector2.up * curJumpForce);
 		curJumpForce = 50f;
 	}
@@ -175,6 +172,7 @@ public class CharacterMovement : MonoBehaviour {
 		// Check if we should be grounded
 		if (ValidGroundTag (other.tag) && !grounded)
 		{
+			charManager.hasHitBlock = false;
 			grounded = true;
 		}
 	}

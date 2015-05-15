@@ -165,6 +165,9 @@ MonoBehaviour:
   fireflowerShootPosition: {fileID: 472788}
   spriteTransform: {fileID: 448398}
   fireRate: .300000012
+  blockRaycastMask:
+    serializedVersion: 2
+    m_Bits: 4294967039
   marioDieSound: {fileID: 111940, guid: 7177a07f38b46724a97da5d85dc21374, type: 2}
   powerUpSound: {fileID: 111940, guid: 7db8ae276fbb1c048baca25259c8e12c, type: 2}
   shootFireballSound: {fileID: 111940, guid: 7528ba7c788a11b4f8cf2fcaaf796f8d, type: 2}
@@ -187,6 +190,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   downForce: .100000001
   movementSpeed: 100
+  sprintSpeed: 150
   jumpForce: 200
   jumpHoldRate: 325
   jumpSmall: {fileID: 111940, guid: cfdfac2a2dba45d41a6627e416cef75f, type: 2}

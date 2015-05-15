@@ -8,7 +8,7 @@ public class Entity : MonoBehaviour
 	public int direction = 1; // 1 = right, -1 = left, 0 = no movement
 	public bool rotateWithDirection = true;
 	public Transform spriteTransform; // The sprite to rotate when turning
-	public bool canMove = true;
+	public bool canMove = false;
 	private bool isChangingDirection = false;
 	[HideInInspector]public Animator anim;
 	[HideInInspector]public Rigidbody2D rBody;
@@ -107,6 +107,14 @@ public class Entity : MonoBehaviour
 	public void RewardScore()
 	{
 		RewardScore (scoreReward);
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag (Tags.entityActivator))
+		{
+			canMove = true;
+		}
 	}
 
 	public virtual void OnHeadHit(Collider2D other)

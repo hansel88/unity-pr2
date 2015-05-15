@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreReward: 100
-  movementSpeed: 2
+  movementSpeed: 1.29999995
   direction: 1
   rotateWithDirection: 0
   spriteTransform: {fileID: 454212}

@@ -121,13 +121,12 @@ MonoBehaviour:
   direction: -1
   rotateWithDirection: 1
   spriteTransform: {fileID: 451122}
-  canMove: 1
+  canMove: 0
   anim: {fileID: 0}
   rBody: {fileID: 0}
   isVisibleInCamera: 1
   boxCollider: {fileID: 0}
   hasDeathAnimation: 0
-  headCollider: {fileID: 0}
   isDying: 0
   shellPrefab: {fileID: 173910, guid: cbc0a80459d694a1e9ecae98e9895b54, type: 2}
 --- !u!212 &21278926

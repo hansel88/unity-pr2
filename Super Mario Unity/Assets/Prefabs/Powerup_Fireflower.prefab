@@ -98,7 +98,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0030911d64844c4a176ca3c0b29864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boxCollider: {fileID: 0}
   scoreReward: 100
   movementSpeed: 0
   direction: 0
@@ -106,8 +105,10 @@ MonoBehaviour:
   spriteTransform: {fileID: 481532}
   canMove: 0
   anim: {fileID: 0}
+  rBody: {fileID: 0}
   isVisibleInCamera: 1
-  hasBeenJumped: 0
+  boxCollider: {fileID: 0}
+  isActive: 1
 --- !u!212 &21256256
 SpriteRenderer:
   m_ObjectHideFlags: 1

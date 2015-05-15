@@ -6,6 +6,7 @@ public class CameraController : MonoBehaviour {
     public Transform Player;        // Reference to the player's transform.
 	public Transform centerTransform;
 	public Transform[] edgeColliders;
+	public Transform entityActivatorCollider;
 
     void Awake()
     {
@@ -24,6 +25,7 @@ public class CameraController : MonoBehaviour {
 		SetEdgeCollider (edgeColliders[1], 
 		                 new Vector3(GM.instance.camWorldTopRight.x + 0.5f, centerTransform.position.y, 0f), 
 		                 new Vector2(1f, screenHeight));
+		SetEdgeCollider (entityActivatorCollider, edgeColliders[1].position, edgeColliders[1].GetComponent<BoxCollider2D>().size);
 	}
 
 	void SetEdgeCollider(Transform collider, Vector3 pos, Vector3 size)

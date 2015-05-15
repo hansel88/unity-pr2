@@ -121,13 +121,12 @@ MonoBehaviour:
   direction: 1
   rotateWithDirection: 1
   spriteTransform: {fileID: 479338}
-  canMove: 1
+  canMove: 0
   anim: {fileID: 0}
   rBody: {fileID: 0}
   isVisibleInCamera: 1
   boxCollider: {fileID: 0}
   hasDeathAnimation: 1
-  headCollider: {fileID: 0}
   isDying: 0
   scoreMovingReward: 100
 --- !u!212 &21201262
