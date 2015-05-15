@@ -63,7 +63,7 @@ public class GM : MonoBehaviour
 	public bool frozenEntitiesCooldown = false;
 	private float currentCountdownTime = 0;
 	private const float secondRatio = 0.4f; // Seconds per in-game seconds
-	private const int totalTime = 4; // Total time for a level
+	private const int totalTime = 400; // Total time for a level
 	private CharacterMovement charMove;
 	[HideInInspector]public CharacterManager charManager;
 	[HideInInspector]public AudioSource source;
@@ -144,7 +144,6 @@ public class GM : MonoBehaviour
 		{
 			// TODO Gameover
             source.Pause();
-			print ("time death");
 			StartCoroutine (charManager.Die (true));
 		}
         else if(Timer == 100)

@@ -6,7 +6,9 @@ public class CharacterMovement : MonoBehaviour {
 
 	[SerializeField]private float downForce = 0.1f; // Force to apply when in the air
 	[SerializeField]private float movementSpeed = 100f;
+	[SerializeField]private float sprintSpeed = 150f;
 	[SerializeField]private float jumpForce = 250f;
+	[SerializeField]private float jumpHoldRate = 325f; // Rate to increase the jumpforce when holding the jump button down
 	[SerializeField]private GameObject jumpSmall;
 	[SerializeField]private GameObject jumpBig;
 
@@ -19,7 +21,10 @@ public class CharacterMovement : MonoBehaviour {
 	private float horizontalInput = 0f;
     private bool jumpPressed = false;
 	private CharacterManager charManager;
-
+	private float curJumpForce;
+	private bool wasGroundedOnJump = false;
+	private float curSpeed;
+	
 	void Awake()
 	{
 		charManager = GetComponent<CharacterManager>();
@@ -30,13 +35,8 @@ public class CharacterMovement : MonoBehaviour {
 	{
 		// Get the animator for the player sprite
 		anim = GetComponent<CharacterManager>().spriteTransform.GetComponent<Animator>();
+		curSpeed = movementSpeed;
 	}
-
-    void FixedUpdate()
-    {
-        if (jumpPressed)
-            jumpForce += 5;
-    }
 
 	void Update () 
 	{
@@ -46,17 +46,33 @@ public class CharacterMovement : MonoBehaviour {
 			// Get input
 			horizontalInput = Input.GetAxisRaw ("Horizontal");
 
+			// Sprinting
+			if (Input.GetButtonDown ("Sprint"))
+			{
+				curSpeed = sprintSpeed;
+			}
+			if (Input.GetButtonUp ("Sprint"))
+			{
+				curSpeed = movementSpeed;
+			}
+
 			// Jumping
 	        if (Input.GetButtonDown("Jump") && grounded == true)
 	        {
-				//Jump (false);
-                jumpPressed = true;
+				curJumpForce = jumpForce;
+				wasGroundedOnJump = true;
+                Jump(true);
 	        }
-
-            if( Input.GetButtonUp("Jump") && grounded == true)
+			// If jump is held down and we were grounded when we jumped
+            if( Input.GetButton("Jump") && wasGroundedOnJump)
             {
-                Jump(false);
+				// Increase the current jump force
+				curJumpForce += Time.deltaTime * jumpHoldRate;
             }
+			if (Input.GetButtonUp("Jump"))
+			{
+				wasGroundedOnJump = false;
+			}
 	        
 			// Flipping
 			if (facingRight && horizontalInput < 0f)
@@ -67,11 +83,26 @@ public class CharacterMovement : MonoBehaviour {
 			{
 				Flip ();
 			}
-	        
 		}
 		else 
 		{
 			horizontalInput = 0f;
+		}
+
+		// Higher jump when holding button
+		if (grounded)
+		{
+			// Reset the current jump force if we are grounded
+			if (curJumpForce > 0f)
+			{
+				curJumpForce = 0f;
+			}
+		}
+		else if (curJumpForce > 0f)
+		{
+			// Add up force to keep ascending when in the air (while holding jump)
+			rBody.AddForce (Vector2.up * curJumpForce);
+			curJumpForce = 0f;
 		}
 
 		// Set the animator parameters
@@ -95,7 +126,7 @@ public class CharacterMovement : MonoBehaviour {
 			}
 
 			// Apply the input and the velocity to the rigidbody
-			rBody.velocity = new Vector2(horizontalInput * movementSpeed * Time.deltaTime, vel);
+			rBody.velocity = new Vector2(horizontalInput * curSpeed * Time.deltaTime, vel);
 		}
 		else if (!rBody.isKinematic)
 		{
@@ -133,9 +164,10 @@ public class CharacterMovement : MonoBehaviour {
         anim.SetTrigger("JumpTrigger");
 
 		// Add the jumpforce to the rigidbody
-		rBody.AddForce(new Vector2(0,Mathf.Clamp(jumpForce, 250f, 350f)));
-        jumpForce = 250f;
-        
+		//rBody.AddForce(new Vector2(0,Mathf.Clamp(jumpForce, 250f, 350f)));
+        //jumpForce = 250f;
+		rBody.AddForce (Vector2.up * curJumpForce);
+		curJumpForce = 50f;
 	}
 
 	void OnTriggerStay2D(Collider2D other)

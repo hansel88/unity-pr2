@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 180370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.4799995, y: -.319999993, z: 0}
+  m_LocalPosition: {x: -13.6808004, y: -.319999993, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 405074}
@@ -130,6 +130,7 @@ MonoBehaviour:
   - {x: -.119999997, y: .600000024}
   activateReward: 50
   blockBreakSound: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
+  bumpSound: {fileID: 111940, guid: a3044a6d3f863974eb266e5006f8fe92, type: 2}
 --- !u!212 &21237574
 SpriteRenderer:
   m_ObjectHideFlags: 1

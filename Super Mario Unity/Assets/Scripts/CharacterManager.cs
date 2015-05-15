@@ -11,8 +11,8 @@ public class CharacterManager : MonoBehaviour
     public GameObject powerUpSound;
     public GameObject shootFireballSound;
 	
-	public PlayerState curState; // Current player state
-	public bool hasStar = false; // If we have a star or not
+	[HideInInspector]public PlayerState curState; // Current player state
+	[HideInInspector]public bool hasStar = false; // If we have a star or not
 	[HideInInspector]public bool isInvincible = false; // If we are invincible or not
 	private SpriteRenderer spriteRenderer; // Spriterenderer of the sprite object
 	private Animator anim;

@@ -95,7 +95,6 @@ public class EnemyShell : Enemy
 		// Check if shell is moving
 		if (direction == 0) // Is not moving
 		{
-			print ("Jumped on and shell is starting");
 			// Reward player with score
 			RewardScore ();
 			// Start moving shell
@@ -103,7 +102,6 @@ public class EnemyShell : Enemy
 		}
 		else // Is moving
 		{
-			print ("Jumped on and shell is stopping");
 			// Reward player with score
 			RewardScore (scoreMovingReward);
 			// Stop shell
