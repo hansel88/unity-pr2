@@ -209,6 +209,17 @@ public class GM : MonoBehaviour
 		//camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
 	}
 	#endregion
+
+    public void saveHighScore()
+    {
+        PlayerPrefs.SetInt("currentScore", this.Score);
+
+        int HighestScore = PlayerPrefs.GetInt("Highscore");
+
+        //Saving this score as the highest if it is
+        if(this.Score > HighestScore)
+            PlayerPrefs.SetInt("Highscore", this.Score);
+    }
 }
 
 public enum DeathType
