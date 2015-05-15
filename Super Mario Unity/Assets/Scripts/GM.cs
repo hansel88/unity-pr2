@@ -101,6 +101,7 @@ public class GM : MonoBehaviour
 	[HideInInspector]public CharacterManager charManager;
     public GameObject gameOverSound;
     public GameObject timerWarningSound;
+    public GameObject fireworksSound;
 
     void Awake()
     {
@@ -130,6 +131,9 @@ public class GM : MonoBehaviour
     private void checkGameOver()
     {
         //TODO
+
+        //if win play fireworks-sound
+        Destroy(Instantiate(fireworksSound), 10);
     }
 
 	void DoCountdown()
