@@ -130,6 +130,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 16
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -182,6 +186,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 9
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -414,6 +422,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 14
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -556,6 +568,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -706,6 +722,10 @@ Prefab:
       propertyPath: content
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11496408, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
+      propertyPath: powerUpAppearSound
+      value: 
+      objectReference: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
   m_IsPrefabParent: 0
@@ -877,6 +897,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Questionmark 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11496408, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
+      propertyPath: powerUpAppearSound
+      value: 
+      objectReference: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
   m_IsPrefabParent: 0
@@ -1175,6 +1199,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 13
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -1352,6 +1380,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 15
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -1623,6 +1655,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 12
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -1725,6 +1761,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11496408, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
+      propertyPath: powerUpAppearSound
+      value: 
+      objectReference: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
   m_IsPrefabParent: 0
@@ -1931,6 +1971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f720b13eeb0842a59b6d4c964888f5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPickupSound: {fileID: 111940, guid: bbe35919cff17954faa0be4c4da2499c, type: 2}
 --- !u!1 &1397479439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1981,6 +2022,8 @@ MonoBehaviour:
   player: {fileID: 0}
   frozenEntities: 0
   charManager: {fileID: 0}
+  gameOverSound: {fileID: 111940, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
+  timerWarningSound: {fileID: 111940, guid: d1613145030ce974e9eb08756429989b, type: 2}
   camWorldTopRight: {x: 0, y: 0, z: 0}
   camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!4 &1397479442
@@ -2112,6 +2155,10 @@ Prefab:
       propertyPath: m_Name
       value: Block_Brick 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11423004, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
+      propertyPath: blockBreakSound
+      value: 
+      objectReference: {fileID: 111940, guid: 8a43fe7dfe09ecf4c8083c7fa16245c7, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f42cc6e4c19974abe9a9f5da404f8101, type: 2}
   m_IsPrefabParent: 0
@@ -2521,6 +2568,10 @@ Prefab:
       propertyPath: activateCount
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 11496408, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
+      propertyPath: powerUpAppearSound
+      value: 
+      objectReference: {fileID: 111940, guid: cc3952225c21d5d4b965c0949e68a97f, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad5cf83dba63c410c83ad5a718cee288, type: 2}
   m_IsPrefabParent: 0
