@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 451900}
   - 82: {fileID: 8203146}
   m_Layer: 0
-  m_Name: fireworks
+  m_Name: pipe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24380714, guid: 7277c4dd6d86a1c4c927f43fb5e91ddf,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 05ffed7bb503b92408d8bb9089183967, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 112066cb37f84e04a9db58c3030c2ebe, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

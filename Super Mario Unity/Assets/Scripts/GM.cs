@@ -134,6 +134,7 @@ public class GM : MonoBehaviour
 
         //if win play fireworks-sound
         Destroy(Instantiate(fireworksSound), 10);
+        saveHighScore();
     }
 
 	void DoCountdown()
@@ -166,6 +167,7 @@ public class GM : MonoBehaviour
         {
             GetComponent<AudioSource>().Pause();
             Destroy(GameObject.Instantiate(timerWarningSound), 15);
+            GetComponent<AudioSource>().PlayDelayed(3f);
         }
 
 	}
@@ -208,6 +210,17 @@ public class GM : MonoBehaviour
 		//camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
 	}
 	#endregion
+
+    public void saveHighScore()
+    {
+        PlayerPrefs.SetInt("currentScore", this.Score);
+
+        int HighestScore = PlayerPrefs.GetInt("Highscore");
+
+        //Saving this score as the highest if it is
+        if(this.Score > HighestScore || HighestScore == null)
+            PlayerPrefs.SetInt("Highscore", this.Score);
+    }
 }
 
 public enum DeathType

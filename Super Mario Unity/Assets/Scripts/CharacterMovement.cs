@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Timers;
 
 public class CharacterMovement : MonoBehaviour {
 
@@ -16,6 +17,8 @@ public class CharacterMovement : MonoBehaviour {
 	[HideInInspector]public bool facingRight = true;
 	private bool previousFacingRight = true; // TODO remove?
 	private float horizontalInput = 0f;
+    private bool jumpPressed = false;
+
 
 	void Awake()
 	{
@@ -28,6 +31,12 @@ public class CharacterMovement : MonoBehaviour {
 		anim = GetComponent<CharacterManager>().spriteTransform.GetComponent<Animator>();
 	}
 
+    void FixedUpdate()
+    {
+        if (jumpPressed)
+            jumpForce += 5;
+    }
+
 	void Update () 
 	{
 		// Check if we can move
@@ -39,8 +48,14 @@ public class CharacterMovement : MonoBehaviour {
 			// Jumping
 	        if (Input.GetButtonDown("Jump") && grounded == true)
 	        {
-				Jump (false);
+				//Jump (false);
+                jumpPressed = true;
 	        }
+
+            if( Input.GetButtonUp("Jump") && grounded == true)
+            {
+                Jump(false);
+            }
 	        
 			// Flipping
 			if (facingRight && horizontalInput < 0f)
@@ -101,6 +116,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	public void Jump(bool ignoreGrounded)
 	{
+        jumpPressed = false;
 		// Check if we want to ignore the grounded value
 		if (!ignoreGrounded)
 			if (!grounded) return;
@@ -116,7 +132,9 @@ public class CharacterMovement : MonoBehaviour {
         anim.SetTrigger("JumpTrigger");
 
 		// Add the jumpforce to the rigidbody
-		rBody.AddForce(new Vector2(0, jumpForce));
+		rBody.AddForce(new Vector2(0,Mathf.Clamp(jumpForce, 250f, 350f)));
+        jumpForce = 250f;
+        
 	}
 
 	void OnTriggerStay2D(Collider2D other)
@@ -142,4 +160,5 @@ public class CharacterMovement : MonoBehaviour {
 		// Checks if the tag is not any of the specified (A.K.A. we can be grounded)
 		return !(groundTag.Equals (Tags.enemy) || groundTag.Equals (Tags.player) || groundTag.Equals (Tags.powerup));
 	}
+        
 }

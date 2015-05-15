@@ -9,6 +9,7 @@ public class BlockBrick : MonoBehaviour
 	public Vector2[] particleVectors = new Vector2[4];
 	public int activateReward = 0;
     public GameObject blockBreakSound;
+    public GameObject bumpSound;
 	private Animator anim;
 
 	void Awake()
@@ -26,6 +27,7 @@ public class BlockBrick : MonoBehaviour
 			if (charManager.curState == PlayerState.Small)
 			{
 				anim.SetTrigger ("ActivateTrigger");
+                Destroy(GameObject.Instantiate(bumpSound), 2);
 				return;
 			}
 		}
