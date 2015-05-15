@@ -1881,38 +1881,6 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 434862, guid: 6313fdc953c3b411aa9c8999710878f6, type: 2}
   m_PrefabInternal: {fileID: 1325460349}
-<<<<<<< HEAD
---- !u!95 &1325460351
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1325460350}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a02f298ac842549e1a4e9fb1206222c1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1325460352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1325460350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f720b13eeb0842a59b6d4c964888f5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coinPickupSound: {fileID: 111940, guid: bbe35919cff17954faa0be4c4da2499c, type: 2}
-=======
->>>>>>> 1519fafb7e4c7387f3f5b045057c3d3989495067
 --- !u!1 &1397479439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1964,13 +1932,10 @@ MonoBehaviour:
   frozenEntities: 0
   frozenEntitiesCooldown: 0
   charManager: {fileID: 0}
-<<<<<<< HEAD
   gameOverSound: {fileID: 111940, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
   timerWarningSound: {fileID: 111940, guid: d1613145030ce974e9eb08756429989b, type: 2}
-=======
   gameOverSound: {fileID: 0}
   timerWarningSound: {fileID: 0}
->>>>>>> 1519fafb7e4c7387f3f5b045057c3d3989495067
   camWorldTopRight: {x: 0, y: 0, z: 0}
   camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!4 &1397479442
