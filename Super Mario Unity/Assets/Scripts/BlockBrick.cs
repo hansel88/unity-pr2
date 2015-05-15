@@ -20,13 +20,11 @@ public class BlockBrick : MonoBehaviour
 	{
 		if (charManager)
 		{
-			print ("hit brick");
 			if (charManager.hasHitBlock) return;
 			charManager.hasHitBlock = true;
 
 			if (charManager.curState == PlayerState.Small)
 			{
-				print ("small hit");
 				anim.SetTrigger ("ActivateTrigger");
 				return;
 			}

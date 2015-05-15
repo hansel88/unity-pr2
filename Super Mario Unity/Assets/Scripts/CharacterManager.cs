@@ -307,6 +307,9 @@ public class CharacterManager : MonoBehaviour
 
 	public IEnumerator AnimatePipeEntering()
 	{
+		transform.SetParent (GM.instance.transform);
+		// animate
+		// wait for animation
 		yield return new WaitForEndOfFrame();
 	}
 }
