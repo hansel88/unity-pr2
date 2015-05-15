@@ -994,7 +994,7 @@ MonoBehaviour:
   charManager: {fileID: 0}
   gameOverSound: {fileID: 111940, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
   timerWarningSound: {fileID: 111940, guid: d1613145030ce974e9eb08756429989b, type: 2}
-  fireworksSound: {fileID: 0}
+  fireworksSound: {fileID: 111940, guid: df0ce4ef681cb894d8d644f6cdc417d8, type: 2}
   camWorldTopRight: {x: 0, y: 0, z: 0}
   camWorldBottomLeft: {x: 0, y: 0, z: 0}
 --- !u!114 &11451796
