@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Threading;
 
 public class GM : MonoBehaviour
 {
@@ -102,6 +103,7 @@ public class GM : MonoBehaviour
     public GameObject gameOverSound;
     public GameObject timerWarningSound;
     public GameObject fireworksSound;
+    public GameObject stageClear;
 
     void Awake()
     {
@@ -133,6 +135,8 @@ public class GM : MonoBehaviour
         //TODO
 
         //if win play fireworks-sound
+        Destroy(Instantiate(stageClear), 10);
+        Thread.Sleep(6000);
         Destroy(Instantiate(fireworksSound), 10);
         saveHighScore();
     }
