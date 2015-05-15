@@ -166,6 +166,7 @@ public class GM : MonoBehaviour
         {
             GetComponent<AudioSource>().Pause();
             Destroy(GameObject.Instantiate(timerWarningSound), 15);
+            GetComponent<AudioSource>().PlayDelayed(3f);
         }
 
 	}
