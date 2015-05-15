@@ -27,7 +27,7 @@ public class ModeSelect : MonoBehaviour {
 
         if (Input.GetButtonDown("Submit"))
         {
-            Application.LoadLevel("Level_01");
+            Application.LoadLevel("Loading_Level");
         }
 	}
 }
