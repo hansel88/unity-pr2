@@ -161,9 +161,9 @@ public class CharacterMovement : MonoBehaviour {
 		// Set us to not grounded and trigger the animtor
 		//grounded = false;
         anim.SetTrigger("JumpTrigger");
-		print ("jumop");
-		curJumpForce = jumpForce;
+
 		// Add the jumpforce to the rigidbody
+		curJumpForce = jumpForce;
 		rBody.AddForce (Vector2.up * curJumpForce);
 		curJumpForce = 50f;
 	}

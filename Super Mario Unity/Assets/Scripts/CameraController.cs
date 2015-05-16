@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour {
 	public Transform centerTransform;
 	public Transform[] edgeColliders;
 	public Transform entityActivatorCollider;
+	public bool staticCamera = false;
 
     void Awake()
     {
@@ -38,7 +39,8 @@ public class CameraController : MonoBehaviour {
 
     void FixedUpdate()
     {
-        TrackPlayer();
+		if (!staticCamera)
+        	TrackPlayer();
     }
 
     void TrackPlayer()
