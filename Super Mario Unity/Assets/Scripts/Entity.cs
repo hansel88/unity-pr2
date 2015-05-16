@@ -12,7 +12,6 @@ public class Entity : MonoBehaviour
 	private bool isChangingDirection = false;
 	[HideInInspector]public Animator anim;
 	[HideInInspector]public Rigidbody2D rBody;
-	public bool isVisibleInCamera = true;
 	[HideInInspector]public BoxCollider2D boxCollider;
 
 	void Awake()
@@ -34,8 +33,10 @@ public class Entity : MonoBehaviour
 
 	public void HorizontalMovement()
 	{
+		// Check if we can move
 		if (!GM.instance.frozenEntities && canMove)
 		{
+			// Enable the animator and rigidbody
 			if (rBody.isKinematic)
 			{
 				if (anim)
@@ -44,11 +45,13 @@ public class Entity : MonoBehaviour
 				}
 				rBody.isKinematic = false;
 			}
+
 			// Moves the object in a horizontal direction
 			transform.Translate ((Vector3.right * direction) * movementSpeed * Time.deltaTime);
 		}
 		else if (GM.instance.frozenEntities && !rBody.isKinematic)
 		{
+			// Disable the animator and rigidbody
 			if (anim)
 			{
 				anim.enabled = false;
@@ -59,8 +62,6 @@ public class Entity : MonoBehaviour
 
 	public void ChangeDirectionOnCollision(Collision2D other)
 	{
-		if (pr)
-			print ("col: " + other.collider.name);
 		if (!other.collider.CompareTag ("Ground"))
 		{
 			// Check if the collided object is on the correct side
@@ -76,7 +77,7 @@ public class Entity : MonoBehaviour
 			}
 		}
 	}
-	public bool pr = false;
+
 	public virtual IEnumerator TurnAround()
 	{
 		isChangingDirection = true;
@@ -111,8 +112,10 @@ public class Entity : MonoBehaviour
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
+		// Check if we hit the entityactivatorcollider attached to the camera
 		if (other.CompareTag (Tags.entityActivator))
 		{
+			// Start moving
 			canMove = true;
 		}
 	}

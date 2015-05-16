@@ -40,7 +40,7 @@ public class CharacterMovement : MonoBehaviour {
 	void Update () 
 	{
 		// Check if we can move
-		if (canMove)
+		if (canMove && !GM.instance.isPaused)
 		{
 			// Get input
 			horizontalInput = Input.GetAxisRaw ("Horizontal");

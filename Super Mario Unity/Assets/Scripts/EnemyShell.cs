@@ -9,18 +9,15 @@ public class EnemyShell : Enemy
 	{
 		base.Start ();
 
-		//headCollider.enabled = false;
-
 		// Start with no movement
 		direction = 0;
-		//StartCoroutine (EnableHead ());
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.collider.CompareTag (Tags.player))
 		{
-			// Check with the player to make sure this wasnt a headhit (player jumped on this enemy)
+			// Die if the player has star
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
@@ -28,35 +25,39 @@ public class EnemyShell : Enemy
 				return;
 			}
 
+			// Check if we hit the head
 			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
 			{
 				OnHeadHit (other.collider);
 			}
 			else
 			{
-				if (direction == 0)
+				if (direction == 0) // If the shell isn't moving
 				{
+					// Start moving the shell
 					direction = other.transform.position.x > transform.position.x ? -1 : 1;
 					RewardScore ();
 				}
 				else
 				{
+					// Fire enemyhit event
 					charManager.OnEnemyHit ();
 				}
 			}
 		}
-		else if (other.collider.CompareTag (Tags.enemy) && direction != 0)
+		else if (other.collider.CompareTag (Tags.enemy) && direction != 0) // If an enemy hit the shell while its moving
 		{
+			// Kill the enemy
 			other.collider.GetComponent<Enemy>().InstaDeath (800);
 		}
 		else
 		{
+			// Check if we just unfroze before turning (to prevent collision event disabling the kinematic option)
 			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
 	}
 
-	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
 		JumpedOn ();

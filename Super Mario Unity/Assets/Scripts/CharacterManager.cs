@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Manager for the player states and more
 public class CharacterManager : MonoBehaviour
 {
 	[SerializeField]private GameObject fireflowerProjectilePrefab; // The prefab for the fireflower projectile
@@ -264,8 +265,7 @@ public class CharacterManager : MonoBehaviour
 		groundTriggerCollider.enabled = false;
 
 		
-		// Tell GM we are dead
-		GM.instance.PlayerIsAlive = false;
+		// Tell GM we died
 		GM.instance.Lives --;
 
 		// Animate death
@@ -276,10 +276,8 @@ public class CharacterManager : MonoBehaviour
         GM.instance.source.Stop();
         Destroy(GameObject.Instantiate(marioDieSound), 4);
 
-		// Wait some time before going to deathscreen
+		// Wait some time before checking for gameover
         yield return new WaitForSeconds(3f);
-		//yield return new WaitForSeconds(withAnimation ? 2f : 1f);
-		//Application.LoadLevel (Application.loadedLevel);
 		GM.instance.CheckGameOver ();
 	}
 	
@@ -329,8 +327,7 @@ public class CharacterManager : MonoBehaviour
 	public IEnumerator AnimatePipeEntering()
 	{
 		transform.SetParent (GM.instance.transform);
-		// animate
-		// wait for animation
+		// TODO animate player entering pipe
 		yield return new WaitForEndOfFrame();
 	}
 }

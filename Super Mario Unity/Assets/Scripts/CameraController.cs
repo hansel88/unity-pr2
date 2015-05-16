@@ -1,23 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Controller for the camera following the player
 public class CameraController : MonoBehaviour {
 
     public Transform Player;        // Reference to the player's transform.
-	public Transform centerTransform;
-	public Transform[] edgeColliders;
-	public Transform entityActivatorCollider;
-	public bool staticCamera = false;
+	public Transform centerTransform; // Tranform for the center of the camera
+	public Transform[] edgeColliders; // Colliders for limiting the player inside the camera view
+	public Transform entityActivatorCollider; // The collider for actiating the entities when hitting them
+	public bool staticCamera = false; // Whether the camera should move or not
 
     void Awake()
     {
         //Setting up the reference.
-        //Player = GameObject.FindGameObjectWithTag("Player").transform; 
         Player = GameObject.FindWithTag("Player").transform;
     }
 
 	void Start()
 	{
+		// position the colliders
 		float screenHeight = Vector2.Distance (new Vector2(0f, GM.instance.camWorldBottomLeft.y), 
 		                                       new Vector2(0f, GM.instance.camWorldTopRight.y));
 		SetEdgeCollider (edgeColliders[0], 
@@ -47,14 +48,12 @@ public class CameraController : MonoBehaviour {
     {
         // By default the target x and y coordinates of the camera are it's current x and y coordinates.
 
-        //GM.instance.UpdateScreenBounds();
 		float targetX = Player.position.x;
 
 		if(Player.position.x > centerTransform.position.x)
         {
             this.transform.position = new Vector3(targetX, this.transform.position.y, transform.position.z);
         }
-        //float targetY = Player.position.y;
 
         // Set the camera's position to the target position with the same z component.
 

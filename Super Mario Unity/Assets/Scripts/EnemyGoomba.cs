@@ -11,16 +11,16 @@ public class EnemyGoomba : Enemy
 	public void OnCollide(Transform other)
 	{
 		other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
-		//base.OnCollide (other);
 	}
 	
 	void OnCollisionEnter2D(Collision2D other)
 	{
+		// Stop if we are dying
 		if (isDying) return;
 		
 		if (other.collider.CompareTag (Tags.player))
 		{
-			// Check with the player to make sure this wasnt a headhit (player jumped on this enemy)
+			// Die if the player has star
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
@@ -28,15 +28,7 @@ public class EnemyGoomba : Enemy
 				return;
 			}
 			
-			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
-			{
-				JumpedOn ();
-				Die ();
-			}
-			else
-			{
-				charManager.OnEnemyHit ();
-			}*/
+			// Check if we hit the head
 			if (transform.ContactPointIsHead (other.contacts[0].point, 0.001f))
 			{
 				OnHeadHit (other.collider);
@@ -48,6 +40,7 @@ public class EnemyGoomba : Enemy
 		}
 		else
 		{
+			// Check if we just unfroze before turning (to prevent collision event disabling the kinematic option)
 			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
@@ -63,11 +56,5 @@ public class EnemyGoomba : Enemy
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 		OnJumpHit ();
-	}
-	
-	IEnumerator headreset()
-	{
-		yield return new WaitForSeconds(0.5f);
-		//GM.instance.charManager.lastHitHead = false;
 	}
 }

@@ -3,13 +3,15 @@ using System.Collections;
 
 public class Enemy : Entity
 {
-	public bool hasDeathAnimation = true;
+	public bool hasDeathAnimation = true; // Whether to show the death animation or not
 	public bool isDying = false;
 
 	void Update()
 	{
+		// Move the enemy
 		HorizontalMovement ();
-		//boxCollider.enabled = !isDying;
+
+		// Disable the collider if we are dying
 		if (boxCollider.enabled && isDying)
 		{
 			boxCollider.enabled = false;
@@ -18,16 +20,20 @@ public class Enemy : Entity
 
 	public void Die()
 	{
+		// Don't die again if we already are dying
 		if (isDying) return;
-
 		isDying = true;
 
 		// Disable the colliders
 		boxCollider.enabled = true;
 
+		// Stop moving
 		canMove = false;
+
+		// Reward player
 		RewardScore ();
 
+		// Play death animation or destroy the enemy
 		if (hasDeathAnimation)
 		{
 			if (anim)
@@ -43,6 +49,7 @@ public class Enemy : Entity
 
 	public void JumpedOn()
 	{
+		// Jump the player
 		GM.instance.charManager.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
 	}
@@ -54,6 +61,7 @@ public class Enemy : Entity
 
 	public void InstaDeath(int pointReward)
 	{
+		// Kill the enemy
 		anim.SetTrigger ("InstaDeathTrigger");
 		RewardScore (pointReward);
 		canMove = false;

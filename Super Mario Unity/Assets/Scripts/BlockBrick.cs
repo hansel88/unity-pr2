@@ -39,6 +39,7 @@ public class BlockBrick : MonoBehaviour
 		// Reward player
 		GM.instance.Score += activateReward;
 
+		// Fire of the particles
 		for (int i = 0; i < brickParticles.Length; i ++)
 		{
             Destroy(GameObject.Instantiate(blockBreakSound), 2);
@@ -46,26 +47,20 @@ public class BlockBrick : MonoBehaviour
 			obj.GetComponent<SpriteRenderer>().sprite = brickParticles[i];
 			obj.GetComponent<Rigidbody2D>().AddForce (particleVectors[i] * particleForce);
 		}
+
+		// Deactivate the object
 		gameObject.SetActive (false);
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
-		/*if (other.collider.CompareTag (Tags.player))
-		{
-			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
-			if (charManager.ValidHeadHit (other.contacts[0].point, charManager.transform.position, charManager.charCollider.size,
-			                              charManager.charCollider.offset, charManager.charCollider.bounds) 
-			    && !charManager.hasHitBlock && charManager.curState != PlayerState.Small)
-			{
-				charManager.hasHitBlock = true;
-				OnHit ();
-			}
-		}*/
+		// If enemy hit
 		if (other.collider.CompareTag (Tags.enemy))
 		{
+			// If enemy is shell
 			if (other.collider.GetComponent<EnemyShell>())
 			{
+				// Hit block
 				OnHit (null);
 			}
 		}

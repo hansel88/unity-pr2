@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
-	public Transform rewardCanvas;
+	public Transform rewardCanvasTransform; // Transform for the reward canvas
 	public Text textScore;
 	public Text textCoin;
 	public Text textTime;
@@ -12,32 +12,10 @@ public class GUIManager : MonoBehaviour
 	public GameObject rewardPrefab;
 
 	public static GUIManager instance;
-    private bool isPaused = false;
 
 	void Awake()
 	{
 		instance = this;
-	}
-
-
-
-    void Update () 
-    {
-		if (Input.GetKeyDown("p"))
-        {
-            if(isPaused)
-            {
-                isPaused = false;
-                Time.timeScale = 0;
-            }
-            else
-            {
-                isPaused = true;
-                Time.timeScale = 1;
-            }
-
-        }
-
 	}
 
 	public void ChangeScoreText(int score)
@@ -86,11 +64,8 @@ public class GUIManager : MonoBehaviour
 
 	public void PopRewardText(Vector3 pos, string rewardText)
 	{
-		//GameObject textObj = new GameObject("RewardText", typeof(RewardText));
-		//Text text = textObj.GetComponent<Text>(); // TODO Get from poolmanager
-		//text.transform.position = pos;
-		//text.text = rewardText;
+		// Displays a text object with the specified text at the position
 		GameObject textObj = Instantiate (rewardPrefab) as GameObject;
-		textObj.GetComponent<RewardText>().Initialize (rewardText, pos, rewardCanvas);
+		textObj.GetComponent<RewardText>().Initialize (rewardText, pos, rewardCanvasTransform);
 	}
 }

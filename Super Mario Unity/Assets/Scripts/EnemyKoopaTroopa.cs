@@ -5,7 +5,6 @@ public class EnemyKoopaTroopa : Enemy
 {
 	public GameObject shellPrefab;
 
-	[ContextMenu("Hit")]
 	public void OnJumpHit()
 	{
 		JumpedOn ();
@@ -16,14 +15,13 @@ public class EnemyKoopaTroopa : Enemy
 	public void OnCollide(Transform other)
 	{
 		other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
-		//base.OnCollide (other);
 	}
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
 		if (other.collider.CompareTag (Tags.player))
 		{
-			// Check with the player to make sure this wasnt a headhit (player jumped on this enemy)
+			// Die if the player has star
 			CharacterManager charManager = other.collider.GetComponent<CharacterManager>();
 			if (charManager.hasStar)
 			{
@@ -31,16 +29,7 @@ public class EnemyKoopaTroopa : Enemy
 				return;
 			}
 
-			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
-			{
-				JumpedOn ();
-				Instantiate (shellPrefab, transform.position, Quaternion.identity);
-				Die ();
-			}
-			else
-			{
-				charManager.OnEnemyHit ();
-			}*/
+			// Check if we hit the head
 			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f, -0.04f))
 			{
 				OnHeadHit (other.collider);
@@ -52,6 +41,7 @@ public class EnemyKoopaTroopa : Enemy
 		}
 		else
 		{
+			// Check if we just unfroze before turning (to prevent collision event disabling the kinematic option)
 			if (GM.instance.frozenEntitiesCooldown) return;
 			ChangeDirectionOnCollision (other);
 		}
