@@ -1,15 +1,17 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Functionality of the brick block
 public class BlockBrick : MonoBehaviour
 {
-	public GameObject brickParticlePrefab;
-	public Sprite[] brickParticles;
-	public float particleForce = 10f;
-	public Vector2[] particleVectors = new Vector2[4];
-	public int activateReward = 0;
+	public GameObject brickParticlePrefab; // Prefab for the particles
+	public Sprite[] brickParticles; // The different sprites for the particles
+	public float particleForce = 10f; // Force of the particles
+	public Vector2[] particleVectors = new Vector2[4]; // Particle directions
+	public int activateReward = 0; // Score reward for activating
     public GameObject blockBreakSound;
     public GameObject bumpSound;
+
 	private Animator anim;
 
 	void Awake()
@@ -21,9 +23,11 @@ public class BlockBrick : MonoBehaviour
 	{
 		if (charManager)
 		{
+			// Stop if we already hit a block this jump
 			if (charManager.hasHitBlock) return;
 			charManager.hasHitBlock = true;
 
+			// If we are small, just thump the block
 			if (charManager.curState == PlayerState.Small)
 			{
 				anim.SetTrigger ("ActivateTrigger");
@@ -32,6 +36,7 @@ public class BlockBrick : MonoBehaviour
 			}
 		}
 
+		// Reward player
 		GM.instance.Score += activateReward;
 
 		for (int i = 0; i < brickParticles.Length; i ++)
