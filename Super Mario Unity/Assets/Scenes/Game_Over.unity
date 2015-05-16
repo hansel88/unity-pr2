@@ -100,7 +100,6 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 136741965}
-  - 114: {fileID: 136741964}
   - 114: {fileID: 136741963}
   m_Layer: 0
   m_Name: GameManager
@@ -117,35 +116,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 136741962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de44d911757af46e0995ab3d7380de09, type: 3}
+  m_Script: {fileID: 11500000, guid: 51d98ac5e19c6c042a6d52794c5179a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardCanvas: {fileID: 0}
-  textScore: {fileID: 527297991}
-  textCoin: {fileID: 1787261512}
-  textTime: {fileID: 981765401}
-  textLevel: {fileID: 694081859}
-  rewardPrefab: {fileID: 0}
---- !u!114 &136741964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 136741962}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  marioPowerupStatus: 0
-  player: {fileID: 0}
-  frozenEntities: 0
-  frozenEntitiesCooldown: 0
-  charManager: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  timerWarningSound: {fileID: 0}
-  camWorldTopRight: {x: 0, y: 0, z: 0}
-  camWorldBottomLeft: {x: 0, y: 0, z: 0}
+  livesText: {fileID: 0}
+  levelToLoad: Main_Title
 --- !u!4 &136741965
 Transform:
   m_ObjectHideFlags: 0
@@ -170,8 +145,6 @@ GameObject:
   - 92: {fileID: 410144522}
   - 124: {fileID: 410144521}
   - 81: {fileID: 410144520}
-  - 114: {fileID: 410144526}
-  - 114: {fileID: 410144525}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -244,52 +217,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
---- !u!114 &410144525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410144519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  marioPowerupStatus: 0
-  player: {fileID: 0}
-  frozenEntities: 0
-  frozenEntitiesCooldown: 0
-  charManager: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  timerWarningSound: {fileID: 0}
-  camWorldTopRight: {x: 0, y: 0, z: 0}
-  camWorldBottomLeft: {x: 0, y: 0, z: 0}
---- !u!114 &410144526
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 410144519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3af6c48d324a45449b8bb7c8ae7f5407, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  marioPowerupStatus: 0
-  player: {fileID: 0}
-  frozenEntities: 0
-  frozenEntitiesCooldown: 0
-  charManager: {fileID: 0}
-  gameOverSound: {fileID: 0}
-  timerWarningSound: {fileID: 0}
-  camWorldTopRight: {x: 0, y: 0, z: 0}
-  camWorldBottomLeft: {x: 0, y: 0, z: 0}
---- !u!114 &527297991 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11477336, guid: 1f46491d4c2fc914eb8a539832e184c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 652164581}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &652164581
 Prefab:
   m_ObjectHideFlags: 0
@@ -396,18 +323,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1f46491d4c2fc914eb8a539832e184c6, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &694081859 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11480348, guid: 1f46491d4c2fc914eb8a539832e184c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 652164581}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
---- !u!114 &981765401 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11430330, guid: 1f46491d4c2fc914eb8a539832e184c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 652164581}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1001 &1699976173
 Prefab:
   m_ObjectHideFlags: 0
@@ -450,12 +365,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6371387b6b7f3554999a5b1d4c7c72d2, type: 2}
   m_IsPrefabParent: 0
---- !u!114 &1787261512 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11493500, guid: 1f46491d4c2fc914eb8a539832e184c6,
-    type: 2}
-  m_PrefabInternal: {fileID: 652164581}
-  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &1804895216
 GameObject:
   m_ObjectHideFlags: 0

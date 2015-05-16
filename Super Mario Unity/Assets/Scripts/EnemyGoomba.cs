@@ -37,7 +37,7 @@ public class EnemyGoomba : Enemy
 			{
 				charManager.OnEnemyHit ();
 			}*/
-			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
+			if (transform.ContactPointIsHead (other.contacts[0].point, 0.001f))
 			{
 				OnHeadHit (other.collider);
 			}
@@ -53,17 +53,15 @@ public class EnemyGoomba : Enemy
 		}
 	}
 
-	public override void OnHeadHit(Collider2D other)
+	public void OnHeadHit(Collider2D other)
 	{
 		// Stop colliding if player is already hit
 		if (other.CompareTag (Tags.player))
 		{
 			CharacterManager charManager = other.GetComponent<CharacterManager>();
 			if (charManager.isInvincible) return;
-			print ("head jump");
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
-		base.OnHeadHit (other);
 		OnJumpHit ();
 	}
 	

@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Loading_Level.unity
   - enabled: 1
     path: Assets/Scenes/Game_Over.unity
+  - enabled: 1
+    path: Assets/Scenes/Time_Up.unity

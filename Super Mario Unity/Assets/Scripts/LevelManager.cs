@@ -37,13 +37,6 @@ public class LevelManager : MonoBehaviour
 		GM.instance.charManager.transform.position = toLevel.playerSpawnPoint.position;
 	}
 
-	public void LoadLevel(int worldId, int levelId)
-	{
-		GM.instance.FreezeEntities ();
-		//GM.instance.charManager.transform.position = levels[levelId].playerSpawnPoint.position;
-		//Camera.main.transform.position = levels[levelId].cameraSpawnPoint.position;
-	}
-
 	public void OnStageStart()
 	{
 		GM.instance.UnFreezeEntities ();

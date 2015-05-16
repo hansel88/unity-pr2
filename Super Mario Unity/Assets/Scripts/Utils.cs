@@ -18,4 +18,14 @@ public static class Utils
 		return point.y > t.position.y + offsetY + (height - margin) && 
 			(t.position.x - (width) < point.x && t.position.x + (width) > point.x);
 	}
+
+	public static void SaveLives(int lives)
+	{
+		PlayerPrefs.SetInt ("Lives", lives);
+	}
+
+	public static int LoadLives()
+	{
+		return PlayerPrefs.GetInt ("Lives", 3);
+	}
 }

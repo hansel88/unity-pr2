@@ -5,7 +5,6 @@ public class Enemy : Entity
 {
 	public bool hasDeathAnimation = true;
 	public bool isDying = false;
-	private bool hasJumped = false;
 
 	void Update()
 	{
@@ -44,7 +43,6 @@ public class Enemy : Entity
 
 	public void JumpedOn()
 	{
-
 		GM.instance.charManager.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 		GM.instance.charManager.GetComponent<CharacterMovement>().Jump (true);
 	}

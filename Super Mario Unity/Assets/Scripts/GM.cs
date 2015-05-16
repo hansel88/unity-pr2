@@ -18,14 +18,14 @@ public class GM : MonoBehaviour
 		}
     }
 
-    private int lives = 3;
+	private int lives = 3;
     public int Lives
     {
         get { return this.lives; }
         set 
 		{ 
 			this.lives = value;
-			// TODO Load gameover menu here
+			Utils.SaveLives (value);
 		}
     }
 
@@ -76,9 +76,10 @@ public class GM : MonoBehaviour
     {
         if (instance == null)
             instance = this;
-		// TODO Dont destroy on load?
         else if (instance != this)
             Destroy(gameObject);
+
+		Lives = Utils.LoadLives ();
 
 		if (!player)
 		{
@@ -102,25 +103,30 @@ public class GM : MonoBehaviour
     #region methods
     public void CheckGameOver()
     {
+        saveHighScore();
+		if (Timer <= 0)
+		{
+			Application.LoadLevel ("Time_Up");
+		}
 		if (Lives <= 0) // Out of lives --> game over
 		{
-        	saveHighScore();
        		Destroy(Instantiate(gameOverSound), 10);
-			// TODO Game over
+			Application.LoadLevel ("Game_Over");
 		}
 		else // Have more lives --> continue
 		{
-			// TODO Continue
-			Application.LoadLevel (Application.loadedLevel);
+			Application.LoadLevel ("Loading_Level");
 		}
     }
 
-	public void StageClear()
+	public IEnumerator StageClear()
 	{
         saveHighScore();
-		Destroy(Instantiate(stageClear), 10);
-		Thread.Sleep(6000);
-		Destroy(Instantiate(fireworksSound), 10);
+		Instantiate(stageClear);
+		Instantiate(fireworksSound);
+		yield return new WaitForSeconds(7f);
+
+		Application.LoadLevel ("Main_Title");
 	}
 
 	void DoTimerCountdown()
@@ -162,12 +168,14 @@ public class GM : MonoBehaviour
 
 	public void FreezeEntities()
 	{
+		print ("Freeze entities");
 		frozenEntities = true;
 		frozenEntitiesCooldown = true;
 	}
 
 	public void UnFreezeEntities()
 	{
+		print ("UnFreeze entities");
 		frozenEntities = false;
 		StartCoroutine (ResetFreezeCooldown ());
 	}
@@ -201,9 +209,18 @@ public class GM : MonoBehaviour
         int HighestScore = PlayerPrefs.GetInt("Highscore");
 
         //Saving this score as the highest if it is
-        if(this.Score > HighestScore || HighestScore == null)
+        if(this.Score > HighestScore || HighestScore == 0)
+		{
+			print (string.Format ("OldHS: {0}, NewHS: {1}", HighestScore, Score));
             PlayerPrefs.SetInt("Highscore", this.Score);
+		}
     }
+
+	[ContextMenu("Reset highscore")]
+	void ResetHighscore()
+	{
+        PlayerPrefs.SetInt("Highscore", 0);
+	}
 
 	void OnLevelWasLoaded(int id)
 	{

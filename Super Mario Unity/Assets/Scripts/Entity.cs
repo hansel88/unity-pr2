@@ -59,6 +59,8 @@ public class Entity : MonoBehaviour
 
 	public void ChangeDirectionOnCollision(Collision2D other)
 	{
+		if (pr)
+			print ("col: " + other.collider.name);
 		if (!other.collider.CompareTag ("Ground"))
 		{
 			// Check if the collided object is on the correct side
@@ -69,14 +71,12 @@ public class Entity : MonoBehaviour
 				// Check if we are already changing direction before turning
 				if (!isChangingDirection && gameObject.activeInHierarchy)
 				{
-					// TODO Check if the current collided object is the previous (that triggered the directionchange) 
-					// that way it probably wont get stuck....
 					StartCoroutine (TurnAround ());
 				}
 			}
 		}
 	}
-	
+	public bool pr = false;
 	public virtual IEnumerator TurnAround()
 	{
 		isChangingDirection = true;
@@ -115,10 +115,5 @@ public class Entity : MonoBehaviour
 		{
 			canMove = true;
 		}
-	}
-
-	public virtual void OnHeadHit(Collider2D other)
-	{
-		print ("Hit head collider");
 	}
 }

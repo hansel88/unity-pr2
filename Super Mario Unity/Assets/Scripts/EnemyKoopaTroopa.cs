@@ -57,7 +57,7 @@ public class EnemyKoopaTroopa : Enemy
 		}
 	}
 
-	public override void OnHeadHit(Collider2D other)
+	public void OnHeadHit(Collider2D other)
 	{
 		// Stop colliding if player is already hit
 		if (other.CompareTag (Tags.player))
@@ -67,7 +67,6 @@ public class EnemyKoopaTroopa : Enemy
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 		
-		base.OnHeadHit (other);
 		OnJumpHit ();
 	}
 }

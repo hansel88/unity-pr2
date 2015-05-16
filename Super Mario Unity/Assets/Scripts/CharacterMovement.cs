@@ -19,7 +19,6 @@ public class CharacterMovement : MonoBehaviour {
 	[HideInInspector]public bool facingRight = true;
 	private bool previousFacingRight = true; // TODO remove?
 	private float horizontalInput = 0f;
-    private bool jumpPressed = false;
 	private CharacterManager charManager;
 	private float curJumpForce;
 	private bool wasGroundedOnJump = false;
@@ -147,7 +146,6 @@ public class CharacterMovement : MonoBehaviour {
 
 	public void Jump(bool ignoreGrounded)
 	{
-        jumpPressed = false;
 		// Check if we want to ignore the grounded value
 		if (!ignoreGrounded)
 			if (!grounded) return;

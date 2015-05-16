@@ -28,37 +28,6 @@ public class EnemyShell : Enemy
 				return;
 			}
 
-			/*if (charManager.ValidHeadHit (other.contacts[0].point, boxCollider))
-			{
-				JumpedOn ();
-				// Check if shell is moving
-				if (direction == 0) // Is not moving
-				{
-					// Reward player with score
-					RewardScore ();
-					// Start moving shell
-					direction = Random.value > 0.5f ? 1 : -1; // Randomized direction
-				}
-				else // Is moving
-				{
-					// Reward player with score
-					RewardScore (scoreMovingReward);
-					// Stop shell
-					direction = 0;
-				}
-			}
-			else
-			{
-				if (direction == 0)
-				{
-					direction = other.transform.position.x > transform.position.x ? -1 : 1;
-					RewardScore ();
-				}
-				else
-				{
-					charManager.OnEnemyHit ();
-				}
-			}*/
 			if (transform.ContactPointIsHead (other.contacts[0].point, 0.003f))
 			{
 				OnHeadHit (other.collider);
@@ -109,28 +78,7 @@ public class EnemyShell : Enemy
 		}
 	}
 
-	/*public void OnCollide(Transform other)
-	{
-		if (other.CompareTag (Tags.enemy) && direction != 0)
-		{
-			OnShellCollision (other);
-			// TODO Dont change the shell direction here
-		}
-
-		// TODO If other == player, dont change direction
-		if (direction == 0 && !other.CompareTag (Tags.enemy))
-		{
-			print ("changdir");
-			direction = other.position.x > transform.position.x ? -1 : 1;
-			RewardScore ();
-		}
-		else
-		{
-			other.SendMessage ("OnEnemyHit", SendMessageOptions.DontRequireReceiver);
-		}
-	}*/
-
-	public override void OnHeadHit(Collider2D other)
+	public void OnHeadHit(Collider2D other)
 	{
 		// Stop colliding if player is already hit
 		if (other.CompareTag (Tags.player))
@@ -140,7 +88,6 @@ public class EnemyShell : Enemy
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 
-		base.OnHeadHit (other);
 		OnJumpHit ();
 	}
 
