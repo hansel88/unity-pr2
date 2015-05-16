@@ -52,12 +52,7 @@ public class EnemyGoomba : Enemy
 			ChangeDirectionOnCollision (other);
 		}
 	}
-	
-	bool ContactPointIsHead(Vector2 point, float margin)
-	{
-		return point.y > transform.position.y + 0.08f - margin;
-	}
-	
+
 	public override void OnHeadHit(Collider2D other)
 	{
 		// Stop colliding if player is already hit
@@ -65,6 +60,7 @@ public class EnemyGoomba : Enemy
 		{
 			CharacterManager charManager = other.GetComponent<CharacterManager>();
 			if (charManager.isInvincible) return;
+			print ("head jump");
 			charManager.GetComponent<CharacterMovement>().Jump (true);
 		}
 		base.OnHeadHit (other);
