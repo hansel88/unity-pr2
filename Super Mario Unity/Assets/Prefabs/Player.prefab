@@ -192,7 +192,7 @@ MonoBehaviour:
   movementSpeed: 100
   sprintSpeed: 150
   jumpForce: 200
-  jumpHoldRate: 325
+  jumpHoldRate: 17000
   jumpSmall: {fileID: 111940, guid: cfdfac2a2dba45d41a6627e416cef75f, type: 2}
   jumpBig: {fileID: 111940, guid: e48499e1aed12ef4b8f6145530c46ef0, type: 2}
   grounded: 1

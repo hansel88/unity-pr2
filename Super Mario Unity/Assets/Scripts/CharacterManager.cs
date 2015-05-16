@@ -72,7 +72,7 @@ public class CharacterManager : MonoBehaviour
 			}
 		}
 	}
-	private float[] offset = new float[]{0f, 0.08f, -0.08f};
+	private float[] offset = new float[]{0f, 0.08f, -0.08f}; // TODO Move
 
 	void OnCollisionEnter2D(Collision2D other)
 	{

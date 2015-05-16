@@ -101,7 +101,7 @@ public class CharacterMovement : MonoBehaviour {
 		else if (curJumpForce > 0f)
 		{
 			// Add up force to keep ascending when in the air (while holding jump)
-			rBody.AddForce (Vector2.up * curJumpForce);
+			rBody.AddForce (Vector2.up * curJumpForce * Time.deltaTime);
 			curJumpForce = 0f;
 		}
 
