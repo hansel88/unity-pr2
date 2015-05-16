@@ -364,9 +364,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .00999999978, y: .800000012}
+  m_Offset: {x: .00999999978, y: 1.5}
   serializedVersion: 2
-  m_Size: {x: .0599999987, y: 1.53999996}
+  m_Size: {x: .0599999987, y: 3}
 --- !u!114 &1197633811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1214449559}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GoalPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -580,7 +580,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 483016, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -16.4799995
+      value: 14.2399998
       objectReference: {fileID: 0}
     - target: {fileID: 483016, guid: 49973fc8a320442749c87c9129d81dac, type: 2}
       propertyPath: m_LocalPosition.y
@@ -650,7 +650,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 487068, guid: 80b507b6a8b0a4b3f91f5c41ba8851c9, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 11416410, guid: 80b507b6a8b0a4b3f91f5c41ba8851c9, type: 2}
       propertyPath: toLevel

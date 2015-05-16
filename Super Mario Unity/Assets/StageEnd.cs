@@ -7,6 +7,7 @@ public class StageEnd : MonoBehaviour
 	public Transform slideGoal;
 	private Transform player;
 	private bool isSliding = false;
+	private int[] scores = new int[]{400, 1200, 2500, 5000};
 
 	void Awake()
 	{
@@ -23,6 +24,8 @@ public class StageEnd : MonoBehaviour
 
 	IEnumerator StartSlide()
 	{
+		yield return new WaitForEndOfFrame();
+		if (isSliding) yield return null;
 		isSliding = true;
 
 		player.GetComponent<CharacterMovement>().canMove = false;
@@ -35,6 +38,28 @@ public class StageEnd : MonoBehaviour
 			player.position = Vector3.MoveTowards (player.position, new Vector3(player.position.x, slideGoal.position.y), slideSpeed * Time.deltaTime);
 			yield return null;
 		}
+		int index = 0;
+		float dist = Vector2.Distance (player.position, new Vector2(player.position.x, slideGoal.position.y));
+
+		if (dist < 0.016f)
+		{
+			index = 0;
+		}
+		else if (dist < 0.038f)
+		{
+			index = 1;
+		}
+		else if (dist < 0.064f)
+		{
+			index = 2;
+		}
+		else if (dist >= 0.064f)
+		{
+			index = 3;
+		}
+		int rewardScore = scores[index];
+		GM.instance.Score += rewardScore;
+		GUIManager.instance.PopRewardText (player.position, "" + rewardScore);
 
 		//player.GetComponent<CharacterMovement>().grounded = true;
 
