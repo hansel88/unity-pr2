@@ -17,6 +17,11 @@ public class GUIManager : MonoBehaviour
 	void Awake()
 	{
 		instance = this;
+
+		if (!rewardCanvasTransform)
+		{
+			Debug.LogError ("No canvas parent for the reward text objects assigned!", this);
+		}
 	}
 
 	public void ChangeScoreText(int score)
@@ -76,5 +81,6 @@ public class GUIManager : MonoBehaviour
 		// Displays a text object with the specified text at the position
 		GameObject textObj = Instantiate (rewardPrefab) as GameObject;
 		textObj.GetComponent<RewardText>().Initialize (rewardText, pos, rewardCanvasTransform);
+		print ("pop");
 	}
 }
