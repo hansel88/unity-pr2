@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Handles loading levels
 public class LevelManager : MonoBehaviour 
 {
 	public Level currentLevel; // The current level
@@ -35,16 +36,5 @@ public class LevelManager : MonoBehaviour
 
 		// Set the playerpositio
 		GM.instance.charManager.transform.position = toLevel.playerSpawnPoint.position;
-	}
-
-	public void OnStageStart()
-	{
-		GM.instance.UnFreezeEntities ();
-		GM.instance.charManager.GetComponent<CharacterMovement>().canMove = true;
-	}
-
-	public void OnStageClear()
-	{
-
 	}
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
-using System.Timers;
 
+// For handling input and moving the player accordingly
 public class CharacterMovement : MonoBehaviour {
 
 	[SerializeField]private float downForce = 0.1f; // Force to apply when in the air
@@ -13,11 +13,11 @@ public class CharacterMovement : MonoBehaviour {
 	[SerializeField]private GameObject jumpBig;
 
     public bool grounded = true;
-	public bool canMove = true; // TODO Remove?
+	public bool canMove = true;
 	private Animator anim;
 	private Rigidbody2D rBody;
 	[HideInInspector]public bool facingRight = true;
-	private bool previousFacingRight = true; // TODO remove?
+	private bool previousFacingRight = true;
 	private float horizontalInput = 0f;
 	private CharacterManager charManager;
 	private float curJumpForce;
@@ -135,6 +135,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	void Flip()
 	{
+		// Animation when turning around while moving
 		if ((previousFacingRight && !facingRight) || (!previousFacingRight && facingRight))
 			anim.SetTrigger ("FlipTrigger");
 		previousFacingRight = facingRight;

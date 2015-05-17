@@ -125,7 +125,6 @@ MonoBehaviour:
   canMove: 0
   anim: {fileID: 0}
   rBody: {fileID: 0}
-  isVisibleInCamera: 1
   boxCollider: {fileID: 0}
   hasDeathAnimation: 1
   isDying: 0
@@ -165,7 +164,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300004, guid: 2e0bbbfd6d0be194d8872ae8a0af28dd, type: 3}
+  m_Sprite: {fileID: 21300088, guid: d906f3629db364a3dafe4ef7f1648a10, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

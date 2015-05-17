@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Handles powerup movement and deactivation
 public class Powerup : Entity
 {
 	public bool isActive = true;
@@ -12,6 +13,6 @@ public class Powerup : Entity
 
 	public virtual void OnPickup()
 	{
-		gameObject.SetActive (false);
+		gameObject.SetActive (false); // TODO Pool
 	}
 }

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Script that every moving entity (non-player) inherits from. Handles movement and turning
 public class Entity : MonoBehaviour
 {
 	public int scoreReward = 100;

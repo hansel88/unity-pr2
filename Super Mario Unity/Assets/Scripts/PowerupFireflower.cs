@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// The fireflower powerup
 public class PowerupFireflower : Powerup
 {
 	public override void OnPickup()

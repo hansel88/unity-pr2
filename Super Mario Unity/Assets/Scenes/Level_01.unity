@@ -443,7 +443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de44d911757af46e0995ab3d7380de09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewardCanvas: {fileID: 1889311526}
+  rewardCanvasTransform: {fileID: 0}
   textScore: {fileID: 299053544}
   textCoin: {fileID: 1484181440}
   textTime: {fileID: 460319842}
@@ -724,11 +724,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 80b507b6a8b0a4b3f91f5c41ba8851c9, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &1889311526 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 22457512, guid: eab8467d310e54f81b7c9d4e04f04bb9,
-    type: 2}
-  m_PrefabInternal: {fileID: 1951945767}
 --- !u!1001 &1951945767
 Prefab:
   m_ObjectHideFlags: 0

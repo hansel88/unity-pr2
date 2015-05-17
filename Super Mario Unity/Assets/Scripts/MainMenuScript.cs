@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// Handling the highscore text
 public class MainMenuScript : MonoBehaviour {
 
     public Text scoreText;
@@ -17,10 +18,5 @@ public class MainMenuScript : MonoBehaviour {
         scoreText.text = prefix + highscore;
 
 		Utils.SaveLives (3); // Default to 3 lives
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 }

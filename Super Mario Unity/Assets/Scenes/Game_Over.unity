@@ -102,7 +102,7 @@ GameObject:
   - 4: {fileID: 136741965}
   - 114: {fileID: 136741963}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: LoadManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,6 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesText: {fileID: 0}
   levelToLoad: Main_Title
+  maxDelay: 2
 --- !u!4 &136741965
 Transform:
   m_ObjectHideFlags: 0

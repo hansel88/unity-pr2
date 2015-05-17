@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Script for the Koopa Troopa
 public class EnemyKoopaTroopa : Enemy
 {
 	public GameObject shellPrefab;

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// Manager for the player states and more
+// Manager for the player states and related functionality
 public class CharacterManager : MonoBehaviour
 {
 	[SerializeField]private GameObject fireflowerProjectilePrefab; // The prefab for the fireflower projectile
@@ -26,7 +26,8 @@ public class CharacterManager : MonoBehaviour
 	[HideInInspector]public int fireflowerCount = 0; // Number of fireflower projectiles in play
 	private float starTimer; // Timer for the star powerup
 	[HideInInspector]public bool hasHitBlock = false; // To check if we already hit a block this jump 
-
+	private float[] blockCastOffset = new float[]{0f, 0.08f, -0.08f}; // Offset for the block thumping raycasts
+	
 	void Awake()
 	{
 		// Stop if a spritetransform isn't assigned
@@ -73,7 +74,6 @@ public class CharacterManager : MonoBehaviour
 			}
 		}
 	}
-	private float[] offset = new float[]{0f, 0.08f, -0.08f}; // TODO Move
 
 	void OnCollisionEnter2D(Collision2D other)
 	{
@@ -91,10 +91,10 @@ public class CharacterManager : MonoBehaviour
 			float distance = Vector2.Distance (transform.position, other.transform.position);
 
 			// Raycast three times (from the center of the player, and on both sides), that way we cover the whole width of the player
-			for (int i = 0; i < offset.Length; i ++)
+			for (int i = 0; i < blockCastOffset.Length; i ++)
 			{
 				// Set the origin of the raycast (
-				Vector2 origin = new Vector2(pos.x + offset[i], yOrigin);
+				Vector2 origin = new Vector2(pos.x + blockCastOffset[i], yOrigin);
 
 				// Raycast
 				RaycastHit2D hit = Physics2D.Raycast (origin, Vector2.up, distance, blockRaycastMask);

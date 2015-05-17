@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Script for the Shell
 public class EnemyShell : Enemy
 {
 	public int scoreMovingReward = 100;

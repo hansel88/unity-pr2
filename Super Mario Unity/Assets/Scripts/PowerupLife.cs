@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// The 1up powerup
 public class PowerupLife : Powerup
 {
 	public override void OnPickup()

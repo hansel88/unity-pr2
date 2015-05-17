@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Threading;
 
+// The gamemanager that handles the score, timer, lives, etc
 public class GM : MonoBehaviour
 {
     public static GM instance = null;
 
     #region score, lives and coins properties
+	// Player score
     private int score = 0;
     public int Score
     {
@@ -18,6 +20,7 @@ public class GM : MonoBehaviour
 		}
     }
 
+	// Player lives
 	private int lives = 3;
     public int Lives
     {
@@ -29,6 +32,7 @@ public class GM : MonoBehaviour
 		}
     }
 
+	// Player coins
     private int coins = 0;
     public int Coins
     {
@@ -40,6 +44,7 @@ public class GM : MonoBehaviour
 		}
     }
 
+	// Game timers
 	private int timer = 0;
 	public int Timer
 	{
@@ -215,7 +220,6 @@ public class GM : MonoBehaviour
 		camWorldTopRight = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth, cam.pixelHeight));
 		//camWorldCenter = cam.ScreenToWorldPoint (new Vector3 (cam.pixelWidth * 0.5f, cam.pixelHeight * 0.5f));
 	}
-	#endregion
 
     public void saveHighScore()
     {
@@ -232,11 +236,12 @@ public class GM : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-	// DEBUG Just for reseting the score during test
+	// DEBUG Just for reseting the score during testing
 	[ContextMenu("Reset highscore")]
 	void ResetHighscore()
 	{
         PlayerPrefs.SetInt("Highscore", 0);
 	}
 #endif
+	#endregion
 }

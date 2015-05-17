@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Chooses the amount of players on the main screen
+// TODO Implement two-player mode
 public class ModeSelect : MonoBehaviour {
 
     public int playerAmount;

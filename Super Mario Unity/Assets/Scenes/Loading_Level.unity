@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   livesText: {fileID: 1295375839}
   levelToLoad: Level_01
+  maxDelay: 2
 --- !u!1 &410144519
 GameObject:
   m_ObjectHideFlags: 0

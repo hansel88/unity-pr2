@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// Handles the movement for the pickuptext
 [RequireComponent(typeof(Text))]
 public class RewardText : MonoBehaviour
 {
@@ -16,10 +17,17 @@ public class RewardText : MonoBehaviour
 
 	public void Initialize(string text, Vector3 pos, Transform parent)
 	{
+		// Set the text
 		textReward.text = text;
+
+		// Set the parent and position the object
 		transform.SetParent (parent, false);
 		transform.position = pos;
+
+		// Activate
 		gameObject.SetActive (true);
+
+		// Deactivate in a certian amount of time
 		Invoke ("Deactivate", duration);
 	}
 

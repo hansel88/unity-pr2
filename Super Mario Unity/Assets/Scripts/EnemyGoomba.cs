@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Script for the Goomba
 public class EnemyGoomba : Enemy
 {
 	public void OnJumpHit()

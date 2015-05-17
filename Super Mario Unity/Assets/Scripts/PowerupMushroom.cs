@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// The mushroom powerup
 public class PowerupMushroom : Powerup
 {
 	public override void OnPickup()

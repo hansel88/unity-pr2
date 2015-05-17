@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+// To make sure the camera is assigned to the screen space canvas
 public class RewardCanvas : MonoBehaviour
 {
 	void Awake()

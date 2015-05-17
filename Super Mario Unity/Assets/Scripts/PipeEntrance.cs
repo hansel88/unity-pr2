@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// Handling the pipe entrance point
 public class PipeEntrance : MonoBehaviour
 {
 	public Level toLevel; // The level we are to be transported to

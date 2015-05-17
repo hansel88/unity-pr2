@@ -1,14 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// Tags are defined here incase Unity tag must be renamed/removed/etc... 
-// we can just change it here instead of in every script it is used.
+// Tags are defined here incase Unity tag must be renamed/removed/etc... we can just change it here instead of in every script it is used.
 public class Tags
 {
 	public static string player = "Player";
 	public static string enemy = "Enemy";
 	public static string powerup = "Powerup";
 	public static string block = "Block";
-	public static string entrancePoint = "EntrancePoint";
 	public static string entityActivator = "EntityActivator";
 }

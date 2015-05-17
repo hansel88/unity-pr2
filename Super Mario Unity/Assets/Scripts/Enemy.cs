@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// The script that all enemies inherits from. Handles movement, jumped on event and death
 public class Enemy : Entity
 {
 	public bool hasDeathAnimation = true; // Whether to show the death animation or not

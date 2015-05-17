@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+// For the coin that can be picked up
 public class CoinPickup : MonoBehaviour
 {
     public GameObject coinPickupSound;
